@@ -26,12 +26,10 @@ export const signInFunction = () => {
     firebase.auth().signInWithEmailAndPassword(emailIn, passwordIn)
       .then((userCredential) => {
         const user = userCredential.user;
-        alert('Bien');
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        alert('Mal');
       });
   });
   mainIn.appendChild(buttonLoginUser);
