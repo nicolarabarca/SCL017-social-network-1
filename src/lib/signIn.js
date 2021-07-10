@@ -33,5 +33,14 @@ export const signInFunction = () => {
       });
   });
   mainIn.appendChild(buttonLoginUser);
+  const separationTextIn = document.createElement('p');
+  separationTextIn.innerHTML = '- o -';
+  mainIn.appendChild(separationTextIn);
+  const buttonToGoogleIn = document.createElement('button');
+  buttonToGoogleIn.innerHTML = 'Ingresa con Google';
+  mainIn.appendChild(buttonToGoogleIn);
+  const sendToSignUpText = document.createElement('p');
+  sendToSignUpText.innerHTML = '¿No tienes una cuenta? <a href="">Regístrate</a>.';
+  mainIn.appendChild(sendToSignUpText);
   rootIn.appendChild(mainIn);
 };

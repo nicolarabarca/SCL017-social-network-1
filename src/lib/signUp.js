@@ -33,5 +33,17 @@ export const signUpFunction = () => {
       });
   });
   mainUp.appendChild(buttonCreateUser);
+  const termsText = document.createElement('p');
+  termsText.innerHTML = 'Al registrarte, aceptas las <a href="">Condiciones</a> de Tejer & Punto.';
+  mainUp.appendChild(termsText);
+  const sendToSignInText = document.createElement('p');
+  sendToSignInText.innerHTML = '¿Ya tienes una cuenta? <a href="">Inicia sesión</a>.';
+  mainUp.appendChild(sendToSignInText);
+  const separationTextUp = document.createElement('p');
+  separationTextUp.innerHTML = '- o -';
+  mainUp.appendChild(separationTextUp);
+  const buttonToGoogleUp = document.createElement('button');
+  buttonToGoogleUp.innerHTML = 'Ingresa con Google';
+  mainUp.appendChild(buttonToGoogleUp);
   rootUp.appendChild(mainUp);
 };
