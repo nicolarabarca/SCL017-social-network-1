@@ -1,3 +1,5 @@
+import { loginUser } from './signInLogic.js';
+
 export const signInFunction = () => {
   const rootIn = document.getElementById('rootSignIn');
   const headerIn = document.createElement('header');
@@ -19,19 +21,7 @@ export const signInFunction = () => {
   const buttonLoginUser = document.createElement('button');
   buttonLoginUser.innerHTML = 'Inicia sesión';
   buttonLoginUser.setAttribute('id', 'buttonLoginUser');
-  buttonLoginUser.addEventListener('click', () => {
-    const emailIn = document.getElementById('emailIn').value;
-    const passwordIn = document.getElementById('passwordIn').value;
-
-    firebase.auth().signInWithEmailAndPassword(emailIn, passwordIn)
-      .then((userCredential) => {
-        const user = userCredential.user;
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-      });
-  });
+  buttonLoginUser.addEventListener('click', loginUser);
   mainIn.appendChild(buttonLoginUser);
   const separationTextIn = document.createElement('p');
   separationTextIn.innerHTML = '- o -';

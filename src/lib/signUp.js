@@ -1,3 +1,5 @@
+import { createUser } from './signUpLogic.js';
+
 export const signUpFunction = () => {
   const rootUp = document.getElementById('rootSignUp');
   const headerUp = document.createElement('header');
@@ -19,19 +21,7 @@ export const signUpFunction = () => {
   const buttonCreateUser = document.createElement('button');
   buttonCreateUser.innerHTML = 'Regístrate';
   buttonCreateUser.setAttribute('id', 'buttonCreateUser');
-  buttonCreateUser.addEventListener('click', () => {
-    const emailUp = document.getElementById('emailUp').value;
-    const passwordUp = document.getElementById('passwordUp').value;
-
-    firebase.auth().createUserWithEmailAndPassword(emailUp, passwordUp)
-      .then((userCredential) => {
-        const user = userCredential.user;
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-      });
-  });
+  buttonCreateUser.addEventListener('click', createUser);
   mainUp.appendChild(buttonCreateUser);
   const termsText = document.createElement('p');
   termsText.innerHTML = 'Al registrarte, aceptas las <a href="">Condiciones</a> de Tejer & Punto.';
