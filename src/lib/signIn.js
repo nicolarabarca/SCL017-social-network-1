@@ -1,12 +1,12 @@
 import { loginUser } from './signInLogic.js';
 
 export const signInFunction = () => {
-  const rootIn = document.getElementById('rootSignIn');
+  const containerIn = document.createElement('div');
   const headerIn = document.createElement('header');
   const titleIn = document.createElement('h1');
   titleIn.innerHTML = 'Tejer & Punto';
   headerIn.appendChild(titleIn);
-  rootIn.appendChild(headerIn);
+  containerIn.appendChild(headerIn);
   const mainIn = document.createElement('main');
   const inputEmailIn = document.createElement('input');
   inputEmailIn.setAttribute('id', 'emailIn');
@@ -30,7 +30,8 @@ export const signInFunction = () => {
   buttonToGoogleIn.innerHTML = 'Ingresa con Google';
   mainIn.appendChild(buttonToGoogleIn);
   const sendToSignUpText = document.createElement('p');
-  sendToSignUpText.innerHTML = '¿No tienes una cuenta? <a href="">Regístrate</a>.';
+  sendToSignUpText.innerHTML = '¿No tienes una cuenta? <a href="#/signup">Regístrate</a>.';
   mainIn.appendChild(sendToSignUpText);
-  rootIn.appendChild(mainIn);
+  containerIn.appendChild(mainIn);
+  return containerIn;
 };

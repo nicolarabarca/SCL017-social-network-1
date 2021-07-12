@@ -1,12 +1,12 @@
 import { createUser } from './signUpLogic.js';
 
 export const signUpFunction = () => {
-  const rootUp = document.getElementById('rootSignUp');
+  const containerUp = document.createElement('div');
   const headerUp = document.createElement('header');
   const titleUp = document.createElement('h1');
   titleUp.innerHTML = 'Tejer & Punto';
   headerUp.appendChild(titleUp);
-  rootUp.appendChild(headerUp);
+  containerUp.appendChild(headerUp);
   const mainUp = document.createElement('main');
   const inputEmailUp = document.createElement('input');
   inputEmailUp.setAttribute('id', 'emailUp');
@@ -27,13 +27,18 @@ export const signUpFunction = () => {
   termsText.innerHTML = 'Al registrarte, aceptas las <a href="">Condiciones</a> de Tejer & Punto.';
   mainUp.appendChild(termsText);
   const sendToSignInText = document.createElement('p');
-  sendToSignInText.innerHTML = '¿Ya tienes una cuenta? <a href="">Inicia sesión</a>.';
+  sendToSignInText.innerHTML = '¿Ya tienes una cuenta?';
   mainUp.appendChild(sendToSignInText);
+  const anchorToSignIn = document.createElement('a');
+  anchorToSignIn.innerHTML = 'Inicia Sesión';
+  anchorToSignIn.setAttribute('href', '#/signin');
+  mainUp.appendChild(anchorToSignIn);
   const separationTextUp = document.createElement('p');
   separationTextUp.innerHTML = '- o -';
   mainUp.appendChild(separationTextUp);
   const buttonToGoogleUp = document.createElement('button');
   buttonToGoogleUp.innerHTML = 'Ingresa con Google';
   mainUp.appendChild(buttonToGoogleUp);
-  rootUp.appendChild(mainUp);
+  containerUp.appendChild(mainUp);
+  return containerUp;
 };
