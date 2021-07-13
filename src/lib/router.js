@@ -11,15 +11,19 @@ const showView = (hash) => {
     case '#/signin':
       root.appendChild(signInView());
       break;
+    default:
+      break;
   }
 };
 
 const changePath = (hash) => {
   if (hash === '#/signup') {
     return showView(hash);
-  } else if (hash === '#/signin') {
+  }
+  if (hash === '#/signin') {
     return showView(hash);
   }
+  return showView(hash);
 };
 
 export const init = () => {
