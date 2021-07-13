@@ -1,7 +1,7 @@
-import { signUpFunction } from '../src/lib/signUp.js';
+import { signUpView } from '../src/lib/signUp.js';
 
-describe('signUpFunction', () => {
+describe('signUpView', () => {
   it('debería ser una función', () => {
-    expect(typeof signUpFunction).toBe('function');
+    expect(typeof signUpView).toBe('function');
   });
 });
