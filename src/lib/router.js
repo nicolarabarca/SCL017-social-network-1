@@ -1,7 +1,7 @@
 import { signUpView } from './signUp.js';
 import { signInView } from './signIn.js';
 
-export const changePath = (hash) => {
+const changePath = (hash) => {
   if (hash === '#/signup') {
     return showView(hash);
   } else if (hash === '#/signin') {
@@ -25,4 +25,10 @@ const showView = (hash) => {
       root.innerHTML = '<h2>No existe</h2>';
       break;
   }
+};
+
+export const init = () => {
+  window.addEventListener('hashchange', () => {
+    changePath(window.location.hash);
+  })
 };
