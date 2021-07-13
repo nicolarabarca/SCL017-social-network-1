@@ -1,6 +1,6 @@
 import { createUser } from './signUpLogic.js';
 
-export const signUpFunction = () => {
+export const signUpView = () => {
   const containerUp = document.createElement('div');
   const headerUp = document.createElement('header');
   const titleUp = document.createElement('h1');
@@ -27,12 +27,8 @@ export const signUpFunction = () => {
   termsText.innerHTML = 'Al registrarte, aceptas las <a href="">Condiciones</a> de Tejer & Punto.';
   mainUp.appendChild(termsText);
   const sendToSignInText = document.createElement('p');
-  sendToSignInText.innerHTML = '¿Ya tienes una cuenta?';
+  sendToSignInText.innerHTML = '¿Ya tienes una cuenta? <a href="#/signin">Inicia sesión</a>.';
   mainUp.appendChild(sendToSignInText);
-  const anchorToSignIn = document.createElement('a');
-  anchorToSignIn.innerHTML = 'Inicia Sesión';
-  anchorToSignIn.setAttribute('href', '#/signin');
-  mainUp.appendChild(anchorToSignIn);
   const separationTextUp = document.createElement('p');
   separationTextUp.innerHTML = '- o -';
   mainUp.appendChild(separationTextUp);

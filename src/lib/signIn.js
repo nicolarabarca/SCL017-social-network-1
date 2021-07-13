@@ -1,6 +1,6 @@
 import { loginUser } from './signInLogic.js';
 
-export const signInFunction = () => {
+export const signInView = () => {
   const containerIn = document.createElement('div');
   const headerIn = document.createElement('header');
   const titleIn = document.createElement('h1');
