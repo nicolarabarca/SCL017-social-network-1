@@ -1,16 +1,6 @@
 import { signUpView } from './signUp.js';
 import { signInView } from './signIn.js';
 
-const changePath = (hash) => {
-  if (hash === '#/signup') {
-    return showView(hash);
-  } else if (hash === '#/signin') {
-    return showView(hash);
-  } else {
-    return showView(hash);
-  }
-};
-
 const showView = (hash) => {
   const root = document.getElementById('root');
   root.innerHTML = '';
@@ -21,14 +11,19 @@ const showView = (hash) => {
     case '#/signin':
       root.appendChild(signInView());
       break;
-    default:
-      root.innerHTML = '<h2>No existe</h2>';
-      break;
+  }
+};
+
+const changePath = (hash) => {
+  if (hash === '#/signup') {
+    return showView(hash);
+  } else if (hash === '#/signin') {
+    return showView(hash);
   }
 };
 
 export const init = () => {
   window.addEventListener('hashchange', () => {
     changePath(window.location.hash);
-  })
+  });
 };
