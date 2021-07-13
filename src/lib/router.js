@@ -15,11 +15,11 @@ const showView = (hash) => {
   const root = document.getElementById('root');
   root.innerHTML = '';
   switch (hash) {
-    case '#/signin':
-      root.appendChild(signInView());
-      break;
     case '#/signup':
       root.appendChild(signUpView());
+      break;
+    case '#/signin':
+      root.appendChild(signInView());
       break;
     default:
       root.innerHTML = '<h2>No existe</h2>';
