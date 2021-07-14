@@ -1,3 +1,4 @@
+import { introView } from './intro.js';
 import { signUpView } from './signUp.js';
 import { signInView } from './signIn.js';
 
@@ -5,6 +6,9 @@ const showView = (hash) => {
   const root = document.getElementById('root');
   root.innerHTML = '';
   switch (hash) {
+    case '#/intro':
+      root.appendChild(introView());
+      break;
     case '#/signup':
       root.appendChild(signUpView());
       break;
@@ -17,6 +21,9 @@ const showView = (hash) => {
 };
 
 const changePath = (hash) => {
+  if (hash === '#/intro') {
+    return showView(hash);
+  }
   if (hash === '#/signup') {
     return showView(hash);
   }
