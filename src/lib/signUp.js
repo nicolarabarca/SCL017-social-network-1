@@ -1,4 +1,5 @@
 import { createUser } from './signUpLogic.js';
+import { googleAccess } from './googleSignIn.js';
 
 export const signUpView = () => {
   const containerUp = document.createElement('div');
@@ -34,6 +35,7 @@ export const signUpView = () => {
   mainUp.appendChild(separationTextUp);
   const buttonToGoogleUp = document.createElement('button');
   buttonToGoogleUp.innerHTML = 'Ingresa con Google';
+  buttonToGoogleUp.addEventListener('click', googleAccess);
   mainUp.appendChild(buttonToGoogleUp);
   containerUp.appendChild(mainUp);
   return containerUp;

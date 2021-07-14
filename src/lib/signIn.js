@@ -1,4 +1,5 @@
 import { loginUser } from './signInLogic.js';
+import { googleAccess } from './googleSignIn.js';
 
 export const signInView = () => {
   const containerIn = document.createElement('div');
@@ -28,6 +29,7 @@ export const signInView = () => {
   mainIn.appendChild(separationTextIn);
   const buttonToGoogleIn = document.createElement('button');
   buttonToGoogleIn.innerHTML = 'Ingresa con Google';
+  buttonToGoogleIn.addEventListener('click', googleAccess);
   mainIn.appendChild(buttonToGoogleIn);
   const sendToSignUpText = document.createElement('p');
   sendToSignUpText.innerHTML = '¿No tienes una cuenta? <a href="#/signup">Regístrate</a>.';
