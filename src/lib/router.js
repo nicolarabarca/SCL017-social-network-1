@@ -27,6 +27,7 @@ const changePath = (hash) => {
 };
 
 export const init = () => {
+  window.addEventListener('load', changePath(window.location.hash));
   window.addEventListener('hashchange', () => {
     changePath(window.location.hash);
   });
