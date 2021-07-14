@@ -11,7 +11,7 @@ export const introView = () => {
   divButtonIntro.setAttribute('id', 'divButtonIntro');
   const buttonIntro= document.createElement('button');
   buttonIntro.setAttribute('id', 'buttonIntro');
-  buttonIntro.innerHTML = 'Comienza';
+  buttonIntro.innerHTML = '<strong>Comenzar</strong>';
   buttonIntro.addEventListener('click', () => {
     window.location.href = '#/signup';
   })

@@ -1,0 +1,44 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  margin: 0%;
+}
+
+#divGif {
+  background: url('https://i.picasion.com/pic91/a84f3fcf776556e023735827dfd8fd51.gif') no-repeat center;
+  background-size: cover;
+  height: 65vh;
+  width: 58vh;
+  margin: 0% auto;
+}
+
+#divTextIntro {
+  font-family: 'Handlee', cursive, bold;
+  font-size: 24px;
+  height: 35%;
+  width: 70%;
+  background-color: transparent;
+  margin: 0% auto;
+}
+
+#divButtonIntro {
+  display: flex;
+  position: relative;
+  height: 47%;
+  width: 25%;
+  background-color: transparent;
+  margin-top: 6%;
+  margin-right: 15%;
+  float: right;
+}
+
+#buttonIntro {
+  background-color: rgb(243, 190, 199);
+  height: 7vh;
+  width: 16vh;
+  border-radius: 4px;
+  font-family: "Handlee", cursive;
+  margin-left: 35%;
+  margin-top: -16%;
+  box-shadow: 0 2px 15px rgba(80, 77, 78, 0.5);
+}
