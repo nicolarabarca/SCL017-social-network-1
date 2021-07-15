@@ -6,6 +6,9 @@ const showView = (hash) => {
   const root = document.getElementById('root');
   root.innerHTML = '';
   switch (hash) {
+    case '':
+      root.appendChild(introView());
+      break;
     case '#/intro':
       root.appendChild(introView());
       break;
@@ -21,6 +24,9 @@ const showView = (hash) => {
 };
 
 const changePath = (hash) => {
+  if (hash === '') {
+    return showView(hash);
+  }
   if (hash === '#/intro') {
     return showView(hash);
   }
