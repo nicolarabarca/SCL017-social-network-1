@@ -3,8 +3,10 @@ import { googleAccess } from './googleSignIn.js';
 
 export const signUpView = () => {
   const containerUp = document.createElement('div');
+  containerUp.setAttribute('id', 'containerUp');
   const headerUp = document.createElement('header');
   const titleUp = document.createElement('h1');
+  titleUp.setAttribute('id', 'titleUp');
   titleUp.innerHTML = 'Tejer & Punto';
   headerUp.appendChild(titleUp);
   containerUp.appendChild(headerUp);
@@ -26,15 +28,19 @@ export const signUpView = () => {
   mainUp.appendChild(buttonCreateUser);
   const termsText = document.createElement('p');
   termsText.innerHTML = 'Al registrarte, aceptas las <a href="">Condiciones</a> de Tejer & Punto.';
+  termsText.setAttribute('id', 'termsText');
   mainUp.appendChild(termsText);
   const sendToSignInText = document.createElement('p');
+  sendToSignInText.setAttribute('id', 'sendToSignInText');
   sendToSignInText.innerHTML = '¿Ya tienes una cuenta? <a href="#/signin">Inicia sesión</a>.';
   mainUp.appendChild(sendToSignInText);
   const separationTextUp = document.createElement('p');
+  separationTextUp.setAttribute('id', 'separationTextUp');
   separationTextUp.innerHTML = '- o -';
   mainUp.appendChild(separationTextUp);
   const buttonToGoogleUp = document.createElement('button');
   buttonToGoogleUp.innerHTML = 'Ingresa con Google';
+  buttonToGoogleUp.setAttribute('id', 'buttonToGoogleUp');
   buttonToGoogleUp.addEventListener('click', googleAccess);
   mainUp.appendChild(buttonToGoogleUp);
   containerUp.appendChild(mainUp);

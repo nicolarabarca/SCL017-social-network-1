@@ -4,6 +4,14 @@
   margin: 0%;
 }
 
+body {
+  background: url('./lib/assets/background1.png');
+  min-height: 100vh;
+  margin: 0%;
+  padding: 0%;
+}
+
+/* intro */
 #divGif {
   background: url('https://i.picasion.com/pic91/a84f3fcf776556e023735827dfd8fd51.gif') no-repeat center;
   background-size: cover;
@@ -13,32 +21,223 @@
 }
 
 #divTextIntro {
+  display: flex;
   font-family: 'Handlee', cursive, bold;
-  font-size: 24px;
+  font-size: 18px;
   height: 35%;
-  width: 70%;
+  width: 86%;
   background-color: transparent;
-  margin: 0% auto;
+  margin-top: 3vh;
+  margin-right: 5%;
 }
 
 #divButtonIntro {
   display: flex;
   position: relative;
-  height: 47%;
-  width: 25%;
+  width: 50%;
   background-color: transparent;
-  margin-top: 6%;
-  margin-right: 15%;
+  margin-top: 7%;
+  margin-right: 10%;
   float: right;
 }
 
 #buttonIntro {
-  background-color: rgb(243, 190, 199);
-  height: 7vh;
-  width: 16vh;
+  background-color: rgba(214, 190, 180, 0.83);
+  height: 5vh;
+  width: 20vh;
   border-radius: 4px;
-  font-family: "Handlee", cursive;
-  margin-left: 35%;
-  margin-top: -16%;
+  font-family: 'Handlee', cursive;
+  margin-left: -10%;
+  margin-top: -5%;
   box-shadow: 0 2px 15px rgba(80, 77, 78, 0.5);
+  border-style: double;
+}
+
+#footerIntro {
+  display: flex;
+  font-family: 'Handlee', cursive;
+  font-size: 15px;
+  background-color: lightskyblue;
+  position: fixed;
+  margin-top: 50%;
+}
+
+/*signUp*/
+#containerUp {
+  display: grid;
+  background-color: rgba(255, 252, 252, 0.48);
+  grid-template-rows: repeat(7, 16%);
+  grid-template-columns: 71%;
+  grid-gap: 5%;
+  justify-content: center;
+  width: 90%;
+  height: 75vh;
+  margin-top: 10vh;
+  margin-left: 5%;
+}
+
+#titleUp {
+  font-family: 'Handlee', cursive;
+  font-size: 36px;
+  line-height: 60px;
+  text-align: center;
+}
+
+#emailUp {
+  width: 214px;
+  height: 38px;
+  background: white;
+  font-family: 'Handlee', cursive;
+  justify-content: center;
+  border-style: none;
+  border-radius: 5px;
+  margin: 2%;
+}
+
+#emailUp::placeholder {
+  color: darkgrey;
+  text-align: center;
+  padding-top: 30px;
+}
+
+#passwordUp {
+  width: 214px;
+  height: 38px;
+  background: white;
+  font-family: 'Handlee', cursive;
+  justify-content: center;
+  border-style: none;
+  border-radius: 5px;
+  margin: 2%;
+}
+
+#passwordUp::placeholder {
+  color: darkgrey;
+  text-align: center;
+  padding-top: 30px;
+}
+
+#buttonCreateUser {
+  width: 216px;
+  height: 39px;
+  font-family: 'Handlee', cursive;
+  background: rgba(214, 190, 180, 0.92);
+}
+
+#termsText {
+  padding: 5%;
+  width: 34vh;
+  font-family: 'Handlee', cursive;
+  font-size: 15px;
+  justify-content: center;
+}
+
+#sendToSignInText {
+  padding: 5%;
+  width: 25vh;
+  font-family: 'Handlee', cursive;
+  font-size: 15px;
+  justify-content: center;
+}
+
+#separationTextUp {
+  padding: 5%;
+  width: 25vh;
+  font-family: 'Handlee', cursive;
+  font-size: 15px;
+  justify-content: center;
+  margin-left: 80px;
+}
+
+#buttonToGoogleUp {
+  width: 216px;
+  height: 39px;
+  font-family: 'Handlee', cursive;
+  background: rgba(214, 190, 180, 0.92); 
+}
+
+/*signin*/
+#containerIn {
+  display: grid;
+  background-color: rgba(255, 252, 252, 0.48);
+  grid-template-rows: repeat(7, 16%);
+  grid-template-columns: 71%;
+  grid-gap: 5%;
+  justify-content: center;
+  width: 90%;
+  height: 75vh;
+  margin-top: 10vh;
+  margin-left: 5%;
+}
+
+#titleIn {
+  font-family: 'Handlee', cursive;
+  font-size: 36px;
+  line-height: 60px;
+  text-align: center;
+}
+
+#emailIn {
+  width: 214px;
+  height: 38px;
+  background: white;
+  font-family: 'Handlee', cursive;
+  justify-content: center;
+  border-style: none;
+  border-radius: 5px;
+  margin: 2%;
+}
+
+#emailIn::placeholder {
+  color: darkgrey;
+  text-align: center;
+  padding-top: 30px;
+}
+
+#passwordIn {
+  width: 214px;
+  height: 38px;
+  background: white;
+  font-family: 'Handlee', cursive;
+  justify-content: center;
+  border-style: none;
+  border-radius: 5px;
+  margin: 2%;
+}
+
+#passwordIn::placeholder {
+  color: darkgrey;
+  text-align: center;
+  padding-top: 30px;
+}
+
+#buttonLoginUser {
+  width: 216px;
+  height: 39px;
+  font-family: 'Handlee', cursive;
+  background: rgba(214, 190, 180, 0.92);
+}
+
+#separationTextIn {
+  padding: 5%;
+  width: 25vh;
+  font-family: 'Handlee', cursive;
+  font-size: 15px;
+  justify-content: center;
+  margin-left: 80px;
+}
+
+#buttonToGoogleIn {
+  width: 216px;
+  height: 39px;
+  font-family: 'Handlee', cursive;
+  background: rgba(214, 190, 180, 0.92); 
+}
+
+#sendToSignUpText {
+  padding: 5%;
+  width: 25vh;
+  font-family: 'Handlee', cursive;
+  font-size: 15px;
+  justify-content: center;
 }

@@ -5,7 +5,7 @@ export const introView = () => {
   containerIntro.appendChild(divGif);
   const divTextIntro = document.createElement('div');
   divTextIntro.setAttribute('id', 'divTextIntro');
-  divTextIntro.innerHTML = '<strong>Conecta con tejedoras y tejedores de todo el mundo</strong>';
+  divTextIntro.innerHTML = '<strong>Conecta con tejedoras de todo el mundo</strong>';
   containerIntro.appendChild(divTextIntro);
   const divButtonIntro = document.createElement('div');
   divButtonIntro.setAttribute('id', 'divButtonIntro');
@@ -17,5 +17,9 @@ export const introView = () => {
   })
   divButtonIntro.appendChild(buttonIntro);
   containerIntro.appendChild(divButtonIntro);
+  const footerIntro = document.createElement('footer');
+  footerIntro.innerHTML = 'Derechos reservados Tejer&Punto';
+  footerIntro.setAttribute('id', 'footerIntro');
+  containerIntro.appendChild(footerIntro);
   return containerIntro;
 }
