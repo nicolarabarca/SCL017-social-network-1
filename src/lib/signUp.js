@@ -44,5 +44,9 @@ export const signUpView = () => {
   buttonToGoogleUp.addEventListener('click', googleAccess);
   mainUp.appendChild(buttonToGoogleUp);
   containerUp.appendChild(mainUp);
+  const footerUp = document.createElement('footer');
+  footerUp.setAttribute('id', 'footerUp');
+  footerUp.innerHTML = 'Derechos reservados @Tejer&Punto';
+  containerUp.appendChild(footerUp);
   return containerUp;
 };

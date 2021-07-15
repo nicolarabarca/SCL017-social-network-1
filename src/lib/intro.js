@@ -18,7 +18,7 @@ export const introView = () => {
   divButtonIntro.appendChild(buttonIntro);
   containerIntro.appendChild(divButtonIntro);
   const footerIntro = document.createElement('footer');
-  footerIntro.innerHTML = 'Derechos reservados Tejer&Punto';
+  footerIntro.innerHTML = 'Derechos reservados @Tejer&Punto';
   footerIntro.setAttribute('id', 'footerIntro');
   containerIntro.appendChild(footerIntro);
   return containerIntro;

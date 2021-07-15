@@ -54,12 +54,10 @@ body {
 }
 
 #footerIntro {
-  display: flex;
-  font-family: 'Handlee', cursive;
-  font-size: 15px;
-  background-color: lightskyblue;
-  position: fixed;
-  margin-top: 50%;
+  clear: both;
+  position: relative;
+  height: 200px;
+  margin-top: 15vh;
 }
 
 /*signUp*/

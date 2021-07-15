@@ -40,5 +40,9 @@ export const signInView = () => {
   sendToSignUpText.setAttribute('id', 'sendToSignUpText');
   mainIn.appendChild(sendToSignUpText);
   containerIn.appendChild(mainIn);
+  const footerIn = document.createElement('footer');
+  footerIn.setAttribute('id', 'footerIn');
+  footerIn.innerHTML = 'Derechos reservados @Tejer&Punto';
+  containerIn.appendChild(footerIn);
   return containerIn;
 };
