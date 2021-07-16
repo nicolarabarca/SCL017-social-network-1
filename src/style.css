@@ -239,3 +239,78 @@ body {
   font-size: 15px;
   justify-content: center;
 }
+
+/* mainMenu*/
+#containerMainMenu {
+  display: grid;
+  grid-template-rows: repeat(3, 16%);
+  grid-template-columns: 71%;
+  grid-gap: 2%;
+  justify-content: center;
+  position: absolute;
+  width: 294px;
+  height: 390px;
+  background: rgba(255, 252, 252, 0.48);
+  margin-top: 22vh;
+  margin-left: 5%;
+}
+
+#boxKnittingSticks {
+  background-color: teal;
+  justify-content: center;
+  width: 33vh;
+  height: 29vh;
+  margin-top: 6vh;
+  margin-left: 35%;
+  border-radius: 5px;
+}
+
+#boxSticksImg {
+  background: url(./lib/assets/sticks.png) no-repeat center;
+  width: 30vh;
+  height: 30vh;
+  margin-top: -46%;
+  border-radius: 5%;
+}
+
+#boxSticksText {
+  width: 30px;
+  height: 15px;
+  background-color: white;
+}
+
+/*
+#boxSticksText:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(68,68,170,.5);
+}
+*/
+
+#boxCrochet {
+  background-color: violet;
+  justify-content: center;
+  width: 33vh;
+  height: 29vh;
+  margin-top: 6vh;
+  margin-left: 35%;
+  border-radius: 5px; 
+}
+
+#boxCrochetImg {
+  background: url(./lib/assets/crochet.png) no-repeat center;
+  width: 30vh;
+  height: 30vh;
+  margin-top: -46%;
+  border-radius: 5%;
+}
+
+#boxCrochetText {
+  width: 30px;
+  height: 15px;
+  background-color: white; 
+}

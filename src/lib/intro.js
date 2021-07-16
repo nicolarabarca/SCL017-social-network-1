@@ -9,17 +9,18 @@ export const introView = () => {
   containerIntro.appendChild(divTextIntro);
   const divButtonIntro = document.createElement('div');
   divButtonIntro.setAttribute('id', 'divButtonIntro');
-  const buttonIntro= document.createElement('button');
+  const buttonIntro = document.createElement('button');
   buttonIntro.setAttribute('id', 'buttonIntro');
   buttonIntro.innerHTML = '<strong>Comenzar</strong>';
   buttonIntro.addEventListener('click', () => {
     window.location.href = '#/signup';
-  })
+  });
   divButtonIntro.appendChild(buttonIntro);
   containerIntro.appendChild(divButtonIntro);
   const footerIntro = document.createElement('footer');
   footerIntro.innerHTML = 'Derechos reservados @Tejer&Punto';
   footerIntro.setAttribute('id', 'footerIntro');
   containerIntro.appendChild(footerIntro);
+  
   return containerIntro;
-}
+};

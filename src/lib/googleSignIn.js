@@ -8,6 +8,7 @@ export const googleAccess = () => {
       const credential = result.credential;
       const token = credential.accessToken;
       const user = result.user;
+      window.location.href = '#/mainmenu';
     }).catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;

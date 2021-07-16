@@ -1,6 +1,7 @@
 import { introView } from './intro.js';
 import { signUpView } from './signUp.js';
 import { signInView } from './signIn.js';
+import { mainMenuView } from './mainMenu.js';
 
 const showView = (hash) => {
   const root = document.getElementById('root');
@@ -18,6 +19,8 @@ const showView = (hash) => {
     case '#/signin':
       root.appendChild(signInView());
       break;
+    case '#/mainmenu':
+      root.appendChild(mainMenuView());
     default:
       break;
   }
@@ -34,6 +37,9 @@ const changePath = (hash) => {
     return showView(hash);
   }
   if (hash === '#/signin') {
+    return showView(hash);
+  }
+  if (hash === '#/mainmenu') {
     return showView(hash);
   }
   return showView(hash);

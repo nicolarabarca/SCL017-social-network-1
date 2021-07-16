@@ -5,6 +5,7 @@ export const createUser = () => {
   firebase.auth().createUserWithEmailAndPassword(emailUp, passwordUp)
     .then((userCredential) => {
       const user = userCredential.user;
+      window.location.href = '#/mainmenu';
     })
     .catch((error) => {
       const errorCode = error.code;
