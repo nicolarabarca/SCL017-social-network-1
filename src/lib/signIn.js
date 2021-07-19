@@ -11,21 +11,31 @@ export const signInView = () => {
   headerIn.appendChild(titleIn);
   containerIn.appendChild(headerIn);
   const mainIn = document.createElement('main');
+  const formIn = document.createElement('form');
   const inputEmailIn = document.createElement('input');
   inputEmailIn.setAttribute('id', 'emailIn');
   inputEmailIn.setAttribute('type', 'email');
   inputEmailIn.setAttribute('placeholder', 'Correo electrónico');
-  mainIn.appendChild(inputEmailIn);
+  inputEmailIn.addEventListener('input', () => {
+    if (inputEmailIn.validity.typeMismatch) {
+      inputEmailIn.setCustomValidity('Debes ingresar un email válido');
+      inputEmailIn.style.border = '2px dashed #FF0000';
+    } else {
+      inputEmailIn.setCustomValidity('');
+    }
+  });
+  formIn.appendChild(inputEmailIn);
   const inputPasswordIn = document.createElement('input');
   inputPasswordIn.setAttribute('id', 'passwordIn');
   inputPasswordIn.setAttribute('type', 'password');
   inputPasswordIn.setAttribute('placeholder', 'Contraseña');
-  mainIn.appendChild(inputPasswordIn);
+  formIn.appendChild(inputPasswordIn);
   const buttonLoginUser = document.createElement('button');
   buttonLoginUser.innerHTML = 'Inicia sesión';
   buttonLoginUser.setAttribute('id', 'buttonLoginUser');
   buttonLoginUser.addEventListener('click', loginUser);
-  mainIn.appendChild(buttonLoginUser);
+  formIn.appendChild(buttonLoginUser);
+  mainIn.appendChild(formIn);
   const separationTextIn = document.createElement('p');
   separationTextIn.innerHTML = '- o -';
   separationTextIn.setAttribute('id', 'separationTextIn');

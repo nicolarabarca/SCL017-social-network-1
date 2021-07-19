@@ -11,21 +11,31 @@ export const signUpView = () => {
   headerUp.appendChild(titleUp);
   containerUp.appendChild(headerUp);
   const mainUp = document.createElement('main');
+  const formUp = document.createElement('form');
   const inputEmailUp = document.createElement('input');
   inputEmailUp.setAttribute('id', 'emailUp');
   inputEmailUp.setAttribute('type', 'email');
   inputEmailUp.setAttribute('placeholder', 'Correo electrónico');
-  mainUp.appendChild(inputEmailUp);
+  inputEmailUp.addEventListener('input', () => {
+    if (inputEmailUp.validity.typeMismatch) {
+      inputEmailUp.setCustomValidity('Debes ingresar un email válido');
+      inputEmailUp.style.border = '2px dashed #FF0000';
+    } else {
+      inputEmailUp.setCustomValidity('');
+    }
+  });
+  formUp.appendChild(inputEmailUp);
   const inputPasswordUp = document.createElement('input');
   inputPasswordUp.setAttribute('id', 'passwordUp');
   inputPasswordUp.setAttribute('type', 'password');
   inputPasswordUp.setAttribute('placeholder', 'Contraseña');
-  mainUp.appendChild(inputPasswordUp);
+  formUp.appendChild(inputPasswordUp);
   const buttonCreateUser = document.createElement('button');
   buttonCreateUser.innerHTML = 'Regístrate';
   buttonCreateUser.setAttribute('id', 'buttonCreateUser');
   buttonCreateUser.addEventListener('click', createUser);
-  mainUp.appendChild(buttonCreateUser);
+  formUp.appendChild(buttonCreateUser);
+  mainUp.appendChild(formUp);
   const termsText = document.createElement('p');
   termsText.innerHTML = 'Al registrarte, aceptas las <a href="">Condiciones</a> de Tejer & Punto.';
   termsText.setAttribute('id', 'termsText');
