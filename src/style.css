@@ -560,18 +560,6 @@ grid-area: main;
 
 
 
-@media (min-width:400px) {
-
- .containerIntro{
-   grid-template-areas:'gif gif            .             .' 
-                       'gif gif      divTextIntro divTextIntro'
-                       'gif gif      divButtonIntro divButtonIntro'
-                       'gif gif             .                 .'
-                       'footer  footer    footer           footer';
-
-                       
- }
-
  #divGif {
   background: url('https://i.picasion.com/pic91/a84f3fcf776556e023735827dfd8fd51.gif') no-repeat center;
   background-size: cover;
@@ -590,5 +578,61 @@ grid-area: main;
   font-size:18px
 }
 
+
+
+@media only screen and (min-width: 64.063em) {
+  body {
+    background-color: green;
+  }
+
+  .containerIntro {
+    display: grid;
+    position: relative;
+    padding: 11px;
+    height: 121vh;
+    grid-column-gap: 30px;
+    grid-row-gap: 20px;
+    /* justify-content: center; */
+    align-items: center;
+    grid-template-columns: min-content(200px, 1fr);
+    grid-template-rows: min-content(200px, 1fr);
+    height: 100hv;
+    grid-template-areas:
+                          'gif gif       divTextIntro divTextIntro' 
+                          'gif gif      divButtonIntro divButtonIntro'
+                          'gif gif      divButtonIntro divButtonIntro'
+                          'gif gif             .                 .'
+                          'gif gif    footer           footer';
+    grid-gap: 39px;
+    width: 161vh;
+    margin-left: 13vh;
+    margin-top: -9vh;
+}
+
+#divTextIntro {
+  width: 61vh;
+  margin-top: 20vh;
+}
+
+#divButtonIntro {
+  grid-area: divButtonIntro;
+  width: 106%;
+  height: 100%;
+}
+
+#divButtonIntro > button {
+  height: 8vh;
+  width: 25vh;
+}
+
+#footerIntro {
+  display: flex;
+  margin-top: -47%;
+  grid-area: footer;
+  width: 64%;
+  height: 83%;
+  margin-left: 13vh;
+  font-size: 15px;
+}
 
 }
