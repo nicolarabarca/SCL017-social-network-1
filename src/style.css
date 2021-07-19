@@ -15,6 +15,7 @@ body {
   display: grid;
   position: relative;
   padding: 11px;
+  height: 100vh;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
   justify-content: center;
@@ -25,8 +26,12 @@ body {
   grid-template-areas: 'gif'
                         'divTextIntro'
                         'divButtonIntro'
+                        'footerIntro'
+                        'footerIntro'
                         'footerIntro';
-  grid-gap: 10px;
+                      
+
+  grid-gap: 39px;
 }
 
 #divGif {
@@ -39,11 +44,19 @@ body {
   grid-area: gif;
 }
 
+#divTextIntro{
+  text-align: center;
+  font-family: 'Handlee', cursive;
+  font-size: large;
+  margin-left: 3%;
+}
 #divButtonIntro {
   justify-content: center;
   align-items: center;
   text-align: center;
   grid-area: divButtonIntro;
+  width: 106%;
+  margin-top: 13%;
 }
 
 #divButtonIntro > button {
@@ -52,7 +65,7 @@ body {
   width: 20vh;
   border-radius: 4px;
   font-family: 'Handlee', cursive;
-  margin-left: -10%;
+  margin-left: -3%;
   margin-top: -5%;
   box-shadow: 0 2px 15px rgba(80, 77, 78, 0.5);
   border-style: double;
@@ -63,12 +76,14 @@ body {
 
 #footerIntro {
   display: flex;
-  background-color: aqua;
   justify-content:center;
   align-items: center;
   text-align: center;
   height: 20px;
+  margin-top: 16%;
+  font-family: 'Handlee', cursive;
   grid-area: footerIntro;
+  margin-left: 4%;
 }
 
 /* signUp*/
@@ -190,8 +205,9 @@ body {
   grid-area:footer;
 }
 
-img{
+#divImgUp > img{
   grid-area: img;
+  background-image: url('./lib/assets/palillohombre.jpg');
   width: 550px; 
   height: 400px;
   align-self: center;
@@ -206,14 +222,14 @@ img{
   width: 90%;
   margin-top: 10vh;
   grid-template-areas:
-      "header"
-      "main"
-      "footer";
+      'header'
+      'main'
+      'footer';
 }
 
 #titleIn {
   grid-area: header;
-  font-family: "Handlee", cursive;
+  font-family: 'Handlee', cursive;
   font-size: 36px;
   line-height: 60px;
   text-align: center;
@@ -229,7 +245,7 @@ main{
   width: 214px;
   height: 38px;
   background: white;
-  font-family: "Handlee", cursive;
+  font-family: 'Handlee', cursive;
   justify-content: center;
   border-style: none;
   border-radius: 5px;
@@ -246,7 +262,7 @@ main{
   width: 214px;
   height: 38px;
   background: white;
-  font-family: "Handlee", cursive;
+  font-family: 'Handlee', cursive;
   justify-content: center;
   border-style: none;
   border-radius: 5px;
@@ -262,21 +278,21 @@ main{
 #buttonLoginUser {
   width: 216px;
   height: 39px;
-  font-family: "Handlee", cursive;
+  font-family: 'Handlee', cursive;
   background: rgba(214, 190, 180, 0.92);
 }
 
 #buttonToGoogleIn {
   width: 216px;
   height: 39px;
-  font-family: "Handlee", cursive;
+  font-family: 'Handlee', cursive;
   background: rgba(214, 190, 180, 0.92);
 }
 
 #separationTextIn {
   padding: 5%;
   width: 25vh;
-  font-family: "Handlee", cursive;
+  font-family: 'Handlee', cursive;
   font-size: 15px;
   justify-content: center;
   margin-left: 80px;
@@ -284,13 +300,13 @@ main{
 
 #sendToSignUpText {
   grid-area: sendToSignUpTex;
-  font-family: "Handlee", cursive;
+  font-family: 'Handlee', cursive;
   text-align: center;
 }
 
 #footerIn {
   grid-area: footer;
-  font-family: "Handlee", cursive;
+  font-family: 'Handlee', cursive;
   text-align: center;
 }
 
@@ -301,11 +317,11 @@ main{
   grid-template-rows: 31% 12% 20%;
   grid-auto-rows: minmax(85px, auto);
   grid-template-areas:
-    "main headerMain"
-    "main headerMain"
-    "main headerMain"
-    "main headerMain"
-    "footer footer";
+    'main headerMain'
+    'main headerMain'
+    'main headerMain'
+    'main headerMain'
+    'footer footer';
 }
 #containerMainMenu > main {
 grid-area: main;
@@ -317,7 +333,7 @@ grid-area: main;
   height: 36vh;
   width: 49vh;
   margin-top: 20vh;
-  font-family: "Handlee", cursive;
+  font-family: 'Handlee', cursive;
   font-size: 27px;
 }
 
@@ -334,13 +350,13 @@ grid-area: main;
 
 #boxSticksImg {
   grid-area: main;
-  background: url(./lib/assets/sticks.png) no-repeat center;
+  background: url('./lib/assets/sticks.png') no-repeat center;
   width: 26vh;
   height: 26vh;
   border-radius: 5%;
   margin-top: 2vh;
   margin-left: 2vh;
-  font-family: "Handlee", cursive;
+  font-family: 'Handlee', cursive;
   font-weight: bold;
   font-size: 25px;
 }
@@ -349,7 +365,7 @@ grid-area: main;
   grid-area: main;
   width: 27%;
   height: 4%;
-  font-family: "Handlee", cursive;
+  font-family: 'Handlee', cursive;
   font-weight: bold;
   font-size: 25px;
   background-color: white;
@@ -381,7 +397,7 @@ grid-area: main;
   border-radius: 5%;
   margin-top: 2vh;
   margin-left: 2vh;
-  font-family: "Handlee", cursive;
+  font-family: 'Handlee', cursive;
   font-weight: bold;
   font-size: 25px;
 }
@@ -390,7 +406,7 @@ grid-area: main;
   grid-area: main;
   width: 27%;
   height: 4%;
-  font-family: "Handlee", cursive;
+  font-family: 'Handlee', cursive;
   font-weight: bold;
   font-size: 25px;
   background-color: white;
@@ -407,7 +423,7 @@ grid-area: main;
   grid-area: main;
   width: 30%;
   height: 4%;
-  font-family: "Handlee", cursive;
+  font-family: 'Handlee', cursive;
   font-weight: bold;
   font-size: 25px;
   background-color: white;
@@ -426,53 +442,153 @@ grid-area: main;
   justify-self: center;
 }
 
-@media only screen {
-} /* Define mobile styles */
 
-@media only screen and (max-width: 40em) {
-  body {
-    background-color: rgb(95, 115, 128);
-    height: 20vh;
-  }
-} /* max-width 640px, mobile-only styles */
+/*Responsive iPhone X*/
 
-@media only screen and (min-width: 40.063em) {
-  body {
-    background-color: yellow;
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3){
+  body{
+    background-color:turquoise;
   }
-} /* min-width 641px, medium screens */
 
-@media only screen and (min-width: 40.063em) and (max-width: 64em) {
-  body {
-    background-color: blue;
+  /*SignUp*/
+  #containerUp {
+    display: grid;
+    background-color: rgba(255, 252, 252, 0.48);
+    grid-template-columns: 1fr;
+    grid-template-areas: 'header'
+                         'a '
+                         'b '
+                         'c '
+                         'd '
+                         'e '
+                         'footer ';
+    width: 90%;
+    row-gap:11px;
+    justify-items: center;
+    height: 75vh;
+    margin-top: 10vh;
+    margin-left: 5%;
   }
-} /* min-width 641px and max-width 1024px */
+#containerUp > header{
+  justify-content: center;
+}
 
-@media only screen and (min-width: 64.063em) {
-  body {
-    background-color: green;
-  }
-} /* min-width 1025px, large screens */
+#containerUp > main{
+  grid-area: a;
+  align-self: center;
+  margin-left: 59px;
+}
+#termsText {
+  width: 28vh;
+  font-family: 'Handlee', cursive;
+  font-size: 15px;
+  text-align: center;
+  margin-top: 0%;
+  margin-left: -3%;
+}
 
-@media only screen and (min-width: 64.063em) and (max-width: 90em) {
-  body {
-    background-image: red;
+  #divImgUp{
+    display: none;
   }
-} /* min-width 1025px and max-width 1440px */
+}
 
-@media only screen and (min-width: 90.063em) {
-  body {
-    background-color: brown;
-  }
-} /* min-width 1441px, xlarge screens */
-@media only screen and (min-width: 90.063em) and (max-width: 120em) {
-  body {
-    background-color: turquoise;
-  }
-} /* min-width 1441px and max-width 1920px */
+/*SignIn*/
+#containerIn {
+  display: grid;
+  background-color: rgba(255, 252, 252, 0.48);
+  grid-gap: 3%;
+  height: 75vh;
+  width: 90%;
+  row-gap:11px;
+  margin-left: 5%;
+  justify-content: center;
+  margin-top: 10vh;
+  grid-template-areas:
+      'header'
+      'main'
+      'footer'
+      'footer'
+      'footer';
+}
 
-@media only screen and (min-width: 120.063em) {
-  body {
-    background-color: gold;
-  }
-} /* min-width 1921px, xxlarge screens */
+#containerIn > main{
+  align-self: center;
+  margin-left: 59px;
+  margin-top: -2%;
+}
+#sendToSignUpText{
+  width: 28vh;
+  text-align: center;
+  margin-top: 0%;
+  margin-left: -3%;
+}
+
+#footerIn {
+  grid-area: footer;
+  font-family: 'Handlee', cursive;
+  text-align: center;
+  margin-top: 67%;
+}
+
+/*MainMenu*/
+
+#headerMainMenu {
+  font-size: 30px;
+}
+
+#footerMainMenu{
+  margin-top: 32%;
+}
+
+#boxKnittingSticks{
+  margin-left:7vh ;
+  margin-top: 16vh;
+}
+
+#boxCrochet{
+  margin-left:7vh;
+}
+/*Pantallas grandes (desktops de menos de 1200px)*/
+@media (max-width: 1199.98px) { 
+
+ }
+
+/*Pantallas medianas (tablets de menos de 992px)*/
+@media (max-width: 991.98px) { 
+  
+ }
+
+
+
+@media (min-width:400px) {
+
+ .containerIntro{
+   grid-template-areas:'gif gif            .             .' 
+                       'gif gif      divTextIntro divTextIntro'
+                       'gif gif      divButtonIntro divButtonIntro'
+                       'gif gif             .                 .'
+                       'footer  footer    footer           footer';
+
+                       
+ }
+
+ #divGif {
+  background: url('https://i.picasion.com/pic91/a84f3fcf776556e023735827dfd8fd51.gif') no-repeat center;
+  background-size: cover;
+  height: 500px;
+  width: 500px;
+  display: flex;
+  gap: 10px;
+  grid-area:gif;
+}
+
+#divTextIntro {
+  font-size: 28px;
+}
+
+#footerIntro{
+  font-size:18px
+}
+
+
+}

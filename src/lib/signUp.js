@@ -49,10 +49,13 @@ export const signUpView = () => {
   buttonToGoogleUp.addEventListener('click', googleAccess);
   mainUp.appendChild(buttonToGoogleUp);
   containerUp.appendChild(mainUp);
-  const imgUp = document.createElement('img');
+  const divImgUp=document.createElement('div');
+  divImgUp.setAttribute('id', 'divImgUp');
+  const imgUp=document.createElement('img');
   imgUp.setAttribute('id', 'imgUp');
-  imgUp.src = "./lib/assets/palillohombre.jpg";
-  containerUp.appendChild(imgUp);
+  divImgUp.appendChild(imgUp);
+  containerUp.appendChild(divImgUp);
+
   const footerUp = document.createElement('footer');
   footerUp.setAttribute('id', 'footerUp');
   footerUp.innerHTML = 'Derechos reservados @Tejer&Punto';
