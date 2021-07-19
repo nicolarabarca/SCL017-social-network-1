@@ -450,6 +450,11 @@ grid-area: main;
     background-color:turquoise;
   }
 
+  /* intro */
+  #divTextIntro {
+    font-size: 22px;
+}
+
   /*SignUp*/
   #containerUp {
     display: grid;
