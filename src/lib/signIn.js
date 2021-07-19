@@ -1,5 +1,6 @@
 import { loginUser } from './signInLogic.js';
 import { googleAccess } from './googleSignIn.js';
+import { checkEmailValidity } from './checkEmail.js';
 
 export const signInView = () => {
   const containerIn = document.createElement('div');
@@ -14,16 +15,10 @@ export const signInView = () => {
   const formIn = document.createElement('form');
   const inputEmailIn = document.createElement('input');
   inputEmailIn.setAttribute('id', 'emailIn');
+  inputEmailIn.setAttribute('class', 'emails');
   inputEmailIn.setAttribute('type', 'email');
   inputEmailIn.setAttribute('placeholder', 'Correo electrónico');
-  inputEmailIn.addEventListener('input', () => {
-    if (inputEmailIn.validity.typeMismatch) {
-      inputEmailIn.setCustomValidity('Debes ingresar un email válido');
-      inputEmailIn.style.border = '2px dashed #FF0000';
-    } else {
-      inputEmailIn.setCustomValidity('');
-    }
-  });
+  inputEmailIn.addEventListener('input', checkEmailValidity);
   formIn.appendChild(inputEmailIn);
   const inputPasswordIn = document.createElement('input');
   inputPasswordIn.setAttribute('id', 'passwordIn');
