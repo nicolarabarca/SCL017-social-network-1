@@ -1,6 +1,6 @@
-import { createUser } from './signUpLogic.js';
-import { googleAccess } from './googleSignIn.js';
-import { checkEmailValidity } from './checkEmail.js';
+import { createUser } from '../logic/signUpLogic.js';
+import { googleAccess } from '../logic/googleSignIn.js';
+import { checkEmailValidity } from '../logic/checkEmail.js';
 
 export const signUpView = () => {
   const containerUp = document.createElement('div');
@@ -55,7 +55,6 @@ export const signUpView = () => {
   imgUp.setAttribute('id', 'imgUp');
   divImgUp.appendChild(imgUp);
   containerUp.appendChild(divImgUp);
-
   const footerUp = document.createElement('footer');
   footerUp.setAttribute('id', 'footerUp');
   footerUp.innerHTML = 'Derechos reservados @Tejer&Punto';

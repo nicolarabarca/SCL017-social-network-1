@@ -1,7 +1,7 @@
-import { introView } from './intro.js';
-import { signUpView } from './signUp.js';
-import { signInView } from './signIn.js';
-import { mainMenuView } from './mainMenu.js';
+import { introView } from './views/intro.js';
+import { signUpView } from './views/signUp.js';
+import { signInView } from './views/signIn.js';
+import { mainMenuView } from './views/mainMenu.js';
 
 const showView = (hash) => {
   const root = document.getElementById('root');
