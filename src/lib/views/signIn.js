@@ -41,6 +41,12 @@ export const signInView = () => {
   buttonToGoogleIn.setAttribute('id', 'buttonToGoogleIn');
   buttonToGoogleIn.addEventListener('click', googleAccess);
   mainIn.appendChild(buttonToGoogleIn);
+  const divImgIn = document.createElement('div');
+  divImgIn.setAttribute('id','divImgIn');
+  const imgIn = document.createElement('img');
+  imgIn.setAttribute('id', 'imgIn');
+  divImgIn.appendChild(imgIn);
+  containerIn.appendChild(divImgIn);
   const sendToSignUpText = document.createElement('p');
   sendToSignUpText.innerHTML = '¿No tienes una cuenta? <a href="#/signup">Regístrate</a>.';
   sendToSignUpText.setAttribute('id', 'sendToSignUpText');

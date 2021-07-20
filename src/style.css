@@ -461,32 +461,40 @@ body {
   }
   #titleIn {
     display: flex;
-    margin-left: 24vh;
+    margin-left: 26vh;
     font-size: 23px;
+    width: 20vh;
   }
   #formIn {
-    margin-top: 5vh;
-    margin-left: -40vh;
+    margin-top: -1vh;
+    margin-left: -137vh;
     height: 19vh;
     width: 33vh;
   }
 
   #separationTextIn {
-    margin-left: -134px;
+    margin-left: -806px;
     margin-top: 9vh;
   }
   #buttonToGoogleIn {
     margin-top: 4vh;
-    margin-left: -39vh;
+    margin-left: -136vh;
   }
   #sendToSignUpText {
-    margin-top: 5vh;
-    margin-left: -37vh;
+    margin-top: 3vh;
+    margin-left: -240vh;
   }
-
+  #divImgIn > img {
+    background-image: url(./lib/assets/palillohombre.jpg);
+    width: 55vh;
+    height: 37vh;
+    margin-left: 41vh;
+    margin-top: 22vh;
+  }
   #footerIn {
-    margin-left: 98px;
+    margin-left: -364px;
     margin-top: 73vh;
+    height: 10%;
   }
 
   /* mainMenu*/
@@ -532,4 +540,5 @@ body {
     margin-left: -55vh;
   }
 }
+
 
