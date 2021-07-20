@@ -13,6 +13,7 @@ export const signUpView = () => {
   containerUp.appendChild(headerUp);
   const mainUp = document.createElement('main');
   const formUp = document.createElement('form');
+  formUp.setAttribute('id', 'formUp');
   const inputEmailUp = document.createElement('input');
   inputEmailUp.setAttribute('id', 'emailUp');
   inputEmailUp.setAttribute('class', 'emails');

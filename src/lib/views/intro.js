@@ -1,6 +1,6 @@
 export const introView = () => {
   const containerIntro = document.createElement('div');
-  containerIntro.setAttribute('class', 'containerIntro');
+  containerIntro.setAttribute('id', 'containerIntro');
   const divGif = document.createElement('div');
   divGif.setAttribute('id', 'divGif');
   containerIntro.appendChild(divGif);
