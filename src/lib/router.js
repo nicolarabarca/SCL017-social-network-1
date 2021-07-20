@@ -2,6 +2,7 @@ import { introView } from './views/intro.js';
 import { signUpView } from './views/signUp.js';
 import { signInView } from './views/signIn.js';
 import { mainMenuView } from './views/mainMenu.js';
+import { feedView } from './views/feed.js';
 
 const showView = (hash) => {
   const root = document.getElementById('root');
@@ -21,6 +22,10 @@ const showView = (hash) => {
       break;
     case '#/mainmenu':
       root.appendChild(mainMenuView());
+      break;
+    case '#/feed':
+      root.appendChild(feedView());
+      break;
     default:
       break;
   }
@@ -40,6 +45,9 @@ const changePath = (hash) => {
     return showView(hash);
   }
   if (hash === '#/mainmenu') {
+    return showView(hash);
+  }
+  if (hash === '#/feed') {
     return showView(hash);
   }
   return showView(hash);
