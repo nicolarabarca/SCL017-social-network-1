@@ -1,5 +1,7 @@
-// Este es el punto de entrada de tu aplicacion
+import { firebaseConfig } from './lib/logic/firebConfig.js';
+import { observer } from './lib/logic/observerFB.js';
+import { init } from './lib/router.js';
 
-import { myFunction } from './lib/index.js';
-
-myFunction();
+firebase.initializeApp(firebaseConfig);
+observer();
+window.addEventListener('load', init);

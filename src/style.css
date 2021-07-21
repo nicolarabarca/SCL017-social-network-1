@@ -1,0 +1,544 @@
+body {
+  background-color: antiquewhite;
+}
+#containerIntro {
+  display: grid;
+  grid-gap: 6vh;
+  grid-template-areas:
+    "gif"
+    "divTextIntro"
+    "divButtonIntro"
+    "footerIntro"
+    "footerIntro"
+    "footerIntro";
+}
+#divGif {
+  background: url("https://i.picasion.com/pic91/a84f3fcf776556e023735827dfd8fd51.gif")
+    no-repeat center;
+  background-size: cover;
+  height: 56vh;
+  width: 43vh;
+  display: flex;
+  margin: 0% auto;
+  grid-area: gif;
+}
+#divTextIntro {
+  text-align: center;
+  font-family: "Handlee", cursive;
+  font-size: large;
+  margin-left: 3%;
+}
+#divButtonIntro {
+  text-align: center;
+  font-family: "Handlee", cursive;
+  font-size: 16px;
+}
+#divButtonIntro > button {
+  background-color: rgba(214, 190, 180, 0.83);
+  height: 5vh;
+  width: 20vh;
+  border-radius: 4px;
+  font-family: "Handlee", cursive;
+  margin-left: -3%;
+  margin-top: -5%;
+  box-shadow: 0 2px 15px rgba(80, 77, 78, 0.5);
+  border-style: double;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#footerIntro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 20px;
+  margin-top: 16%;
+  font-family: "Handlee", cursive;
+  grid-area: footerIntro;
+  margin-left: 4%;
+}
+/* signUp*/
+#containerUp {
+  display: grid;
+  background-color: rgba(255, 252, 252, 0.48);
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header "
+    "a "
+    "b "
+    "c "
+    "d "
+    "e "
+    " footer";
+}
+#titleUp {
+  font-family: "Handlee", cursive;
+  font-size: 36px;
+  line-height: 60px;
+  text-align: center;
+  justify-content: flex-start;
+  grid-area: header;
+}
+#containerUp > main {
+  grid-area: a;
+  align-self: center;
+  margin-left: 48px;
+}
+
+#emailUp {
+  width: 214px;
+  height: 38px;
+  background: white;
+  font-family: "Handlee", cursive;
+  border-style: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 23px;
+  grid-area: a;
+}
+#emailUp::placeholder {
+  color: darkgrey;
+  text-align: center;
+}
+#passwordUp {
+  width: 214px;
+  height: 38px;
+  background: white;
+  font-family: "Handlee", cursive;
+  display: flex;
+  flex: center;
+  border-style: none;
+  border-radius: 5px;
+  grid-area: c;
+  margin-bottom: 23px;
+}
+
+#passwordUp::placeholder {
+  color: darkgrey;
+  text-align: center;
+  padding-top: 30px;
+}
+#buttonCreateUser {
+  width: 216px;
+  height: 39px;
+  font-family: "Handlee", cursive;
+  background: rgba(214, 190, 180, 0.92);
+  grid-area: d;
+  margin-bottom: 23px;
+}
+
+#termsText {
+  width: 39vh;
+  font-family: "Handlee", cursive;
+  font-size: 15px;
+  text-align: center;
+}
+#sendToSignInText {
+  width: 29vh;
+  font-family: "Handlee", cursive;
+  font-size: 15px;
+  text-align: center;
+  margin-left: 4vh;
+}
+#separationTextUp {
+  padding: 5%;
+  width: 25vh;
+  font-family: "Handlee", cursive;
+  font-size: 15px;
+  justify-content: center;
+  margin-left: 80px;
+}
+#buttonToGoogleUp {
+  width: 216px;
+  height: 39px;
+  font-family: "Handlee", cursive;
+  background: rgba(214, 190, 180, 0.92);
+  margin-top: -9vh;
+}
+#footerUp {
+  grid-area: footer;
+  font-family: "Handlee", cursive;
+  text-align: center;
+  font-size: 14px;
+}
+/* signin */
+#containerIn {
+  display: grid;
+  background-color: rgba(255, 252, 252, 0.48);
+  grid-template-columns: 1fr;
+  gap: 3vh;
+  margin-top: 6vh;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+#titleIn {
+  grid-area: header;
+  font-family: "Handlee", cursive;
+  font-size: 36px;
+  line-height: 60px;
+  text-align: center;
+  margin-left: 3v;
+}
+#containerIn > main {
+  grid-area: main;
+  align-self: center;
+  margin-left: 48px;
+}
+
+#emailIn {
+  width: 214px;
+  height: 38px;
+  background: white;
+  font-family: "Handlee", cursive;
+  justify-content: center;
+  border-style: none;
+  border-radius: 5px;
+  grid-area: main;
+  margin: 2%;
+}
+
+#emailIn::placeholder {
+  color: darkgrey;
+  text-align: center;
+  padding-top: 30px;
+}
+#passwordIn {
+  width: 214px;
+  height: 38px;
+  background: white;
+  font-family: "Handlee", cursive;
+  justify-content: center;
+  border-style: none;
+  border-radius: 5px;
+  grid-area: main;
+  margin: 2%;
+}
+#buttonLoginUser {
+  width: 216px;
+  height: 39px;
+  margin: 2%;
+  font-family: "Handlee", cursive;
+  background: rgba(214, 190, 180, 0.92);
+  grid-area: main;
+}
+
+#passwordIn::placeholder {
+  color: darkgrey;
+  text-align: center;
+  padding-top: 30px;
+}
+#separationTextIn {
+  padding: 5%;
+  width: 25vh;
+  font-family: "Handlee", cursive;
+  font-size: 15px;
+  justify-content: center;
+  margin-left: 80px;
+}
+#buttonToGoogleIn {
+  width: 216px;
+  height: 39px;
+  font-family: "Handlee", cursive;
+  background: rgba(214, 190, 180, 0.92);
+  grid-area: main;
+}
+#sendToSignUpText {
+  grid-area: main;
+  font-family: "Handlee", cursive;
+  text-align: center;
+  font-size: 15px;
+  margin-left: -7vh;
+}
+#footerIn {
+  grid-area: footer;
+  font-family: "Handlee", cursive;
+  text-align: center;
+  font-size: 14px;
+}
+/* mainMenu*/
+#containerMainMenu {
+  display: grid;
+  grid-template-areas:
+    "main headerMain"
+    "main headerMain"
+    "main headerMain"
+    "main headerMain"
+    "footer footer";
+}
+#containerMainMenu > main {
+  grid-area: main;
+}
+#headerMainMenu {
+  grid-area: headerMain;
+  background: transparent;
+  transform: rotate(-90deg);
+  height: 36vh;
+  width: 49vh;
+  margin-top: 20vh;
+  font-family: "Handlee", cursive;
+  font-size: 20px;
+  margin-left: -5vh;
+}
+#boxKnittingSticks {
+  grid-area: main;
+  background-color: rgba(245, 126, 215, 0.755);
+  justify-content: center;
+  width: 30vh;
+  height: 30vh;
+  border-radius: 6px;
+  margin-top: 10vh;
+  margin-left: 10vh;
+}
+#boxSticksImg {
+  grid-area: main;
+  background: url("./lib/assets/sticks.png") no-repeat center;
+  width: 26vh;
+  height: 26vh;
+  border-radius: 5%;
+  margin-top: 2vh;
+  margin-left: 2vh;
+  font-family: "Handlee", cursive;
+  font-weight: bold;
+  font-size: 25px;
+}
+#boxSticksText {
+  grid-area: main;
+  width: 27%;
+  height: 4%;
+  font-family: "Handlee", cursive;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: white;
+  position: absolute;
+  border-radius: 5px;
+  opacity: 0.5;
+  margin-top: -24vh;
+  margin-left: 6vh;
+  justify-items: center;
+  padding-left: 5vh;
+}
+#boxCrochet {
+  grid-area: main;
+  background-color: teal;
+  justify-content: center;
+  width: 30vh;
+  height: 30vh;
+  border-radius: 6px;
+  margin-top: 5vh;
+  margin-left: 10vh;
+}
+#boxCrochetImg {
+  grid-area: main;
+  background: url("./lib/assets/crochet.png") no-repeat center;
+  width: 26vh;
+  height: 26vh;
+  border-radius: 5%;
+  margin-top: 2vh;
+  margin-left: 2vh;
+  font-family: "Handlee", cursive;
+  font-weight: bold;
+  font-size: 25px;
+}
+#boxCrochetText {
+  grid-area: main;
+  width: 27%;
+  height: 4%;
+  font-family: "Handlee", cursive;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: white;
+  position: absolute;
+  border-radius: 5px;
+  opacity: 0.5;
+  margin-top: -24vh;
+  margin-left: 6vh;
+  justify-items: center;
+  padding-left: 5vh;
+}
+#footerMainMenu {
+  grid-area: footer;
+  font-size: 15px;
+  margin-left: 7vh;
+  margin-top: 20vh;
+}
+@media only screen and (min-width: 64.063em) {
+  body {
+    /*background-color: green;*/
+    margin: 0%;
+    padding: 0%;
+  }
+  #containerIntro {
+    display: flex;
+    background-color: rgba(214, 190, 180, 0.92);
+    min-height: 85vh;
+    width: 162vh;
+    margin: 0% auto;
+    margin-top: 10vh;
+    opacity: 0.8;
+  }
+  #divGif {
+    display: flex;
+    width: 63vh;
+    height: 43vh;
+    margin-left: 23vh;
+    margin-top: 17vh;
+  }
+
+  #divTextIntro {
+    display: flex;
+    font-family: "Handlee", cursive;
+    margin-right: -53%;
+    width: 95vh;
+    margin-top: 27vh;
+    float: right;
+  }
+  #divButtonIntro {
+    margin-top: 50vh;
+  }
+  #footerIntro {
+    display: flex;
+    margin-top: 42%;
+    font-family: "Handlee", cursive;
+    margin-left: -38%;
+    width: 99vh;
+  }
+  #containerUp {
+    display: flex;
+    background-color: rgba(214, 190, 180, 0.92);
+    min-height: 85vh;
+    width: 162vh;
+    margin: 0% auto;
+    margin-top: 10vh;
+    opacity: 0.8;
+  }
+  #titleUp {
+    margin-left: 35vh;
+    font-size: 36px;
+  }
+  #formUp {
+    margin-top: 18vh;
+    margin-left: -43vh;
+  }
+  #termsText {
+    margin-left: -44vh;
+  }
+
+  #sendToSignInText {
+    margin-left: -40vh;
+  }
+  #separationTextUp {
+    margin-left: -158px;
+    margin-top: 0vh;
+  }
+  #buttonToGoogleUp {
+    margin-left: -44vh;
+    margin-top: 3vh;
+  }
+  #divImgUp > img {
+    background-image: url(./lib/assets/palillohombre.jpg);
+    width: 60vh;
+    height: 37vh;
+    margin-left: 10vh;
+    margin-top: 22vh;
+  }
+  #footerUp {
+    margin-top: 84vh;
+    margin-left: -48vh;
+  }
+  #containerIn {
+    display: flex;
+    background-color: rgba(214, 190, 180, 0.92);
+    min-height: 85vh;
+    width: 162vh;
+    margin: 0% auto;
+    margin-top: 10vh;
+    opacity: 0.8;
+  }
+  #titleIn {
+    display: flex;
+    margin-left: 26vh;
+    font-size: 23px;
+    width: 20vh;
+  }
+  #formIn {
+    margin-top: -1vh;
+    margin-left: -137vh;
+    height: 19vh;
+    width: 33vh;
+  }
+
+  #separationTextIn {
+    margin-left: -806px;
+    margin-top: 9vh;
+  }
+  #buttonToGoogleIn {
+    margin-top: 4vh;
+    margin-left: -136vh;
+  }
+  #sendToSignUpText {
+    margin-top: 3vh;
+    margin-left: -240vh;
+  }
+  #divImgIn > img {
+    background-image: url(./lib/assets/palillohombre.jpg);
+    width: 55vh;
+    height: 37vh;
+    margin-left: 41vh;
+    margin-top: 22vh;
+  }
+  #footerIn {
+    margin-left: -364px;
+    margin-top: 73vh;
+    height: 10%;
+  }
+
+  /* mainMenu*/
+  #containerMainMenu {
+    display: flex;
+    background-color: rgba(214, 190, 180, 0.92);
+    min-height: 85vh;
+    width: 162vh;
+    margin: 0% auto;
+    margin-top: 10vh;
+    opacity: 0.8;
+  }
+  #headerMainMenu {
+    transform: rotate(0deg);
+    height: 36vh;
+    width: 49vh;
+    margin-top: 0vh;
+    font-size: 24px;
+    margin-left: 62vh;
+  }
+
+  #boxKnittingSticks {
+    margin-top: 25vh;
+    margin-left: -65vh;
+  }
+  #boxSticksText {
+    width: 8%;
+    height: 4%;
+  }
+
+  #boxCrochet {
+    margin-top: -30vh;
+    margin-left: -26vh;
+  }
+  #boxCrochetText {
+    width: 9%;
+    height: 4%;
+    margin-left: 4vh;
+  }
+
+  #footerMainMenu {
+    margin-top: 73vh;
+    margin-left: -55vh;
+  }
+}
+
+
