@@ -232,12 +232,15 @@ body {
   text-align: center;
   padding-top: 30px;
 }
+
 #separationTextIn {
   padding: 5%;
   width: 25vh;
   font-family: "Handlee", cursive;
   font-size: 15px;
   justify-content: center;
+  width: 15%;
+  text-align: center;
   margin-left: 80px;
 }
 #buttonToGoogleIn {
@@ -540,5 +543,3 @@ body {
     margin-left: -55vh;
   }
 }
-
-

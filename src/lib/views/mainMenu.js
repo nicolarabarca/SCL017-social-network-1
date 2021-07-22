@@ -1,3 +1,4 @@
+
 export const mainMenuView = () => {
   const containerMainMenu = document.createElement('div');
   containerMainMenu.setAttribute('id', 'containerMainMenu');
@@ -11,7 +12,7 @@ export const mainMenuView = () => {
   const boxKnittingSticks = document.createElement('div');
   boxKnittingSticks.setAttribute('id', 'boxKnittingSticks');
   const boxKnittingSticksAnchor = document.createElement('a');
-  boxKnittingSticksAnchor.setAttribute('href', '') //acá ponemos la ruta a la que nos lleva la imagen.
+  boxKnittingSticksAnchor.setAttribute('href', '#/feed');//acá ponemos la ruta a la que nos lleva la imagen.
   const boxSticksImg = document.createElement('img');
   boxSticksImg.setAttribute('id', 'boxSticksImg');
   boxKnittingSticksAnchor.appendChild(boxSticksImg);
@@ -24,7 +25,7 @@ export const mainMenuView = () => {
   const boxCrochet = document.createElement('div');
   boxCrochet.setAttribute('id', 'boxCrochet');
   const boxCrochetAnchor = document.createElement('a');
-  boxCrochetAnchor.setAttribute('href', '') // acá ponemos la ruta a la que nos lleva la imagen.
+  boxCrochetAnchor.setAttribute('href', '#/feed') // acá ponemos la ruta a la que nos lleva la imagen.
   const boxCrochetImg = document.createElement('img');
   boxCrochetImg.setAttribute('id', 'boxCrochetImg');
   boxCrochetAnchor.appendChild(boxCrochetImg);
