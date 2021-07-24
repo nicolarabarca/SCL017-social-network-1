@@ -37,10 +37,11 @@ export const patternsView = () => {
   containerMenuFeed.appendChild(boxSignOutUser);
 
 
-  const boxp= document.createElement('p');
-  boxp.setAttribute('id', 'boxmiscelaneo');
-  boxp.innerHTML = 'estoy en patrones';
-  containerMenuFeed.appendChild(boxp);
+  const boxbuilding= document.createElement('p');
+  boxbuilding.setAttribute('id', 'boxbuilding');
+  boxbuilding.innerHTML = 'Patrones en construcción ';
+  containerMenuFeed.appendChild(boxbuilding);
+
   
 
 

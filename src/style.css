@@ -434,26 +434,20 @@ ul {
   float: left;
 }
 
-/*#containerMenuFeedNav > a {
-  line-height: 60px;
+#boxbuilding {
+  width: 45vh;
+  height: 19vh;
+  grid-area: main;
+  opacity: 0.8;
+  background-color: rgba(214, 190, 180, 0.92);
+  font-family: "Handlee", cursive;
+  font-weight: bold;
   font-size: 19px;
-  display: inline-block;
-  position: relative;
-  z-index: 1;
-  text-decoration: none;
   text-align: center;
-  color: black;
-  cursor: pointer;
-  margin-top: 1vh;
-  margin-left: 1vh;
+  margin-top: 20vh;
+  line-height: 18vh;
+  border-style: dotted;
 }
-a:nth-child(2) {
-  width: 115px;
-}
-a:nth-child(3) {
-  width: 110px;
-}*/
-
 @media only screen and (min-width: 64.063em) {
   body {
     /*background-color: green;*/

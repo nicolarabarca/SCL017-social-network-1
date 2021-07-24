@@ -36,10 +36,10 @@ export const miscellaneousView = () => {
   boxSignOutUser.addEventListener('click', signOutUser );
   containerMenuFeed.appendChild(boxSignOutUser);
   
-  const box= document.createElement('p');
-  box.setAttribute('id', 'boxmiscelaneo');
-  box.innerHTML = 'estoy en miscelaneo';
-  containerMenuFeed.appendChild(box);
+  const boxbuilding= document.createElement('p');
+  boxbuilding.setAttribute('id', 'boxbuilding');
+  boxbuilding.innerHTML = 'Misceláneo en construcción ';
+  containerMenuFeed.appendChild(boxbuilding);
 
 
   generalContainer.appendChild(containerMenuFeed);
