@@ -1,7 +1,7 @@
 
 import { signOutUser } from '../logic/signOutFB.js';
 
-export const feedView = () => {
+export const patternsView = () => {
 
   const containerFeed = document.createElement('div');
   containerFeed.setAttribute('id', 'containerFeed');
@@ -35,6 +35,12 @@ export const feedView = () => {
   boxSignOutUser.setAttribute('id', 'boxsignOutUser');
   boxSignOutUser.addEventListener('click', signOutUser );
   containerMenuFeed.appendChild(boxSignOutUser);
+
+
+  const boxp= document.createElement('p');
+  boxp.setAttribute('id', 'boxmiscelaneo');
+  boxp.innerHTML = 'estoy en patrones';
+  containerMenuFeed.appendChild(boxp);
   
 
 
@@ -43,4 +49,3 @@ export const feedView = () => {
   return containerFeed;
 
 }
-
