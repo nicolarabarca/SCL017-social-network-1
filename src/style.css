@@ -376,10 +376,10 @@ body {
   grid-template-columns: 1fr;
   gap: 3vh;
   margin-top: 6vh;
-  grid-template-areas:
+  /*grid-template-areas:
     "navigator"
-    "main"
-    "main";
+    "conatinerPost"
+    "containerPost";*/
 }
 
 #containerMenuFeedUl {
@@ -388,6 +388,8 @@ body {
   background-color: #3aa9a1;
   border-radius: 8px;
   grid-area: navigator;
+  position: fixed;
+  z-index: 100;
 }
 
 #boxHome {
@@ -433,6 +435,49 @@ ul {
 #containerMenuFeedUl > li {
   float: left;
 }
+#containerPost {
+  grid-area: containerPost;
+  width: 36vh;
+  height: 7vh;
+  background: black;
+  grid-area: main;
+}
+
+#writePost {
+  width: 36vh;
+  height: 7vh;
+  background: white;
+  font-family: "Handlee", cursive;
+  border-style: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  grid-area: containerPost;
+}
+#writePost::placeholder {
+  color: darkgrey;
+  text-align: center;
+}
+#divButtonPost {
+  text-align: center;
+  font-family: "Handlee", cursive;
+  font-size: 16px;
+  grid-area: main;
+}
+#divButtonPost > button {
+  background-color: rgba(214, 190, 180, 0.83);
+  height: 5vh;
+  width: 20vh;
+  border-radius: 4px;
+  font-family: "Handlee", cursive;
+  margin-left: -3%;
+  margin-top: -5%;
+  box-shadow: 0 2px 15px rgba(80, 77, 78, 0.5);
+  border-style: double;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
 #boxbuilding {
   width: 45vh;
@@ -448,6 +493,47 @@ ul {
   line-height: 18vh;
   border-style: dotted;
 }
+
+td {
+  width: 20vh;
+  height: 20vh;
+  opacity: 0.5;
+  background: #efd1cf;
+  border-radius: 8px;
+  font-family: "Handlee", cursive;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  border-style: outset;
+}
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid purple;
+}
+
+thead th:nth-child(1) {
+  width: 30%;
+}
+
+thead th:nth-child(2) {
+  width: 20%;
+}
+
+thead th:nth-child(3) {
+  width: 15%;
+}
+
+thead th:nth-child(4) {
+  width: 35%;
+}
+
+th,
+td {
+  padding: 20px;
+}
+
 @media only screen and (min-width: 64.063em) {
   body {
     /*background-color: green;*/

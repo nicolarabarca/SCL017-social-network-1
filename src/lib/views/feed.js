@@ -1,5 +1,6 @@
-
 import { signOutUser } from '../logic/signOutFB.js';
+import{ savePost } from '../../main.js';
+
 
 export const feedView = () => {
 
@@ -36,11 +37,44 @@ export const feedView = () => {
   boxSignOutUser.addEventListener('click', signOutUser );
   containerMenuFeed.appendChild(boxSignOutUser);
   
+  
+
+  const containerPost = document.createElement('div')
+  containerPost.setAttribute('id', 'containerPost');
+  const writePost = document.createElement('input');
+  writePost.setAttribute('id', 'writePost');
+  writePost.setAttribute('id', 'writePost');
+  writePost.setAttribute('type', 'text');
+  writePost.setAttribute('placeholder', 'Escribe lo que piensas');
+  containerPost.appendChild(writePost);
+  generalContainer.appendChild(containerPost);
+
+  const divButtonPost= document.createElement('div');
+  divButtonPost.setAttribute('id','divButtonPost');
+  const buttonPost = document.createElement('button');
+  buttonPost.setAttribute('id', 'buttonPost');
+  buttonPost.innerHTML = '<strong>post</strong>';
+  buttonPost.addEventListener('click', savePost);
+  divButtonPost.appendChild(buttonPost);
+  generalContainer.appendChild(divButtonPost);
+
+  
+  const tablePost = document.createElement('table');
+  tablePost.setAttribute('id','tablePost');
+  const tbodyTablepost = document.createElement('tbody'); 
+  const trtablepost = document.createElement('tr'); 
+  trtablepost.setAttribute('id','trtablePost');
+  tbodyTablepost.appendChild(trtablepost);
+  tablePost.appendChild(tbodyTablepost);
+  generalContainer.appendChild(tablePost);
+
 
 
   generalContainer.appendChild(containerMenuFeed);
   containerFeed.appendChild(generalContainer);
+  
   return containerFeed;
+
 
 }
 
