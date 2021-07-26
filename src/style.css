@@ -376,10 +376,10 @@ body {
   grid-template-columns: 1fr;
   gap: 3vh;
   margin-top: 6vh;
-  /*grid-template-areas:
+  grid-template-areas:
     "navigator"
     "conatinerPost"
-    "containerPost";*/
+    "containerPost";
 }
 
 #containerMenuFeedUl {
@@ -432,9 +432,12 @@ ul {
   padding: 10px 15px;
 }
 
+
 #containerMenuFeedUl > li {
   float: left;
 }
+
+/*
 #containerPost {
   grid-area: containerPost;
   width: 36vh;
@@ -442,6 +445,7 @@ ul {
   background: black;
   grid-area: main;
 }
+*/
 
 #writePost {
   width: 36vh;
