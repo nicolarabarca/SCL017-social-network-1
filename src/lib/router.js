@@ -3,6 +3,17 @@ import { signUpView } from './views/signUp.js';
 import { signInView } from './views/signIn.js';
 import { mainMenuView } from './views/mainMenu.js';
 import { feedView } from './views/feed.js';
+import { patternsView } from './views/pattern.js';
+import {miscellaneousView} from './views/miscellaneous.js';
+import{  readPost } from '../main.js';
+
+
+
+
+
+
+
+
 
 const showView = (hash) => {
   const root = document.getElementById('root');
@@ -25,6 +36,13 @@ const showView = (hash) => {
       break;
     case '#/feed':
       root.appendChild(feedView());
+      readPost(); // se cargan los post existentes en base de datos
+      break;
+      case '#/patterns':
+        root.appendChild(patternsView());
+      break;
+    case '#/miscellaneous':
+        root.appendChild(miscellaneousView());
       break;
     default:
       break;
@@ -50,7 +68,13 @@ const changePath = (hash) => {
   if (hash === '#/feed') {
     return showView(hash);
   }
-  return showView(hash);
+  if (hash === '#/patterns') {
+    return showView(hash);
+  }
+  if (hash === '#/miscellaneous') {
+    return showView(hash);
+  }
+  
 };
 
 export const init = () => {

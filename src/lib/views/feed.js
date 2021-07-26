@@ -1,13 +1,80 @@
 import { signOutUser } from '../logic/signOutFB.js';
+import{ savePost } from '../../main.js';
+
 
 export const feedView = () => {
+
   const containerFeed = document.createElement('div');
   containerFeed.setAttribute('id', 'containerFeed');
-  const divSignOut = document.createElement('div');
-  const buttonSignOut = document.createElement('button');
-  buttonSignOut.innerHTML = 'Cerrar sesión';
-  buttonSignOut.addEventListener('click', signOutUser);
-  divSignOut.appendChild(buttonSignOut);
-  containerFeed.appendChild(divSignOut);
+
+  const generalContainer=document.createElement('div');
+  generalContainer.setAttribute('id', 'generalContainer');
+  const containerMenuFeed= document.createElement ('ul');
+  containerMenuFeed.setAttribute('id', 'containerMenuFeedUl');
+  
+  
+  const boxHome  = document.createElement('li');
+  boxHome.setAttribute('id', 'boxHome');
+  boxHome.innerHTML = '<a href="#/mainmenu"></a>';
+  containerMenuFeed.appendChild(boxHome);
+  
+    
+ 
+  
+  const boxPatterns= document.createElement('li');
+  boxPatterns.setAttribute('id', 'boxPatterns');
+  boxPatterns.innerHTML = '<a href="#/patterns">Patrones</a>';
+  containerMenuFeed.appendChild(boxPatterns);
+
+  const boxMiscelaneo= document.createElement('li');
+  boxMiscelaneo.setAttribute('id', 'boxmiscelaneo');
+  boxMiscelaneo.innerHTML = '<a href="#/miscellaneous">misceláneo</a>';
+  containerMenuFeed.appendChild(boxMiscelaneo);
+ 
+  
+  const boxSignOutUser  = document.createElement('li');
+  boxSignOutUser.setAttribute('id', 'boxsignOutUser');
+  boxSignOutUser.addEventListener('click', signOutUser );
+  containerMenuFeed.appendChild(boxSignOutUser);
+  
+  
+
+  const containerPost = document.createElement('div')
+  containerPost.setAttribute('id', 'containerPost');
+  const writePost = document.createElement('input');
+  writePost.setAttribute('id', 'writePost');
+  writePost.setAttribute('id', 'writePost');
+  writePost.setAttribute('type', 'text');
+  writePost.setAttribute('placeholder', 'Escribe lo que piensas');
+  containerPost.appendChild(writePost);
+  generalContainer.appendChild(containerPost);
+
+  const divButtonPost= document.createElement('div');
+  divButtonPost.setAttribute('id','divButtonPost');
+  const buttonPost = document.createElement('button');
+  buttonPost.setAttribute('id', 'buttonPost');
+  buttonPost.innerHTML = '<strong>post</strong>';
+  buttonPost.addEventListener('click', savePost);
+  divButtonPost.appendChild(buttonPost);
+  generalContainer.appendChild(divButtonPost);
+
+  
+  const tablePost = document.createElement('table');
+  tablePost.setAttribute('id','tablePost');
+  const tbodyTablepost = document.createElement('tbody'); 
+  const trtablepost = document.createElement('tr'); 
+  trtablepost.setAttribute('id','trtablePost');
+  tbodyTablepost.appendChild(trtablepost);
+  tablePost.appendChild(tbodyTablepost);
+  generalContainer.appendChild(tablePost);
+
+
+
+  generalContainer.appendChild(containerMenuFeed);
+  containerFeed.appendChild(generalContainer);
+  
   return containerFeed;
+
+
 }
+
