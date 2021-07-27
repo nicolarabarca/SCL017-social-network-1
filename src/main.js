@@ -33,22 +33,24 @@ export const savePost = () => {
 
   // readPost
   export const readPost = () => {
-    const tablePost = document.getElementById('tablePost'); // aqui se  llama al tr donde se  insertan los post
+    const tablePost = document.getElementById('extraDiv'); // aqui se  llama al tr donde se  insertan los post
     db.collection('post').get().then((querySnapshot) => {
         tablePost.innerHTML='';
         querySnapshot.forEach((doc) => {
             console.log(`${doc.id} => ${doc.data().post}`);
         tablePost.innerHTML += `
-        <tr>
-        <td>${doc.data().idUser} ${doc.data().post} ${doc.data().date}</td>
-        
-        <td>  <button onclick= editPost( '${doc.id}')"> Editar</button> 
-        <button onclick= "deletePost( '${doc.id}')"> Borrar</button></td>
+        <div class = "divPost">
+        <div class = "textPost">
+       <p> ${doc.data().idUser} ${doc.data().post} ${doc.data().date} </p>
+       </div>
+        <div class = "buttons">
+        <button id="edit-button" class = "editButton" onclick= editPost( '${doc.id}')"></button> 
+       <button id="delete-button" class="deleteButton" onclick= "deletePost( '${doc.id}')"></button>
+       </div>
 
-        
+       </div>
 
-        </tr>
-        `;   
+            `;   
         });
     });
 }

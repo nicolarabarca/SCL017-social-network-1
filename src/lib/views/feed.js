@@ -40,6 +40,8 @@ export const feedView = () => {
   
 
   const containerPost = document.createElement('div')
+  const formPost=document.createElement('form');
+  formPost.setAttribute('id','formPost');
   containerPost.setAttribute('id', 'containerPost');
   const writePost = document.createElement('input');
   writePost.setAttribute('id', 'writePost');
@@ -47,28 +49,21 @@ export const feedView = () => {
   writePost.setAttribute('type', 'text');
   writePost.setAttribute('placeholder', 'Escribe lo que piensas');
   containerPost.appendChild(writePost);
-  generalContainer.appendChild(containerPost);
+  formPost.appendChild(containerPost);
+
 
   const divButtonPost= document.createElement('div');
   divButtonPost.setAttribute('id','divButtonPost');
   const buttonPost = document.createElement('button');
   buttonPost.setAttribute('id', 'buttonPost');
-  buttonPost.innerHTML = '<strong>post</strong>';
   buttonPost.addEventListener('click', savePost);
   divButtonPost.appendChild(buttonPost);
-  generalContainer.appendChild(divButtonPost);
+  formPost.appendChild(divButtonPost);
+  generalContainer.appendChild(formPost);
 
-  
-  const tablePost = document.createElement('table');
-  tablePost.setAttribute('id','tablePost');
-  const tbodyTablepost = document.createElement('tbody'); 
-  const trtablepost = document.createElement('tr'); 
-  trtablepost.setAttribute('id','trtablePost');
-  tbodyTablepost.appendChild(trtablepost);
-  tablePost.appendChild(tbodyTablepost);
-  generalContainer.appendChild(tablePost);
-
-
+  const extraDiv= document.createElement('div');
+  extraDiv.setAttribute('id', 'extraDiv');
+  generalContainer.appendChild(extraDiv);
 
   generalContainer.appendChild(containerMenuFeed);
   containerFeed.appendChild(generalContainer);
