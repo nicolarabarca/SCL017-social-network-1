@@ -41,9 +41,9 @@ export const savePost = () => {
         tablePost.innerHTML += `
         <tr>
         <td>${doc.data().idUser} ${doc.data().post} ${doc.data().date}</td>
-        
-        <td>  <button onclick= editPost( '${doc.id}')"> Editar</button> 
-        <button onclick= "deletePost( '${doc.id}')"> Borrar</button></td>
+
+        <td>  <button id='deleteButton' onclick= editPost( '${doc.id}')"> Editar</button> 
+        <button onclick= "deletePost( '${doc.idUser}')"> Borrar</button></td>
 
         
 
