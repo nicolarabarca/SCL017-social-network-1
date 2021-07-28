@@ -44,7 +44,11 @@ export const savePost = () => {
        <p> ${doc.data().idUser} ${doc.data().post} ${doc.data().date} </p>
        </div>
         <div id = "buttons">
-        <button id="likeButton"  onclick= "likeButton( '${doc.id}')"></button>
+        <button id="likeButton" onclick= "likeButton( '${doc.id}')" ></button>
+        
+        <button id="dislikeButton"  onclick= "likeButton( '${doc.id}')"></button>
+        <TextView id="textView" "> nlikes</textView>
+        
         <button id="edit-button" class = "editButton" onclick= editPost( '${doc.id}')"></button> 
        <button id="delete-button" class="deleteButton" onclick= "deletePost( '${doc.id}')"></button>
        
@@ -57,7 +61,12 @@ export const savePost = () => {
     });
 }
 
-
+export const likePost = (idPost) => {
+   // FirebaseDatabase database = FirebaseDatabase.getInstance();
+   
+    console.log(idPost);
+    
+  }
 export const deletePost = (idPost) => {
 
     console.log(idPost);
