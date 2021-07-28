@@ -71,7 +71,7 @@ const likePost = (idPost) => {
 //deleteButtonfunction.addEventListener('click', deletePost('${doc.id}'), 'false');
  
 export const deletePost = (id) => {
-    db.collection('posts').doc('${doc.id}').delete().then(() => {
+    db.collection('posts').doc('${doc.id}').delete('${doc.id}').then(() => {
         console.log("Document successfully deleted!");
     }).catch((error) => {
           console.error("Error removing document: ", error);
