@@ -1,6 +1,6 @@
 import { signOutUser } from '../logic/signOutFB.js';
 import{ savePost } from '../../main.js';
-
+import { deletePost } from '../../main.js';
 
 export const feedView = () => {
 
@@ -67,6 +67,12 @@ export const feedView = () => {
 
   generalContainer.appendChild(containerMenuFeed);
   containerFeed.appendChild(generalContainer);
+
+  const buttonTest = document.createElement('button');
+  buttonTest.innerHTML = 'borrar';
+  buttonTest.setAttribute('id', 'delete-button');
+  buttonTest.addEventListener('click', deletePost);
+  containerFeed.appendChild(buttonTest);
   
   return containerFeed;
 

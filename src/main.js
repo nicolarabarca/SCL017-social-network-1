@@ -50,7 +50,6 @@ export const savePost = () => {
         <TextView id="textView" "> nlikes</textView>
         
         <button id="edit-button" class = "editButton" onclick= editPost( '${doc.id}')"></button> 
-       <button id="delete-button" class="deleteButton" onclick= "deletePost( '${doc.id}')"></button>
        
        </div>
 
@@ -61,14 +60,20 @@ export const savePost = () => {
     });
 }
 
-export const likePost = (idPost) => {
+const likePost = (idPost) => {
    // FirebaseDatabase database = FirebaseDatabase.getInstance();
    
     console.log(idPost);
     
   }
-export const deletePost = (idPost) => {
 
-    console.log(idPost);
-    
-  }
+//const deleteButtonfunction=document.querySelector('#delete-button');
+//deleteButtonfunction.addEventListener('click', deletePost('${doc.id}'), 'false');
+ 
+export const deletePost = (id) => {
+    db.collection('posts').doc('${doc.id}').delete().then(() => {
+        console.log("Document successfully deleted!");
+    }).catch((error) => {
+          console.error("Error removing document: ", error);
+        });
+ }
