@@ -43,9 +43,11 @@ export const savePost = () => {
         <div class = "textPost">
        <p> ${doc.data().idUser} ${doc.data().post} ${doc.data().date} </p>
        </div>
-        <div class = "buttons">
+        <div id = "buttons">
+        <button id="likeButton"  onclick= "likeButton( '${doc.id}')"></button>
         <button id="edit-button" class = "editButton" onclick= editPost( '${doc.id}')"></button> 
        <button id="delete-button" class="deleteButton" onclick= "deletePost( '${doc.id}')"></button>
+       
        </div>
 
        </div>

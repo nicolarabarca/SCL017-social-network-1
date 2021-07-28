@@ -383,13 +383,14 @@ body {
 }
 
 #containerMenuFeedUl {
-  width: 51vh;
+  width: 47vh;
   height: 9vh;
   background-color: #3aa9a1;
   border-radius: 8px;
   grid-area: navigator;
   position: fixed;
   z-index: 100;
+  padding-left: 4vh;
 }
 
 #boxHome {
@@ -432,11 +433,9 @@ ul {
   padding: 10px 15px;
 }
 
-
 #containerMenuFeedUl > li {
   float: left;
 }
-
 
 #containerPost {
   grid-area: containerPost;
@@ -446,7 +445,6 @@ ul {
   grid-area: main;
   margin-left: 2vh;
 }
-
 
 #writePost {
   width: 40vh;
@@ -481,7 +479,6 @@ ul {
   border-style: none;
   align-items: center;
   text-align: center;
-
 }
 
 #boxbuilding {
@@ -499,19 +496,18 @@ ul {
   border-style: dotted;
 }
 
-.divPost{
-  border: 2px solid black;
- /* margin: 1% 30%;*/
+.divPost {
+  border: 2px solid rgb(0 0 0 / 26%);
   width: 40vh;
   height: 40vh;
-  margin: 5% 10% 1% 10%;
-  padding: 5vh;
-  background-color: lightcoral;
-  padding: 2%;
+  margin: 2% 4% 6% 6%;
+  padding: 3vh;
+  background-color: #f080807d;
   text-align: center;
   display: flex;
   align-items: stretch;
   --h: 120px;
+  border-radius: 2vh;
 
   /*align-self: center;
   display: flex;
@@ -519,44 +515,68 @@ ul {
   box-sizing: border-box;*/
   /*padding: solid 20% black;*/
 
- /* white-space: nowrap;*/
- 
-
+  /* white-space: nowrap;*/
 }
 
-.textPost{
+.textPost {
   width: 40vh;
   height: 40vh;
+  font-family: "Handlee", cursive;
   text-align: center;
-  overflow-y:scroll;
+  overflow-y: scroll;
   word-break: break-word;
   /*overflow: hidden;*/
   /*text-overflow: ellipsis;
   white-space: nowrap;
   flex-grow: inherit;*/
-  background-color: wheat;
-  opacity: 0.8;
+  background-color: white;
+  opacity: 0.7;
   height: var(--h);
-  --h: 230px;
+  --h: 220px;
+  border-radius: 2vh;
 }
 .textPost > p {
-  margin: 5%;
+  margin: 13%;
+}
+#buttons {
+  width: 25vh;
+  height: 10vh;
+  position: absolute;
+  display: flex;
+  margin-top: 33vh;
+  margin-left: 10vh;
+}
+#likeButton {
+  background: url("lib/assets/like\ \(7\).png") no-repeat;
+  display: block;
+  width: 5vh;
+  height: 5vh;
+  border-style: none;
+}
+#likeButton:active {
+  background: url("lib/assets/like\ \(6\).png") no-repeat;
+  display: block;
+  width: 5vh;
+  height: 5vh;
+  border-style: none;
 }
 
 #delete-button {
-  background: url('./lib/assets/delete.png') no-repeat;
+  background: url("./lib/assets/delete.png") no-repeat;
   display: block;
-  width: 10vh;
-  height: 10vh;
+  width: 5vh;
+  height: 5vh;
   border-style: none;
+  margin-left: 4vh;
 }
 
 #edit-button {
-  background: url('./lib/assets/writing.png') no-repeat;
+  background: url("./lib/assets/writing.png") no-repeat;
   display: block;
-  width: 10vh;
-  height: 10vh;
+  width: 5vh;
+  height: 5vh;
   border-style: none;
+  margin-left: 4vh;
 }
 
 @media only screen and (min-width: 64.063em) {
