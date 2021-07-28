@@ -50,7 +50,6 @@ export const savePost = () => {
         <TextView id="textView" "> nlikes</textView>
         
         <button id="edit-button" class = "editButton" onclick= editPost( '${doc.id}')"></button> 
-       <button id="delete-button" class="deleteButton" onclick= "deletePost( '${doc.id}')"></button>
        
        </div>
 
@@ -68,18 +67,13 @@ const likePost = (idPost) => {
     
   }
 
-
- const deletePost = (id) => {
-    const deleteButtonfunction=document.querySelector('#delete-button');
-    deleteButtonfunction.addEventListener('click',deletePost);
-
-    db.collection('posts').doc(id).delete().then(() => {
+//const deleteButtonfunction=document.querySelector('#delete-button');
+//deleteButtonfunction.addEventListener('click', deletePost('${doc.id}'), 'false');
+ 
+export const deletePost = (id) => {
+    db.collection('posts').doc('${doc.id}').delete('${doc.id}').then(() => {
         console.log("Document successfully deleted!");
-      }).catch((error) => {
-        console.error("Error removing document: ", error);
-      });
-    
-    console.log(id);
-    
-  }
-
+    }).catch((error) => {
+          console.error("Error removing document: ", error);
+        });
+ }

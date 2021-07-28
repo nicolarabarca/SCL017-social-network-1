@@ -596,6 +596,8 @@ ul {
   margin-top: 2vh;
 }
 
+/*MEDIA QUERY*/
+
 @media only screen and (min-width: 64.063em) {
   body {
     /*background-color: green;*/
@@ -769,4 +771,84 @@ ul {
     margin-top: 73vh;
     margin-left: -55vh;
   }
+
+  /*feed*/
+  #generalContainer{
+    width: 68vh;
+    margin-left: 53vh;
+    margin-top: 6vh;
+  }
+  #containerMenuFeedUl {
+      width: 74vh;
+      display: block;
+      flex-direction: column;
+      transform: rotate(90deg);
+      margin-top: 42vh;
+      margin-left: -430px;
+  }
+  
+
+  #boxHome{
+    transform: rotate(-90deg);
+    margin-top: 8px;
+    margin-left: 14px;
+  }
+  #boxPatterns{
+    transform: rotate(180deg);
+    margin-top: 7px;
+    margin-left: 40px;
+  }
+  #boxmiscelaneo{
+    transform: rotate(180deg);
+    margin-top: 9px;
+    margin-left: 40px;
+  }
+  #boxsignOutUser{
+    transform: rotate(-90deg);
+    margin-left: 53px;
+    margin-top: 9px;
+  }
+ 
+  #writePosts{
+    margin-left: 61%;
+   
+  }
+  #writePost >input{
+    margin-top: 23px;
+    position: fixed;
+    margin-left: 3vh;
+    width: 44vh;
+
+  }
+  .divPost{
+    margin-left: 388px;
+    border: 2px solid rgb(0 0 0 / 26%);
+    width: 40vh;
+    height: 40vh;
+    margin: 2% 4% 6% 6%;
+    padding: 3vh;
+    background-color: #f080807d;
+    text-align: center;
+    display: flex;
+    align-items: stretch;
+    --h: 120px;
+    border-radius: 2vh;
+    /* white-space: nowrap; */
+  }
+  #divButtonPost > button{
+      background: url(./lib/assets/send.png) no-repeat;
+      height: 5vh;
+      width: 26vh;
+      margin-top: -7%;
+      margin-left: 57%;
+      border-style: none;
+      align-items: center;
+      text-align: center;
+  }
 }
+/*
+#boxHome > li {
+  display: flex;
+  flex-direction: column;
+}
+*/
