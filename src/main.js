@@ -68,7 +68,20 @@ export const likePost = (idPost) => {
     
   }
 export const deletePost = (idPost) => {
-
+    const deletePost = (id) => {
+        const deleteButtonfunction=document.querySelector('#delete-button');
+        deleteButtonfunction.addEventListener('click',deletePost);
+    
+        db.collection('posts').doc(id).delete().then(() => {
+            console.log("Document successfully deleted!");
+          }).catch((error) => {
+            console.error("Error removing document: ", error);
+          });
+        
+        console.log(id);
+        
+      }
+    
     console.log(idPost);
     
   }
