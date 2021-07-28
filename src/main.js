@@ -61,14 +61,25 @@ export const savePost = () => {
     });
 }
 
-export const likePost = (idPost) => {
+const likePost = (idPost) => {
    // FirebaseDatabase database = FirebaseDatabase.getInstance();
    
     console.log(idPost);
     
   }
-export const deletePost = (idPost) => {
 
-    console.log(idPost);
+
+ const deletePost = (id) => {
+    const deleteButtonfunction=document.querySelector('#delete-button');
+    deleteButtonfunction.addEventListener('click',deletePost);
+
+    db.collection('posts').doc(id).delete().then(() => {
+        console.log("Document successfully deleted!");
+      }).catch((error) => {
+        console.error("Error removing document: ", error);
+      });
+    
+    console.log(id);
     
   }
+
