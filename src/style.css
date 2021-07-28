@@ -376,20 +376,21 @@ body {
   grid-template-columns: 1fr;
   gap: 3vh;
   margin-top: 6vh;
-  *grid-template-areas:
+  grid-template-areas:
     "navigator"
     "conatinerPost"
     "containerPost";
 }
 
 #containerMenuFeedUl {
-  width: 51vh;
+  width: 47vh;
   height: 9vh;
   background-color: #3aa9a1;
   border-radius: 8px;
   grid-area: navigator;
   position: fixed;
   z-index: 100;
+  padding-left: 4vh;
 }
 
 #boxHome {
@@ -435,16 +436,18 @@ ul {
 #containerMenuFeedUl > li {
   float: left;
 }
+
 #containerPost {
   grid-area: containerPost;
   width: 36vh;
   height: 7vh;
-  background: black;
+  background: transparent;
   grid-area: main;
+  margin-left: 2vh;
 }
 
 #writePost {
-  width: 36vh;
+  width: 40vh;
   height: 7vh;
   background: white;
   font-family: "Handlee", cursive;
@@ -452,8 +455,10 @@ ul {
   border-radius: 5px;
   display: flex;
   justify-content: center;
-  grid-area: containerPost;
+  margin-top: 16vh;
+  margin-left: 4vh;
 }
+
 #writePost::placeholder {
   color: darkgrey;
   text-align: center;
@@ -463,18 +468,15 @@ ul {
   font-family: "Handlee", cursive;
   font-size: 16px;
   grid-area: main;
+  margin-top: -3vh;
 }
 #divButtonPost > button {
-  background-color: rgba(214, 190, 180, 0.83);
+  background: url("./lib/assets/send.png") no-repeat;
   height: 5vh;
   width: 20vh;
-  border-radius: 4px;
-  font-family: "Handlee", cursive;
-  margin-left: -3%;
+  margin-left: 76%;
   margin-top: -5%;
-  box-shadow: 0 2px 15px rgba(80, 77, 78, 0.5);
-  border-style: double;
-  justify-content: center;
+  border-style: none;
   align-items: center;
   text-align: center;
 }
@@ -494,44 +496,87 @@ ul {
   border-style: dotted;
 }
 
-td {
-  width: 20vh;
-  height: 20vh;
-  opacity: 0.5;
-  background: #efd1cf;
-  border-radius: 8px;
-  font-family: "Handlee", cursive;
-  font-weight: bold;
-  font-size: 12px;
+.divPost {
+  border: 2px solid rgb(0 0 0 / 26%);
+  width: 40vh;
+  height: 40vh;
+  margin: 2% 4% 6% 6%;
+  padding: 3vh;
+  background-color: #f080807d;
   text-align: center;
-  border-style: outset;
-}
-table {
-  table-layout: fixed;
-  width: 100%;
-  border-collapse: collapse;
-  border: 3px solid purple;
+  display: flex;
+  align-items: stretch;
+  --h: 120px;
+  border-radius: 2vh;
+
+  /*align-self: center;
+  display: flex;
+  align-items: stretch;
+  box-sizing: border-box;*/
+  /*padding: solid 20% black;*/
+
+  /* white-space: nowrap;*/
 }
 
-thead th:nth-child(1) {
-  width: 30%;
+.textPost {
+  width: 40vh;
+  height: 40vh;
+  font-family: "Handlee", cursive;
+  text-align: center;
+  overflow-y: scroll;
+  word-break: break-word;
+  /*overflow: hidden;*/
+  /*text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-grow: inherit;*/
+  background-color: white;
+  opacity: 0.7;
+  height: var(--h);
+  --h: 220px;
+  border-radius: 2vh;
+}
+.textPost > p {
+  margin: 13%;
+}
+#buttons {
+  width: 25vh;
+  height: 10vh;
+  position: absolute;
+  display: flex;
+  margin-top: 33vh;
+  margin-left: 10vh;
+}
+#likeButton {
+  background: url("lib/assets/like\ \(7\).png") no-repeat;
+  display: block;
+  width: 5vh;
+  height: 5vh;
+  border-style: none;
+}
+#likeButton:active {
+  background: url("lib/assets/like\ \(6\).png") no-repeat;
+  display: block;
+  width: 5vh;
+  height: 5vh;
+  border-style: none;
 }
 
-thead th:nth-child(2) {
-  width: 20%;
+#delete-button {
+  background: url("./lib/assets/delete.png") no-repeat;
+  display: block;
+  width: 5vh;
+  height: 5vh;
+  border-style: none;
+  margin-left: 4vh;
 }
 
-thead th:nth-child(3) {
-  width: 15%;
-}
-
-thead th:nth-child(4) {
-  width: 35%;
-}
-
-th,
-td {
-  padding: 20px;
+#edit-button {
+  background: url("./lib/assets/writing.png") no-repeat;
+  display: block;
+  width: 5vh;
+  height: 5vh;
+  border-style: none;
+  margin-left: 4vh;
 }
 
 @media only screen and (min-width: 64.063em) {
