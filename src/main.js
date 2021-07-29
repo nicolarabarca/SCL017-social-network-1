@@ -33,6 +33,7 @@ export const savePost = () => {
 
   // readPost
   export const readPost = () => {
+     
     const tablePost = document.getElementById('extraDiv'); // aqui se  llama al tr donde se  insertan los post
     db.collection('post').get().then((querySnapshot) => {
         tablePost.innerHTML='';
@@ -55,7 +56,8 @@ export const savePost = () => {
 
        </div>
 
-            `;   
+            `
+             //llamar funcion deletePost;   
         });
     });
 }
@@ -73,6 +75,7 @@ const likePost = (idPost) => {
 export const deletePost = (id) => {
     db.collection('posts').doc('${doc.id}').delete('${doc.id}').then(() => {
         console.log("Document successfully deleted!");
+        console.log(db.collection('posts'));
     }).catch((error) => {
           console.error("Error removing document: ", error);
         });
