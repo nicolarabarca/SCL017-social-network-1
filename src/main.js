@@ -64,7 +64,7 @@ export const savePost = () => {
             const edit_button = document.createElement('button');
             edit_button.setAttribute('id', 'edit-button');
             edit_button.addEventListener('click', editPost); 
-            edit_button.idPost = doc.id /* doc.data().idUser, doc.data().post, doc.data().date; *///editar post y no estamos segira de esto
+            edit_button.idPost = `${doc.id}` ,`${doc.data().idUser}` ,`${doc.data().post}`, `${doc.data().date}`; //editar post y no estamos segira de esto
 
             const delete_button = document.createElement('button');
             delete_button.setAttribute('id', 'delete-button');
@@ -91,7 +91,7 @@ export const savePost = () => {
 export const likePost = (idPost) => {
    // FirebaseDatabase database = FirebaseDatabase.getInstance();
    
-    console.log(idPost);
+  /*  console.log(idPost);*/
     
   }
  
@@ -107,18 +107,20 @@ export const likePost = (idPost) => {
     }
 // Editar post 
  export const editPost = (evnt)=>{
-     /*document.getElementById('writePost').value = doc.data().idUser;*/
-    const editPost2 = db.collection('post').doc(evnt.currentTarget.idPost); //probando 
+     document.getElementById('writePost').value = evnt /*doc.data().idUser;*/
+    const writePostValue = db.collection('post').doc(evnt.currentTarget.idPost);//probando 
+    readPost();
+  /*  const idUser = firebase.auth().currentUser; */
    /* console.log('id' + id);*/
 // Set the "capital" field of the city 'DC'
-return editPost2.update({
-    idUser: idUser.displayName, 
+return writePostValue.update({
+  /*  idUser: idUser.displayName, */
     post: writePostValue,
     date: (new Date())
 })
 .then(() => {
     console.log("Document successfully updated!");
-    readPost();
+    
 })
 .catch((error) => {
     // The document probably doesn't exist.
