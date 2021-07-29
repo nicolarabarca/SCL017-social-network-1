@@ -381,7 +381,9 @@ body {
     "conatinerPost"
     "containerPost";
 }
-
+#headerFeed {
+  display: none;
+}
 #containerMenuFeedUl {
   width: 47vh;
   height: 9vh;
@@ -773,79 +775,101 @@ ul {
   }
 
   /*feed*/
-  #generalContainer{
+  #generalContainer {
     width: 68vh;
     margin-left: 53vh;
     margin-top: 6vh;
   }
   #containerMenuFeedUl {
-      width: 74vh;
-      display: block;
-      flex-direction: column;
-      transform: rotate(90deg);
-      margin-top: 42vh;
-      margin-left: -430px;
+    width: 74vh;
+    display: block;
+    flex-direction: column;
+    transform: rotate(90deg);
+    margin-top: 42vh;
+    margin-left: -430px;
   }
-  
 
-  #boxHome{
+  #boxHome {
     transform: rotate(-90deg);
     margin-top: 8px;
     margin-left: 14px;
   }
-  #boxPatterns{
+  #boxPatterns {
     transform: rotate(180deg);
     margin-top: 7px;
     margin-left: 40px;
   }
-  #boxmiscelaneo{
+  #boxmiscelaneo {
     transform: rotate(180deg);
     margin-top: 9px;
     margin-left: 40px;
   }
-  #boxsignOutUser{
+  #boxsignOutUser {
     transform: rotate(-90deg);
     margin-left: 53px;
     margin-top: 9px;
   }
- 
-  #writePosts{
-    margin-left: 61%;
-   
+  #containerPost {
+    margin-left: -39vh;
   }
-  #writePost >input{
-    margin-top: 23px;
+  #writePost {
+    height: 8vh;
+    margin-left: 61%;
+    margin-top: 37vh;
     position: fixed;
+  }
+  #writePost > input {
+    margin-top: 23px;
+    position: sticky;
     margin-left: 3vh;
     width: 44vh;
-
   }
-  .divPost{
-    margin-left: 388px;
-    border: 2px solid rgb(0 0 0 / 26%);
-    width: 40vh;
-    height: 40vh;
-    margin: 2% 4% 6% 6%;
-    padding: 3vh;
-    background-color: #f080807d;
-    text-align: center;
-    display: flex;
-    align-items: stretch;
-    --h: 120px;
-    border-radius: 2vh;
-    /* white-space: nowrap; */
+  .divPost {
+    width: 49vh;
+    height: 49vh;
+    margin-top: -2vh;
   }
-  #divButtonPost > button{
-      background: url(./lib/assets/send.png) no-repeat;
-      height: 5vh;
-      width: 26vh;
-      margin-top: -7%;
-      margin-left: 57%;
-      border-style: none;
-      align-items: center;
-      text-align: center;
+  .textPost {
+    width: 48vh;
+  }
+  #buttons {
+    margin-left: 0vh;
+    margin-top: 42vh;
+    width: 49vh;
+  }
+  #divButtonPost {
+    margin-top: -17vh;
+    margin-left: 35vh;
+  }
+  #divButtonPost > button {
+    width: 22vh;
+    margin-top: 27%;
+    margin-left: 40%;
+    position: fixed;
+    display: block;
+  }
+  #likeButton {
+    margin-left: 14vh;
+  }
+  #edit-button {
+    margin-left: 3vh;
+  }
+  #boxbuilding {
+    width: 62vh;
+    height: 27vh;
+    margin-top: -88vh;
+    transform: rotate(255deg);
+    line-height: 26vh;
+  }
+  #headerFeed {
+    display: block;
+    font-family: "Handlee", cursive;
+    font-size: 19px;
+    margin-left: 16vh;
+    margin-top: -8vh;
   }
 }
+
 /*
 #boxHome > li {
   display: flex;
