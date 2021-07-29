@@ -12,6 +12,7 @@ export const patternsView = () => {
   containerMenuFeed.setAttribute('id', 'containerMenuFeedUl');
   
   
+  
   const boxHome  = document.createElement('li');
   boxHome.setAttribute('id', 'boxHome');
   boxHome.innerHTML = '<a href="#/mainmenu"></a>';

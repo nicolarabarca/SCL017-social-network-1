@@ -1,6 +1,6 @@
 import { signOutUser } from '../logic/signOutFB.js';
 import{ savePost } from '../../main.js';
-
+import { deletePost } from '../../main.js';
 
 export const feedView = () => {
 
@@ -30,7 +30,13 @@ export const feedView = () => {
   boxMiscelaneo.setAttribute('id', 'boxmiscelaneo');
   boxMiscelaneo.innerHTML = '<a href="#/miscellaneous">misceláneo</a>';
   containerMenuFeed.appendChild(boxMiscelaneo);
- 
+
+  const header = document.createElement('header');
+  header.setAttribute('id', 'headerFeed');
+  const headerFeed = document.createElement('h1');
+  headerFeed.innerHTML = 'Tejer & Punto';
+  header.appendChild(headerFeed);
+  generalContainer.appendChild(header);
   
   const boxSignOutUser  = document.createElement('li');
   boxSignOutUser.setAttribute('id', 'boxsignOutUser');
@@ -65,8 +71,16 @@ export const feedView = () => {
   extraDiv.setAttribute('id', 'extraDiv');
   generalContainer.appendChild(extraDiv);
 
+
+
+  const buttonTest = document.createElement('button');
+  buttonTest.innerHTML = 'borrar';
+  buttonTest.setAttribute('id', 'delete-button');
+  buttonTest.addEventListener('click', deletePost);
+  containerFeed.appendChild(buttonTest);
   generalContainer.appendChild(containerMenuFeed);
   containerFeed.appendChild(generalContainer);
+  
   
   return containerFeed;
 

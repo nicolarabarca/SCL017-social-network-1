@@ -49,8 +49,7 @@ export const savePost = () => {
         <button id="dislikeButton"  onclick= "likeButton( '${doc.id}')"></button>
         <TextView id="textView" "> nlikes</textView>
         
-        <button id="edit-button" class = "editButton" onclick= editPost( '${doc.id}')"></button> 
-       <button id="delete-button" class="deleteButton" onclick= "deletePost( '${doc.id}')"></button>
+        <button id="edit-button" class = "editButton" onclick= deletePost( '${doc.id}')"></button> 
        
        </div>
 
@@ -61,27 +60,66 @@ export const savePost = () => {
     });
 }
 
-export const likePost = (idPost) => {
+  
+
+  
+  
+  
+ 
+
+
+
+
+  
+
+const likePost = (idPost) => {
    // FirebaseDatabase database = FirebaseDatabase.getInstance();
    
     console.log(idPost);
     
   }
-export const deletePost = (idPost) => {
-    const deletePost = (id) => {
-        const deleteButtonfunction=document.querySelector('#delete-button');
-        deleteButtonfunction.addEventListener('click',deletePost);
-    
-        db.collection('posts').doc(id).delete().then(() => {
-            console.log("Document successfully deleted!");
-          }).catch((error) => {
-            console.error("Error removing document: ", error);
-          });
+
+//const deleteButtonfunction=document.querySelector('#delete-button');
+//deleteButtonfunction.addEventListener('click', deletePost('${doc.id}'), 'false');
+export const deletePost = () => {
+  const deletePost= document.getElementById('readpost').value; // aqui se  obtiene  el valor del  texto que  hizo el usuario en el murp
+    const idUser = firebase.auth().currentUser;// obtener  el id del usuario que se encuentra usando firebase
+    console.log(idUser);
+    idUser: idUser.displayName,
+console.log(id );
+    db.collection('id').doc('${doc.id}').delete('${doc.id}').then(() => {
+      
+        console.log("Document successfully deleted!");
+        // esto es para limpiar el campo donde se escriben los post
+            
+    }).catch((error) => {
+          console.error("Error removing document: ", error);
+        });
+        readPost();
         
-        console.log(id);
-        
-      }
-    
-    console.log(idPost);
-    
-  }
+ }
+ /*const Post = () => {
+
+  const divPost = document.createElement('div');
+  divPost.setAttribute('id', 'containerFeed');
+
+  const textPost=document.createElement('div');
+  textPost.setAttribute('id', 'generalContainer');
+  const Parrafo= document.createElement('p');
+  Parrafo.innerHTML= '${doc.data().idUser} ${doc.data().post} ${doc.data().date}';
+  parrafo.setAttribute('id', 'extraDiv');
+  textPost.appendChild(parrafo);
+  divPost.appendChild(textPost);
+
+
+
+  const buttonTest = document.createElement('button');
+  buttonTest.innerHTML = 'borrar';
+  buttonTest.setAttribute('id', 'deletebutton');
+  buttonTest.addEventListener('click', deletePost);
+  divPost.appendChild(buttonTest);
+
+  
+  
+  return divPost ;
+}*/
