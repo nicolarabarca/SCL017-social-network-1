@@ -115,7 +115,7 @@ export const likePost = (idPost) => {
 export const deletePost = (evt) => {
     console.log(evt.currentTarget.idPost); // se lee la id del elemento a eliminar 
     
-    db.collection('post').doc(evt.currentTarget.idPost).delete().then(() => {  // se pone la id del post a eliminar
+    db.collection('post').doc(evt.currentTarget.idPost).delete().then(() => {  // se pone la id del post
         console.log("Document successfully deleted!");
         readPost();// se pone readpost para refrescar la vista
     }).catch((error) => {
