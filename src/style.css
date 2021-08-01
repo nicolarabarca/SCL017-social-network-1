@@ -555,7 +555,7 @@ ul {
   margin-left: 0vh;
   margin-top: 31, 5vh;
 }
-#likeButton {
+.likeButton {
   background: url("lib/assets/like\ \(7\).png") no-repeat;
   display: block;
   width: 5vh;
@@ -564,13 +564,14 @@ ul {
   margin-left: 5vh;
   margin-top: 2vh;
 }
-#dislikeButton {
+.dislikeButton {
   background: url("lib/assets/like\ \(6\).png") no-repeat;
   display: block;
   width: 5vh;
   height: 5vh;
   border-style: none;
   margin-top: 2vh;
+  margin-left: 5vh;
 }
 #textView {
   display: block;

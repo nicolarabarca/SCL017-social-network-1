@@ -17,10 +17,12 @@ export const savePost = () => {
 
     if (idEditPost == 0 ) { //  si es  igual a 0  el post se guarda como un post  nuevo
  
-        db.collection('post').add({
+        db.collection('post').add({ // esta estructura es un json
             idUser: idUser.displayName, // son los datos que se guardan cuando se hace  un nuevo post 
             post: writePostValue,
-            date: (new Date())
+            date: (new Date()),
+            like: 0 // Se inicializan los like 
+
         })
         .then((docRef) => { // acaes cuando el guardar  funciona  bien 
             console.log("Document written with ID: ", docRef.id);
@@ -79,12 +81,15 @@ export const savePost = () => {
             
             
             const likeButton = document.createElement('button');
-            likeButton.setAttribute('id', 'likeButton');
-            likeButton.addEventListener('click', likePost(`${doc.id}`));
+            likeButton.setAttribute('class', 'likeButton');
+            likeButton.setAttribute('id', 'likeButton'+ doc.id);//  se concatena  para individualizar el boton con el id del post
+            likeButton.addEventListener('click', likePost);
+            likeButton.idPost = doc.id; // se  le  pasa el id del post
+            
 
-            const dislikeButton = document.createElement('button');
+            /*const dislikeButton = document.createElement('button');
             dislikeButton.setAttribute('id', 'dislikeButton');
-            dislikeButton.addEventListener('click', likePost(`${doc.id}`));         
+            dislikeButton.addEventListener('click', likePost(`${doc.id}`));  */      
             
             const editButton = document.createElement('button');
             editButton.setAttribute('id', 'editButton');
@@ -99,15 +104,11 @@ export const savePost = () => {
 
 
             divButtons.appendChild(likeButton);
-            divButtons.appendChild(dislikeButton);
             divButtons.appendChild(editButton);
             divButtons.appendChild(deleteButton);
-
             textPost.appendChild(pPost);
-
             divPost.appendChild(divButtons);
             divPost.appendChild(textPost);
-
             tablePost.appendChild(divPost);
             
 
@@ -115,10 +116,16 @@ export const savePost = () => {
     });
 }
 
-export const likePost = (idPost) => {
-   // FirebaseDatabase database = FirebaseDatabase.getInstance();
-   
+export const likePost = (evt) => {
     
+   let likeButton = document.getElementById('likeButton' +  evt.currentTarget.idPost); // se  identifica el  boton like  
+   console.log(likeButton.className);
+   if (likeButton.className == "dislikeButton"){
+       likeButton.className = "likeButton";
+    }else {
+        likeButton.className = "dislikeButton";
+     }
+
   }
 
  
