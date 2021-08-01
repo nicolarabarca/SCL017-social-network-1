@@ -393,6 +393,7 @@ body {
   position: fixed;
   z-index: 100;
   padding-left: 4vh;
+  background-color: #3aa9a1;
 }
 
 #boxHome {
@@ -578,7 +579,7 @@ ul {
   border-style: none;
   margin-top: 2vh;
 }
-#delete-button {
+#deleteButton {
   background: url("./lib/assets/delete.png") no-repeat;
   display: block;
   width: 5vh;
@@ -588,7 +589,7 @@ ul {
   margin-top: 2vh;
 }
 
-#edit-button {
+#editButton {
   background: url("./lib/assets/writing.png") no-repeat;
   display: block;
   width: 5vh;
@@ -851,7 +852,7 @@ ul {
   #likeButton {
     margin-left: 14vh;
   }
-  #edit-button {
+  #editButton {
     margin-left: 3vh;
   }
   #boxbuilding {
