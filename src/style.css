@@ -541,7 +541,7 @@ ul {
 .textPost > p {
   margin: 13%;
 }
-#buttons {
+.buttons {
   width: 25vh;
   height: 7vh;
   position: absolute;
@@ -555,7 +555,7 @@ ul {
   margin-left: 0vh;
   margin-top: 31, 5vh;
 }
-.likeButton {
+.dislikeButton {
   background: url("lib/assets/like\ \(7\).png") no-repeat;
   display: block;
   width: 5vh;
@@ -564,7 +564,7 @@ ul {
   margin-left: 5vh;
   margin-top: 2vh;
 }
-.dislikeButton {
+.likeButton {
   background: url("lib/assets/like\ \(6\).png") no-repeat;
   display: block;
   width: 5vh;
@@ -834,7 +834,7 @@ ul {
   .textPost {
     width: 48vh;
   }
-  #buttons {
+  .buttons {
     margin-left: 0vh;
     margin-top: 42vh;
     width: 49vh;
