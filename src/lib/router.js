@@ -5,7 +5,7 @@ import { mainMenuView } from './views/mainMenu.js';
 import { feedView } from './views/feed.js';
 import { patternsView } from './views/pattern.js';
 import {miscellaneousView} from './views/miscellaneous.js';
-import{  readPost } from '../main.js';
+import{  readPost } from './logic/feedLogic.js';
 
 
 
