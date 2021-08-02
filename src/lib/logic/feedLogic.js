@@ -6,12 +6,33 @@ let idEditPost = 0; // se declara la variable idEditPost (ideditPost) que  tendr
 
 export const savePost = () => {
     const writePostValue = document.getElementById('writePost').value; // aqui se  obtiene  el valor del  texto que  hizo el usuario en el murp
-    if (writePostValue == ''){
-        alert ( 'Upss no haz escrito nada ');
-        return;
+    if (writePostValue ==""){
+        const inputValidation = () =>{
+         
+                 modal.style.display = "block";
+                 
+                 const myModal= document.createElement('div');
+                 myModal.setAttribute('id', ',modalPost');
+                 myModal.setAttribute('class','mdoal');
+     
+                 const modalContent = document.createElement('div');
+                 modalContent.setAttribute('class','modal-content');
+                 const pmodalContent= document.createElement('p');
+                 pmodalContent.innerHTML= `escribe algo para postear`;
+     
+                 myModal.appendChild(modalContent);
+                 modalContent.appendChild(pmodalContent);
 
-    }
-        
+                 window.onclick = function(event) {
+                     if (event.target == modal) {
+                       modal.style.display = "none"; 
+
+                     }
+                return inputValidation;    
+               }
+          
+}
+        } 
     const idUser = firebase.auth().currentUser;// obtener  el id del usuario que se encuentra usando firebase
     console.log(idEditPost);
 
@@ -20,7 +41,7 @@ export const savePost = () => {
         db.collection('post').add({ // esta estructura es un json
             idUser: idUser.displayName, // son los datos que se guardan cuando se hace  un nuevo post 
             post: writePostValue,
-            date: (new Date()),
+            date: Date(),
             like: 0 // Se inicializan los like 
 
         })
@@ -124,7 +145,6 @@ export const savePost = () => {
             querySnapshot.forEach((doc) => { // aqui se recorre el resultado de la query
                 if(doc.data().idUser==firebase.auth().currentUser.displayName){// aqui se pregunta si el like pertenece al usuario logueado
                     let divButtons= document.getElementById("buttons"+doc.data().idPost); // se concatena para que tengan un id unico
-                    console.log(divButtons);
                     if(divButtons != null){ // cuando  es  nuevo se tiene  que saltar esto y  se dibuja en  la  parte  de abajo
                         const likeButton = document.createElement('button');
                         arrayIdLikes.push(doc.data().idPost); // aqui se  agrega el id del post al array
