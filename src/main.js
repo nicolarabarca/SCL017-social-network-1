@@ -89,8 +89,8 @@ export const savePost = () => {
             divButtons.setAttribute('class', 'buttons');               
             
             const textLike = document.createElement('textView');
-           
-            textLike.innerHTML= doc.data().like; //  aca  se  llama  el  valor del contador del  like
+
+            textLike.innerHTML += doc.data().like; //  aca  se  llama  el  valor del contador del  like
                  
             
             const editButton = document.createElement('button');
@@ -257,7 +257,7 @@ export const likePost = (evt) => {
   function updatePostLike (idEditPost,like) { // contador de  likes 
     
     let updateEditPost = db.collection("post").doc(idEditPost);// aca se  busca el  documento a editar, se  usa la variale  que guarda el id del post
-    let likeValue = -1; // aqui vamos a suponer que el usuario hara dislike entonces diminuiremos
+    let likeValue = 0; // aqui vamos a suponer que el usuario hara dislike entonces diminuiremos
     if(like == 1){
         likeValue=1;
 
