@@ -11,7 +11,33 @@ window.addEventListener('load', init);
 let idEditPost = 0; // se declara la variable idEditPost (ideditPost) que  tendra el id del post que se quiere editar (cuando este ne un valor diferente a 0 significa que esta editando)
 
 export const savePost = () => {
-    const writePostValue = document.getElementById('writePost').value; // aqui se  obtiene  el valor del  texto que  hizo el usuario en el murp
+    const writePostValue = document.getElementById('writePost').value; // aqui se  obtiene  el valor del  texto que  hizo el usuario en el muro
+ if (writePostValue ==="" || writePostValue == null){
+   const inputValidation = () =>{
+    
+            modal.style.display = "block";
+            
+            const myModal= document.createElement('div');
+            myModal.setAttribute('id', ',modalPost');
+            myModal.setAttribute('class','mdoal');
+
+            const modalContent = document.createElement('div');
+            modalContent.setAttribute('class','modal-content');
+            const pmodalContent= document.createElement('p');
+            pmodalContent.innerHTML= `escribe algo para postear`;
+
+            myModal.appendChild(modalContent);
+            modalContent.appendChild(pmodalContent);
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                  modal.style.display = "none"; 
+                }
+          }
+     return inputValidation
+    }
+   } else{
+
     const idUser = firebase.auth().currentUser;// obtener  el id del usuario que se encuentra usando firebase
     console.log(idEditPost);
 
@@ -57,10 +83,10 @@ export const savePost = () => {
        
      }
 
-  }
+  
 
   // readPost
-  export const readPost = () => {
+export const readPost = () => {
     
     const tablePost = document.getElementById('extraDiv'); // aqui se  llama al tr donde se  insertan los post
     db.collection('post').get().then((querySnapshot) => {// querySnapshot es el nombre de la variable que trae los post
@@ -77,6 +103,7 @@ export const savePost = () => {
             
             const pPost= document.createElement('p');
             pPost.innerHTML = ` ${doc.data().idUser} ${doc.data().post} ${doc.data().date}`;
+    
 
             const divButtons= document.createElement('div');
             divButtons.setAttribute('id', 'buttons'+ doc.id);
@@ -183,7 +210,7 @@ export const deletePost = (evt) => {
      
    }
  
-export const likePost = (evt) => {
+/*export*/ const likePost = (evt) => {
     
     let likeButton = document.getElementById('likeButton' +  evt.currentTarget.idPost); // se  identifica el  boton like  
     console.log(likeButton.className);
@@ -234,6 +261,6 @@ export const likePost = (evt) => {
 
  
    }
+}
 
-
-  
+}

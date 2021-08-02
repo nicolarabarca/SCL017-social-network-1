@@ -42,6 +42,7 @@ export const patternsView = () => {
   boxbuilding.setAttribute('id', 'boxbuilding');
   boxbuilding.innerHTML = 'Patrones en construcción ';
   containerMenuFeed.appendChild(boxbuilding);
+  
 
   
 

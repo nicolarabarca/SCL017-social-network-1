@@ -466,6 +466,21 @@ ul {
   color: darkgrey;
   text-align: center;
 }
+
+  /* Modal Content */
+  .modal-content {
+    background-color: 		#FFE4B5;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid 	#FF7F50;
+    width: 80%;
+    font-weight: bold
+  }
+  .modal-content  p {
+  
+  text-align: center;
+  }
+
 #divButtonPost {
   text-align: center;
   font-family: "Handlee", cursive;
