@@ -89,6 +89,7 @@ export const savePost = () => {
             divButtons.setAttribute('class', 'buttons');               
             
             const textLike = document.createElement('textView');
+            textLike.setAttribute('class', 'scoreLikes');
            
             textLike.innerHTML= doc.data().like; //  aca  se  llama  el  valor del contador del  like
                  
