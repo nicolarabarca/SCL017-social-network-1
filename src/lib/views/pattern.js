@@ -37,12 +37,17 @@ export const patternsView = () => {
   boxSignOutUser.addEventListener('click', signOutUser );
   containerMenuFeed.appendChild(boxSignOutUser);
 
+  const divPostPattern= document.createElement('div');
+            divPostPattern.setAttribute('class', 'divPostPattern');
 
-  const boxbuilding= document.createElement('p');
-  boxbuilding.setAttribute('id', 'boxbuilding');
+            const textPost= document.createElement('div');
+            textPost.setAttribute('class', 'textPost'); 
+ 
+            const pPostPattern = document.createElement('p');
+  pPostPattern.setAttribute('id', 'boxbuilding');
   boxbuilding.innerHTML = 'Patrones en construcción ';
   containerMenuFeed.appendChild(boxbuilding);
-  
+
 
   
 

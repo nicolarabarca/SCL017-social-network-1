@@ -22,7 +22,7 @@ export const savePost = () => {
      
                  myModal.appendChild(modalContent);
                  modalContent.appendChild(pmodalContent);
-     
+
                  window.onclick = function(event) {
                      if (event.target == modal) {
                        modal.style.display = "none"; 
@@ -41,7 +41,7 @@ export const savePost = () => {
         db.collection('post').add({ // esta estructura es un json
             idUser: idUser.displayName, // son los datos que se guardan cuando se hace  un nuevo post 
             post: writePostValue,
-            date: (new Date()),
+            date: Date(),
             like: 0 // Se inicializan los like 
 
         })

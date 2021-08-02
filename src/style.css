@@ -458,6 +458,11 @@ ul {
   border-radius: 5px;
   display: flex;
   justify-content: center;
+  text-align: center;
+  overflow-y: scroll;
+  word-break: break-word;
+  height: var(--h);
+  --h: 43.75px;
   margin-top: 16vh;
   margin-left: 4vh;
 }
@@ -466,6 +471,7 @@ ul {
   color: darkgrey;
   text-align: center;
 }
+
 
   /* Modal Content */
   .modal-content {
@@ -497,6 +503,7 @@ ul {
   border-style: none;
   align-items: center;
   text-align: center;
+  
 }
 
 #boxbuilding {
@@ -842,10 +849,10 @@ ul {
   }
   #writePost {
     height: 8vh;
-    margin-left: 61%;
-    margin-top: 37vh;
+    margin-left: 31%;
+    margin-top: -2vh;
     position: fixed;
-  }
+}
   #writePost > input {
     margin-top: 23px;
     position: sticky;
@@ -855,8 +862,8 @@ ul {
   .divPost {
     width: 49vh;
     height: 49vh;
-    margin-top: -2vh;
-  }
+    margin-top: 6vh;
+}
   .textPost {
     width: 48vh;
   }
@@ -871,16 +878,17 @@ ul {
   }
   #divButtonPost > button {
     width: 22vh;
-    margin-top: 27%;
-    margin-left: 40%;
+    margin-top: 6%;
+    margin-left: 7%;
     position: fixed;
     display: block;
+}
   }
   #likeButton {
     margin-left: 14vh;
   }
   #editButton {
-    margin-left: 3vh;
+    margin-left: 14vh;
   }
   #boxbuilding {
     width: 62vh;
@@ -896,7 +904,7 @@ ul {
     margin-left: 16vh;
     margin-top: -8vh;
   }
-}
+
 
 /*
 #boxHome > li {
