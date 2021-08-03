@@ -12,17 +12,26 @@ Dado el contexto sanitario actual ha existido una creciente demanda y expansión
 Orientamos nuestro trabajo poniendo en el centro las historias de usuario: 
 
 
-#### Historia de Usuario 1:
+### Historia de Usuario 1:
  ”Yo como usuaria, quiero poder ver si esta red social tiene lo que busco, sin necesariamente registrarme o tener una cuenta”.
+<<<<<<< HEAD
    - Criterio de aceptación: Que el usuario pueda ver elementos de la red social sin registrar
    - Definición de terminado: 
         * Tener un botón que permita ir a registrarse si lo desea
         * Mostrar posts, imágenes y contenido en la red social
         * Se crea vista de portada/intro de la red social con html dinámico
         * Se estiliza la vista en concordancia con la temática de la red social
+=======
+   * Criterio de aceptación: Que el usuario pueda ver elementos de la red social sin registrar
+   * Definición de terminado: 
+       * Tener un botón que permita ir a registrarse si lo desea
+       * Mostrar posts, imágenes y contenido en la red social
+       * Se crea vista de portada/intro de la red social con html dinámico
+       * Se estiliza la vista en concordancia con la temática de la red social
+>>>>>>> 1e62838f027fbc30f702a06aa87968769456be16
 
 
-#### Historia de Usuario 2:
+### Historia de Usuario 2:
 “Yo como usuaria, quiero poder registrarme/crearme una cuenta”.
    - Criterio de aceptación: Que el usuario se pueda crear una cuenta
    - Definición de terminado: 
@@ -32,7 +41,7 @@ Orientamos nuestro trabajo poniendo en el centro las historias de usuario:
         * Se crea proyecto de firebase y se enlaza al proyecto de la red social.
 
 
-#### Historia de Usuario 3:
+### Historia de Usuario 3:
 “Yo como usuaria, quiero postear en Tejer & Punto”
   - Criterio de aceptación: Que el usuario pueda postear una publicación
   - Definición de terminado: 
@@ -40,7 +49,7 @@ Orientamos nuestro trabajo poniendo en el centro las historias de usuario:
         * Crear colecciones en firebase que permita almacenar y mostrar los datos de publicación 
 
 
-#### Historia de Usuario 4:
+### Historia de Usuario 4:
 “Yo como usuaria, quiero dar like, editar y borrar posts”
   - Criterio de aceptación: Que el usuario pueda dar like, editar y borrar sus propias publicaciones 
   - Definición de terminado: 
@@ -79,7 +88,7 @@ Las preguntas que te surjan en la navegación las responderemos al final de la p
 ### Misiones a realizar y criterios de éxito 
 ![Prototipo-de-Alta](src/lib/assets/testusa.PNG)
 
-*Iteraciones en base al Test de Usabilidad: 
+* Iteraciones en base al Test de Usabilidad: 
 (PONERLOS)
 
 ## 7. Link A "Tejer & Punto"
