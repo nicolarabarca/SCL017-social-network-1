@@ -36,16 +36,16 @@ Orientamos nuestro trabajo poniendo en el centro las historias de usuario:
 “Yo como usuaria, quiero postear en Tejer & Punto”
   - Criterio de aceptación: Que el usuario pueda postear una publicación
   - Definición de terminado: 
-        *Crear vistas del feed
-        *Crear colecciones en firebase que permita almacenar y mostrar los datos de publicación 
+        * Crear vistas del feed
+        * Crear colecciones en firebase que permita almacenar y mostrar los datos de publicación 
 
 
 ### Historia de Usuario 4:
 “Yo como usuaria, quiero dar like, editar y borrar posts”
   - Criterio de aceptación: Que el usuario pueda dar like, editar y borrar sus propias publicaciones 
   - Definición de terminado: 
-       *Crear CSS con los Iconos y botones 
-       *Asociar funcionalidades de Firebase a dichos botones 
+       * Crear CSS con los Iconos y botones 
+       * Asociar funcionalidades de Firebase a dichos botones 
 
 
 ## 3. Diagrama de Flujo 
