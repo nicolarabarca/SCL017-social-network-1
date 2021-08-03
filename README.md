@@ -16,36 +16,36 @@ Orientamos nuestro trabajo poniendo en el centro las historias de usuario:
  ”Yo como usuaria, quiero poder ver si esta red social tiene lo que busco, sin necesariamente registrarme o tener una cuenta”.
    - Criterio de aceptación: Que el usuario pueda ver elementos de la red social sin registrar
    - Definición de terminado: 
-        *Tener un botón que permita ir a registrarse si lo desea
-        *Mostrar posts, imágenes y contenido en la red social
-        *Se crea vista de portada/intro de la red social con html dinámico
-        *Se estiliza la vista en concordancia con la temática de la red social
+        * Tener un botón que permita ir a registrarse si lo desea
+        * Mostrar posts, imágenes y contenido en la red social
+        * Se crea vista de portada/intro de la red social con html dinámico
+        * Se estiliza la vista en concordancia con la temática de la red social
 
 
 #### Historia de Usuario 2:
 “Yo como usuaria, quiero poder registrarme/crearme una cuenta”.
    - Criterio de aceptación: Que el usuario se pueda crear una cuenta
    - Definición de terminado: 
-        *Desde html crear los inputs de tipo texto, uno de password y botón de registro que desata la función de  firebase, todo esto de modo responsive. 
-        *Se crea la vista de la página de registro con html dinámico.
-        *En la vista, se agregan casillas de texto (inputs de tipo email y password) y un elemento botón para que el usuario ingrese sus datos de registro.
-        *Se crea proyecto de firebase y se enlaza al proyecto de la red social.
+        * Desde html crear los inputs de tipo texto, uno de password y botón de registro que desata la función de  firebase, todo esto de modo responsive. 
+        * Se crea la vista de la página de registro con html dinámico.
+        * En la vista, se agregan casillas de texto (inputs de tipo email y password) y un elemento botón para que el usuario ingrese sus datos de registro.
+        * Se crea proyecto de firebase y se enlaza al proyecto de la red social.
 
 
 #### Historia de Usuario 3:
 “Yo como usuaria, quiero postear en Tejer & Punto”
   - Criterio de aceptación: Que el usuario pueda postear una publicación
   - Definición de terminado: 
-        *Crear vistas del feed
-        *Crear colecciones en firebase que permita almacenar y mostrar los datos de publicación 
+        * Crear vistas del feed
+        * Crear colecciones en firebase que permita almacenar y mostrar los datos de publicación 
 
 
 #### Historia de Usuario 4:
 “Yo como usuaria, quiero dar like, editar y borrar posts”
   - Criterio de aceptación: Que el usuario pueda dar like, editar y borrar sus propias publicaciones 
   - Definición de terminado: 
-       *Crear CSS con los Iconos y botones 
-       *Asociar funcionalidades de Firebase a dichos botones 
+       * Crear CSS con los Iconos y botones 
+       * Asociar funcionalidades de Firebase a dichos botones 
 
 
 ## 3. Diagrama de Flujo 
@@ -85,6 +85,7 @@ Las preguntas que te surjan en la navegación las responderemos al final de la p
 ## 7. Link A "Tejer & Punto"
 (PONER GH-PAGES)
 
+## 8. Read Me Laboratoria
 <details>
 <summary>Read Me Laboratoria</summary>
 # Creando una Red Social
