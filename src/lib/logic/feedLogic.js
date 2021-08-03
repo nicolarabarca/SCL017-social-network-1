@@ -7,29 +7,29 @@ let idEditPost = 0; // se declara la variable idEditPost (ideditPost) que  tendr
 export const savePost = () => {
     const writePostValue = document.getElementById('writePost').value; // aqui se  obtiene  el valor del  texto que  hizo el usuario en el murp
     if (writePostValue ==""){
-        const inputValidation = () =>{
+       /* const inputValidation = () =>{*/
          
-                 modal.style.display = "block";
                  
                  const myModal= document.createElement('div');
                  myModal.setAttribute('id', ',modalPost');
-                 myModal.setAttribute('class','mdoal');
+                 myModal.setAttribute('class','modal');
      
                  const modalContent = document.createElement('div');
                  modalContent.setAttribute('class','modal-content');
                  const pmodalContent= document.createElement('p');
                  pmodalContent.innerHTML= `escribe algo para postear`;
+                 modalContent.style.display = "block";
      
                  myModal.appendChild(modalContent);
                  modalContent.appendChild(pmodalContent);
 
                  window.onclick = function(event) {
-                     if (event.target == modal) {
-                       modal.style.display = "none"; 
+                     if (event.target == modalContent) {
+                        modalContent.style.display = "none"; 
 
                      }
-                return inputValidation;    
-               }
+              /*  return inputValidation;  */  
+               /*}*/
           
 }
         } 
