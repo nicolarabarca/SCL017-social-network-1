@@ -37,15 +37,59 @@ export const patternsView = () => {
   boxSignOutUser.addEventListener('click', signOutUser );
   containerMenuFeed.appendChild(boxSignOutUser);
 
+  const header = document.createElement('header');
+  header.setAttribute('id', 'headerFeed');
+  const headerFeed = document.createElement('h1');
+  headerFeed.innerHTML = 'Tejer & Punto';
+  header.appendChild(headerFeed);
+  generalContainer.appendChild(header);
 
-  const boxbuilding= document.createElement('p');
-  boxbuilding.setAttribute('id', 'boxbuilding');
-  boxbuilding.innerHTML = 'Patrones en construcción ';
-  containerMenuFeed.appendChild(boxbuilding);
+//COPIA Y PASAR A PATRONES//
+const containerPostPattern = document.createElement('div')
+  const formPostPattern=document.createElement('form');
+  formPostPattern.setAttribute('id','formPostPattern');
+  containerPostPattern.setAttribute('id', 'containerPostPattern');
+  const writePostPattern = document.createElement('input');
+  writePostPattern.setAttribute('id', 'writePostPattern');
+  writePostPattern.setAttribute('type', 'text');
+  /*writePost.setAttribute('size','4');
+  writePost.setAttribute('maxlength', '10');
+  writePost.setAttribute('required', 'required');*/
+  writePostPattern.setAttribute('placeholder', 'Comparte Patrones');
+  formPostPattern.appendChild(writePostPattern);
+  containerPostPattern.appendChild(formPostPattern);
 
+
+  const divButtonPostPattern= document.createElement('div');
+  divButtonPostPattern.setAttribute('id','divButtonPostPattern');
+  const buttonPostPattern = document.createElement('button');
+  buttonPostPattern.setAttribute('id', 'buttonPostPattern');
+  /*buttonPostPattern.addEventListener('click', savePost);*/
+  divButtonPostPattern.appendChild(buttonPostPattern);
   
+  formPostPattern.appendChild(divButtonPostPattern);
+  generalContainer.appendChild(formPostPattern);
+/*
+  //AQUI EMPIEZA LA WEA DE PATTERNS//
+  const divPostPattern= document.createElement('div');
+            divPostPattern.setAttribute('class', 'divPostPattern');
+
+            const textPostPattern= document.createElement('div');
+            textPostPattern.setAttribute('class', 'textPostPattern'); 
+ 
+            const pPostPattern = document.createElement('p');
+  pPostPattern.setAttribute('id', 'pPostPattern');
+  pPostPattern.innerHTML = 'Patrones en construcción ';
+
+  textPostPattern.appendChild(pPostPattern);
+  divPostPattern.appendChild(textPostPattern); 
 
 
+*/
+
+  /*containerMenuFeed.appendChild(divPostPattern);*/
+ /* containerPostPattern.appendChild(formPostPattern);*/
+ generalContainer.appendChild(containerPostPattern)
   generalContainer.appendChild(containerMenuFeed);
   containerFeed.appendChild(generalContainer);
   return containerFeed;

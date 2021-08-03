@@ -458,6 +458,11 @@ ul {
   border-radius: 5px;
   display: flex;
   justify-content: center;
+  text-align: center;
+  overflow-y: scroll;
+  word-break: break-word;
+  height: var(--h);
+  --h: 43.75px;
   margin-top: 16vh;
   margin-left: 4vh;
 }
@@ -466,6 +471,22 @@ ul {
   color: darkgrey;
   text-align: center;
 }
+
+
+  /* Modal Content */
+  .modal-content {
+    background-color: 		#FFE4B5;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid 	#FF7F50;
+    width: 80%;
+    font-weight: bold
+  }
+  .modal-content  p {
+  
+  text-align: center;
+  }
+
 #divButtonPost {
   text-align: center;
   font-family: "Handlee", cursive;
@@ -482,8 +503,9 @@ ul {
   border-style: none;
   align-items: center;
   text-align: center;
+  
 }
-
+/*
 #boxbuilding {
   width: 45vh;
   height: 19vh;
@@ -497,7 +519,7 @@ ul {
   margin-top: 20vh;
   line-height: 18vh;
   border-style: dotted;
-}
+}*/
 
 .divPost {
   border: 2px solid rgb(0 0 0 / 26%);
@@ -610,6 +632,7 @@ ul {
   margin-left: 6vh;
   margin-top: 2vh;
 }
+
 #containerModal {
   background-color: white;
   opacity: 0.8;
@@ -643,6 +666,53 @@ ul {
   height: 5vh;
   margin-left: 2vh;
 }
+=======
+/*PATTERN VIEW*/
+#divButtonPostPattern > button {
+  background: url("./lib/assets/send.png") no-repeat;
+  height: 5vh;
+  width: 20vh;
+  margin-left: 84%;
+  margin-top: -5%;
+  border-style: none;
+  align-items: center;
+  text-align: center;
+  
+}
+#writePostPattern {
+  width: 40vh;
+  height: 7vh;
+  background: white;
+  font-family: "Handlee", cursive;
+  border-style: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  overflow-y: scroll;
+  word-break: break-word;
+  height: var(--h);
+  --h: 43.75px;
+  margin-top: 16vh;
+  margin-left: 5vh;
+}
+
+#writePostPattern::placeholder {
+  color: darkgrey;
+  text-align: center;
+}
+
+#divButtonPostPattern{
+  text-align: center;
+  font-family: "Handlee", cursive;
+  font-size: 16px;
+  grid-area: main;
+  margin-top: -3vh;
+}
+
+/*MISCELLANEOUS VIEW/
+
+
 
 /*MEDIA QUERY*/
 
@@ -860,10 +930,10 @@ ul {
   }
   #writePost {
     height: 8vh;
-    margin-left: 61%;
-    margin-top: 37vh;
+    margin-left: 31%;
+    margin-top: -2vh;
     position: fixed;
-  }
+}
   #writePost > input {
     margin-top: 23px;
     position: sticky;
@@ -873,9 +943,9 @@ ul {
   .divPost {
     width: 49vh;
     height: 49vh;
-
     margin: -8% 0% 30% 0%;
   }
+
   .textPost {
     width: 48vh;
   }
@@ -890,16 +960,17 @@ ul {
   }
   #divButtonPost > button {
     width: 22vh;
-    margin-top: 27%;
-    margin-left: 40%;
+    margin-top: 6%;
+    margin-left: 7%;
     position: fixed;
     display: block;
   }
+  
   #likeButton {
     margin-left: 14vh;
   }
   #editButton {
-    margin-left: 3vh;
+    margin-left: 14vh;
   }
   #boxbuilding {
     width: 62vh;
@@ -915,10 +986,38 @@ ul {
     margin-left: 16vh;
     margin-top: -8vh;
   }
+
   #containerModal {
     margin-left: 58vh;
     position: fixed;
     display: block;
     margin-top: 18vh;
   }
+
+
+
+    /*PATTERN VIEW MEDIA QUERY*/
+   #divButtonPostPattern > button {
+  width: 22vh;
+  margin-top: -1%;
+  margin-left: 24%;
+  position: fixed;
+  display: block;
+  }
+
+  #writePostPattern{
+  margin-top: 1vh;
+  margin-left: 4vh;
+  }
+
+  #headerFeed {
+    display: block;
+    font-family: "Handlee", cursive;
+    font-size: 19px;
+    margin-left: 16vh;
+    margin-top: -8vh;
+}
+
+
+
 }
