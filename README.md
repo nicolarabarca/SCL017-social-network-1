@@ -51,6 +51,8 @@ Orientamos nuestro trabajo poniendo en el centro las historias de usuario:
 ## 3. Diagrama de Flujo 
 
 Para organizar nuestro proyecto, hicimos uso de el siguiente diagrama de flujo 
+
+
 ![Diagrama-de-Flujo](src/lib/assets/diagramadeflujo.jpeg)
 
 
@@ -59,8 +61,12 @@ Para diseñar nuestra aplicación poniendo al usuario al centro decidimos escuch
 
 A continuación se presentan los prototipos que se desprenden de la investigación anterior.
 ### Prototipo de Baja Fidelidad
+
+
 ![Prototipo-de-Baja](src/lib/assets/prototipotejerypunto.jpeg)
 ### Prototipo de Alta Fidelidad
+
+
 ![Prototipo-de-Alta](src/lib/assets/protodealta.jpeg)
 
 
@@ -77,6 +83,8 @@ El test tiene una duración aproximada de 5 minutos. En esta página, te daré u
 Las preguntas que te surjan en la navegación las responderemos al final de la prueba."
 
 ### Misiones a realizar y criterios de éxito 
+
+
 ![Prototipo-de-Alta](src/lib/assets/testusa.PNG)
 
 * Iteraciones en base al Test de Usabilidad: 
