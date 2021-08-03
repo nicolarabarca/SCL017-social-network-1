@@ -1,6 +1,7 @@
 body {
   background-color: antiquewhite;
 }
+
 #containerIntro {
   display: grid;
   grid-gap: 6vh;
@@ -12,6 +13,7 @@ body {
     "footerIntro"
     "footerIntro";
 }
+
 #divGif {
   background: url("https://i.picasion.com/pic91/a84f3fcf776556e023735827dfd8fd51.gif")
     no-repeat center;
@@ -22,17 +24,20 @@ body {
   margin: 0% auto;
   grid-area: gif;
 }
+
 #divTextIntro {
   text-align: center;
   font-family: "Handlee", cursive;
   font-size: large;
   margin-left: 3%;
 }
+
 #divButtonIntro {
   text-align: center;
   font-family: "Handlee", cursive;
   font-size: 16px;
 }
+
 #divButtonIntro > button {
   background-color: rgba(214, 190, 180, 0.83);
   height: 5vh;
@@ -59,6 +64,7 @@ body {
   grid-area: footerIntro;
   margin-left: 4%;
 }
+
 /* signUp*/
 #containerUp {
   display: grid;
@@ -73,6 +79,7 @@ body {
     "e "
     " footer";
 }
+
 #titleUp {
   font-family: "Handlee", cursive;
   font-size: 36px;
@@ -81,6 +88,7 @@ body {
   justify-content: flex-start;
   grid-area: header;
 }
+
 #containerUp > main {
   grid-area: a;
   align-self: center;
@@ -99,10 +107,12 @@ body {
   margin-bottom: 23px;
   grid-area: a;
 }
+
 #emailUp::placeholder {
   color: darkgrey;
   text-align: center;
 }
+
 #passwordUp {
   width: 214px;
   height: 38px;
@@ -121,6 +131,7 @@ body {
   text-align: center;
   padding-top: 30px;
 }
+
 #buttonCreateUser {
   width: 216px;
   height: 39px;
@@ -136,6 +147,7 @@ body {
   font-size: 15px;
   text-align: center;
 }
+
 #sendToSignInText {
   width: 29vh;
   font-family: "Handlee", cursive;
@@ -143,6 +155,7 @@ body {
   text-align: center;
   margin-left: 4vh;
 }
+
 #separationTextUp {
   padding: 5%;
   width: 25vh;
@@ -151,6 +164,7 @@ body {
   justify-content: center;
   margin-left: 80px;
 }
+
 #buttonToGoogleUp {
   width: 216px;
   height: 39px;
@@ -158,12 +172,14 @@ body {
   background: rgba(214, 190, 180, 0.92);
   margin-top: -9vh;
 }
+
 #footerUp {
   grid-area: footer;
   font-family: "Handlee", cursive;
   text-align: center;
   font-size: 14px;
 }
+
 /* signin */
 #containerIn {
   display: grid;
@@ -176,6 +192,7 @@ body {
     "main"
     "footer";
 }
+
 #titleIn {
   grid-area: header;
   font-family: "Handlee", cursive;
@@ -184,6 +201,7 @@ body {
   text-align: center;
   margin-left: 3v;
 }
+
 #containerIn > main {
   grid-area: main;
   align-self: center;
@@ -207,6 +225,7 @@ body {
   text-align: center;
   padding-top: 30px;
 }
+
 #passwordIn {
   width: 214px;
   height: 38px;
@@ -218,6 +237,7 @@ body {
   grid-area: main;
   margin: 2%;
 }
+
 #buttonLoginUser {
   width: 216px;
   height: 39px;
@@ -243,6 +263,7 @@ body {
   text-align: center;
   margin-left: 80px;
 }
+
 #buttonToGoogleIn {
   width: 216px;
   height: 39px;
@@ -250,6 +271,7 @@ body {
   background: rgba(214, 190, 180, 0.92);
   grid-area: main;
 }
+
 #sendToSignUpText {
   grid-area: main;
   font-family: "Handlee", cursive;
@@ -257,12 +279,14 @@ body {
   font-size: 15px;
   margin-left: -7vh;
 }
+
 #footerIn {
   grid-area: footer;
   font-family: "Handlee", cursive;
   text-align: center;
   font-size: 14px;
 }
+
 /* mainMenu*/
 #containerMainMenu {
   display: grid;
@@ -273,9 +297,11 @@ body {
     "main headerMain"
     "footer footer";
 }
+
 #containerMainMenu > main {
   grid-area: main;
 }
+
 #headerMainMenu {
   grid-area: headerMain;
   background: transparent;
@@ -287,6 +313,7 @@ body {
   font-size: 20px;
   margin-left: -5vh;
 }
+
 #boxKnittingSticks {
   grid-area: main;
   background-color: rgba(245, 126, 215, 0.755);
@@ -297,6 +324,7 @@ body {
   margin-top: 10vh;
   margin-left: 10vh;
 }
+
 #boxSticksImg {
   grid-area: main;
   background: url("./lib/assets/sticks.png") no-repeat center;
@@ -335,6 +363,7 @@ body {
   margin-top: 5vh;
   margin-left: 10vh;
 }
+
 #boxCrochetImg {
   grid-area: main;
   background: url("./lib/assets/crochet.png") no-repeat center;
@@ -347,6 +376,7 @@ body {
   font-weight: bold;
   font-size: 25px;
 }
+
 #boxCrochetText {
   grid-area: main;
   width: 27%;
@@ -363,6 +393,7 @@ body {
   justify-items: center;
   padding-left: 5vh;
 }
+
 #footerMainMenu {
   grid-area: footer;
   font-size: 15px;
@@ -381,9 +412,11 @@ body {
     "conatinerPost"
     "containerPost";
 }
+
 #headerFeed {
   display: none;
 }
+
 #containerMenuFeedUl {
   width: 47vh;
   height: 9vh;
@@ -403,6 +436,7 @@ body {
   margin-top: 2vh;
   grid-area: navigator;
 }
+
 #boxPatterns {
   font-family: "Handlee", cursive;
   font-weight: bold;
@@ -410,6 +444,7 @@ body {
   grid-area: navigator;
   width: 16vh;
 }
+
 #boxmiscelaneo {
   font-family: "Handlee", cursive;
   font-weight: bold;
@@ -417,6 +452,7 @@ body {
   grid-area: navigator;
   width: 16vh;
 }
+
 #boxsignOutUser {
   grid-area: navigator;
   background: url(./lib/assets/cerrar-sesion.png) no-repeat;
@@ -425,6 +461,7 @@ body {
   margin-left: 3vh;
   margin-top: 2vh;
 }
+
 ul {
   list-style: none;
 }
@@ -474,18 +511,18 @@ ul {
 
 
   /* Modal Content */
-  .modal-content {
-    background-color: 		#FFE4B5;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid 	#FF7F50;
-    width: 80%;
-    font-weight: bold
-  }
-  .modal-content  p {
-  
+.modal-content {
+  background-color: 		#FFE4B5;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid 	#FF7F50;
+  width: 80%;
+  font-weight: bold
+}
+
+.modal-content  p {
   text-align: center;
-  }
+}
 
 #divButtonPost {
   text-align: center;
@@ -494,6 +531,7 @@ ul {
   grid-area: main;
   margin-top: -3vh;
 }
+
 #divButtonPost > button {
   background: url("./lib/assets/send.png") no-repeat;
   height: 5vh;
@@ -505,21 +543,6 @@ ul {
   text-align: center;
   
 }
-/*
-#boxbuilding {
-  width: 45vh;
-  height: 19vh;
-  grid-area: main;
-  opacity: 0.8;
-  background-color: rgba(214, 190, 180, 0.92);
-  font-family: "Handlee", cursive;
-  font-weight: bold;
-  font-size: 19px;
-  text-align: center;
-  margin-top: 20vh;
-  line-height: 18vh;
-  border-style: dotted;
-}*/
 
 .divPost {
   border: 2px solid rgb(0 0 0 / 26%);
@@ -534,13 +557,6 @@ ul {
   --h: 120px;
   border-radius: 2vh;
 
-  /*align-self: center;
-  display: flex;
-  align-items: stretch;
-  box-sizing: border-box;*/
-  /*padding: solid 20% black;*/
-
-  /* white-space: nowrap;*/
 }
 
 .textPost {
@@ -560,9 +576,11 @@ ul {
   --h: 220px;
   border-radius: 2vh;
 }
+
 .textPost > p {
   margin: 13%;
 }
+
 .buttons {
   width: 25vh;
   height: 7vh;
@@ -577,6 +595,7 @@ ul {
   margin-left: 0vh;
   margin-top: 31, 5vh;
 }
+
 .dislikeButton {
   background: url("lib/assets/like\ \(7\).png") no-repeat;
   display: block;
@@ -586,6 +605,7 @@ ul {
   margin-left: -8vh;
   margin-top: 2vh;
 }
+
 .likeButton {
   background: url("lib/assets/like\ \(6\).png") no-repeat;
   display: block;
@@ -595,6 +615,7 @@ ul {
   margin-top: 2vh;
   margin-left: -8vh;
 }
+
 #textView {
   display: block;
   width: 5vh;
@@ -602,6 +623,7 @@ ul {
   border-style: none;
   margin-top: 2vh;
 }
+
 #deleteButton {
   background: url("./lib/assets/delete.png") no-repeat;
   display: block;
@@ -679,6 +701,7 @@ ul {
   text-align: center;
   
 }
+
 #writePostPattern {
   width: 40vh;
   height: 7vh;
@@ -722,6 +745,7 @@ ul {
     margin: 0%;
     padding: 0%;
   }
+
   #containerIntro {
     display: flex;
     background-color: rgba(214, 190, 180, 0.92);
@@ -731,6 +755,7 @@ ul {
     margin-top: 10vh;
     opacity: 0.8;
   }
+
   #divGif {
     display: flex;
     width: 63vh;
@@ -747,9 +772,11 @@ ul {
     margin-top: 27vh;
     float: right;
   }
+
   #divButtonIntro {
     margin-top: 50vh;
   }
+
   #footerIntro {
     display: flex;
     margin-top: 42%;
@@ -757,6 +784,7 @@ ul {
     margin-left: -38%;
     width: 99vh;
   }
+
   #containerUp {
     display: flex;
     background-color: rgba(214, 190, 180, 0.92);
@@ -766,14 +794,17 @@ ul {
     margin-top: 10vh;
     opacity: 0.8;
   }
+
   #titleUp {
     margin-left: 35vh;
     font-size: 36px;
   }
+
   #formUp {
     margin-top: 18vh;
     margin-left: -43vh;
   }
+
   #termsText {
     margin-left: -44vh;
   }
@@ -781,14 +812,17 @@ ul {
   #sendToSignInText {
     margin-left: -40vh;
   }
+
   #separationTextUp {
     margin-left: -158px;
     margin-top: 0vh;
   }
+
   #buttonToGoogleUp {
     margin-left: -44vh;
     margin-top: 3vh;
   }
+
   #divImgUp > img {
     background-image: url(./lib/assets/palillohombre.jpg);
     width: 60vh;
@@ -800,6 +834,7 @@ ul {
     margin-top: 84vh;
     margin-left: -48vh;
   }
+
   #containerIn {
     display: flex;
     background-color: rgba(214, 190, 180, 0.92);
@@ -809,12 +844,14 @@ ul {
     margin-top: 10vh;
     opacity: 0.8;
   }
+
   #titleIn {
     display: flex;
     margin-left: 26vh;
     font-size: 23px;
     width: 20vh;
   }
+
   #formIn {
     margin-top: -1vh;
     margin-left: -137vh;
@@ -826,14 +863,17 @@ ul {
     margin-left: -806px;
     margin-top: 9vh;
   }
+
   #buttonToGoogleIn {
     margin-top: 4vh;
     margin-left: -136vh;
   }
+
   #sendToSignUpText {
     margin-top: 3vh;
     margin-left: -240vh;
   }
+
   #divImgIn > img {
     background-image: url(./lib/assets/palillohombre.jpg);
     width: 55vh;
@@ -841,6 +881,7 @@ ul {
     margin-left: 41vh;
     margin-top: 22vh;
   }
+
   #footerIn {
     margin-left: -364px;
     margin-top: 73vh;
@@ -857,6 +898,7 @@ ul {
     margin-top: 10vh;
     opacity: 0.8;
   }
+
   #headerMainMenu {
     transform: rotate(0deg);
     height: 36vh;
@@ -870,6 +912,7 @@ ul {
     margin-top: 25vh;
     margin-left: -65vh;
   }
+
   #boxSticksText {
     width: 8%;
     height: 4%;
@@ -879,6 +922,7 @@ ul {
     margin-top: -30vh;
     margin-left: -26vh;
   }
+
   #boxCrochetText {
     width: 9%;
     height: 4%;
@@ -896,6 +940,7 @@ ul {
     margin-left: 53vh;
     margin-top: 6vh;
   }
+
   #containerMenuFeedUl {
     width: 74vh;
     display: block;
@@ -910,30 +955,35 @@ ul {
     margin-top: 8px;
     margin-left: 14px;
   }
+
   #boxPatterns {
     transform: rotate(180deg);
     margin-top: 7px;
     margin-left: 40px;
   }
+
   #boxmiscelaneo {
     transform: rotate(180deg);
     margin-top: 9px;
     margin-left: 40px;
   }
+
   #boxsignOutUser {
     transform: rotate(-90deg);
     margin-left: 53px;
     margin-top: 9px;
   }
+
   #containerPost {
     margin-left: -39vh;
   }
+
   #writePost {
     height: 8vh;
     margin-left: 31%;
     margin-top: -2vh;
     position: fixed;
-}
+  }
   #writePost > input {
     margin-top: 23px;
     position: sticky;
@@ -949,15 +999,18 @@ ul {
   .textPost {
     width: 48vh;
   }
+
   .buttons {
     margin-left: 0vh;
     margin-top: 42vh;
     width: 49vh;
   }
+
   #divButtonPost {
     margin-top: -17vh;
     margin-left: 35vh;
   }
+
   #divButtonPost > button {
     width: 22vh;
     margin-top: 6%;
@@ -969,9 +1022,11 @@ ul {
   #likeButton {
     margin-left: 14vh;
   }
+
   #editButton {
     margin-left: 14vh;
   }
+
   #boxbuilding {
     width: 62vh;
     height: 27vh;
@@ -1016,7 +1071,7 @@ ul {
     font-size: 19px;
     margin-left: 16vh;
     margin-top: -8vh;
-}
+  }
 
 
 
