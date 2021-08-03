@@ -1,4 +1,4 @@
-import { signUpView } from '../src/lib/signUp.js';
+import { signUpView } from '../src/lib/views/signUp.js';
 
 describe('signUpView', () => {
   it('debería ser una función', () => {
