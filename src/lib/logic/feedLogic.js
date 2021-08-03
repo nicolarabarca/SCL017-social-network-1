@@ -20,7 +20,7 @@ export const savePost = () => {
         db.collection('post').add({ // esta estructura es un json
             idUser: idUser.displayName, // son los datos que se guardan cuando se hace  un nuevo post 
             post: writePostValue,
-            date: (new Date()),
+            date: ( Date()),
             like: 0 // Se inicializan los like 
 
         })
@@ -60,9 +60,9 @@ export const savePost = () => {
   }
 
   // readPost
-  export const readPost = (containerFeed) => {
+  export const readPost = () => {
     
-    const tablePost = containerFeed.querySelector('#extraDiv'); // aqui se  llama al tr donde se  insertan los post
+    const tablePost = document.getElementById('extraDiv'); // aqui se  llama al tr donde se  insertan los post
     db.collection('post').get().then((querySnapshot) => {// querySnapshot es el nombre de la variable que trae los post
         tablePost.innerHTML='';
         let arrayIdPost = Array(); // aqui se guardan los id de los post
@@ -103,6 +103,8 @@ export const savePost = () => {
                 divButtons.appendChild(editButton);
                 divButtons.appendChild(deleteButton);   // si entra aqui  solo el usuario dueño de los post puede ver los botones
             }
+
+            
             
             
             textPost.appendChild(pPost);
@@ -177,6 +179,7 @@ export const deletePost = (evt) => {
     
     db.collection('post').doc(evt.currentTarget.idPost).delete().then(() => {  // se pone la id del post
         console.log("Document successfully deleted!");
+        
         readPost();// se pone readpost para refrescar la vista
     }).catch((error) => {
           console.error("Error removing document: ", error);

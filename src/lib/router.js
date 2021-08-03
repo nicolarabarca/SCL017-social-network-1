@@ -5,7 +5,7 @@ import { mainMenuView } from './views/mainMenu.js';
 import { feedView } from './views/feed.js';
 import { patternsView } from './views/pattern.js';
 import {miscellaneousView} from './views/miscellaneous.js';
-//import{  readPost } from './logic/feedLogic.js';
+import{  readPost } from './logic/feedLogic.js';
 
 
 
@@ -36,7 +36,7 @@ const showView = (hash) => {
       break;
     case '#/feed':
       root.appendChild(feedView());
-      //readPost(); // se cargan los post existentes en base de datos
+      readPost(); // se cargan los post existentes en base de datos
       break;
       case '#/patterns':
         root.appendChild(patternsView());
