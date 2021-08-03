@@ -41,7 +41,7 @@ export const savePost = () => {
         db.collection('post').add({ // esta estructura es un json
             idUser: idUser.displayName, // son los datos que se guardan cuando se hace  un nuevo post 
             post: writePostValue,
-            date: Date(),
+            date: ( Date()),
             like: 0 // Se inicializan los like 
 
         })
@@ -124,6 +124,8 @@ export const savePost = () => {
                 divButtons.appendChild(editButton);
                 divButtons.appendChild(deleteButton);   // si entra aqui  solo el usuario dueño de los post puede ver los botones
             }
+
+            
             
             
             textPost.appendChild(pPost);
@@ -197,6 +199,7 @@ export const deletePost = (evt) => {
     
     db.collection('post').doc(evt.currentTarget.idPost).delete().then(() => {  // se pone la id del post
         console.log("Document successfully deleted!");
+        
         readPost();// se pone readpost para refrescar la vista
     }).catch((error) => {
           console.error("Error removing document: ", error);

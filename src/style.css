@@ -623,7 +623,7 @@ ul {
 }
 
 .scoreLikes {
-  font-family: 'Handlee', cursive;
+  font-family: "Handlee", cursive;
   font-style: bold;
   font-size: 20px;
   display: block;
@@ -632,6 +632,41 @@ ul {
   margin-left: 6vh;
   margin-top: 2vh;
 }
+
+#containerModal {
+  background-color: white;
+  opacity: 0.8;
+  border-radius: 8%;
+  width: 42vh;
+  height: 21vh;
+  margin-left: 5vh;
+}
+#textModal {
+  font-family: "handlee", cursive;
+  text-align: center;
+  font-size: 20px;
+}
+
+#buttonSure {
+  font-size: 20px;
+  border-radius: 5%;
+  border-style: dotted;
+  background-color: #f080807d;
+  margin-left: 14vh;
+  width: 12vh;
+  padding: 1vh;
+  font-family: "Handlee", cursive;
+  text-align: center;
+  margin-top: -2vh;
+}
+#sheepImg {
+  background: url(./lib/assets/sheep1.png) no-repeat;
+  position: absolute;
+  width: 5vh;
+  height: 5vh;
+  margin-left: 2vh;
+}
+=======
 /*PATTERN VIEW*/
 #divButtonPostPattern > button {
   background: url("./lib/assets/send.png") no-repeat;
@@ -908,7 +943,7 @@ ul {
   .divPost {
     width: 49vh;
     height: 49vh;
-    margin-top: 6vh;
+    margin: -8% 0% 30% 0%;
   }
 
   .textPost {
@@ -952,6 +987,15 @@ ul {
     margin-top: -8vh;
   }
 
+  #containerModal {
+    margin-left: 58vh;
+    position: fixed;
+    display: block;
+    margin-top: 18vh;
+  }
+
+
+
     /*PATTERN VIEW MEDIA QUERY*/
    #divButtonPostPattern > button {
   width: 22vh;
@@ -977,9 +1021,3 @@ ul {
 
 
 }
-/*
-#boxHome > li {
-  display: flex;
-  flex-direction: column;
-}
-*/

@@ -1,5 +1,8 @@
 import { signOutUser } from '../logic/signOutFB.js';
 import{ savePost, readPost } from '../logic/feedLogic.js';
+import{ deletePost} from '../logic/feedLogic.js';
+
+
 
 export const feedView = () => {
 
@@ -69,6 +72,26 @@ export const feedView = () => {
   formPost.appendChild(divButtonPost);
   generalContainer.appendChild(formPost);
 
+  const containerModal = document.createElement('div');
+  containerModal.setAttribute('id', 'containerModal');
+
+  const TextModal=document.createElement('p');
+  TextModal.setAttribute('id', 'textModal');
+  TextModal.innerHTML= 'Este post se eliminara para siempre!!';
+  const sheepImg = document.createElement('sheepImg');
+  sheepImg.setAttribute('id','sheepImg');
+  TextModal.appendChild(sheepImg);
+  containerModal.appendChild(TextModal);
+  generalContainer.appendChild(containerModal);
+
+  const buttonSure = document.createElement('div');
+  buttonSure.setAttribute('id', 'buttonSure');
+  buttonSure.addEventListener('click', deletePost);
+  buttonSure.innerHTML= 'Eliminar';
+  containerModal.appendChild(buttonSure);
+  generalContainer.appendChild(containerModal);
+  
+
   const extraDiv= document.createElement('div');
   extraDiv.setAttribute('id', 'extraDiv');
   generalContainer.appendChild(extraDiv);
@@ -76,9 +99,21 @@ export const feedView = () => {
   generalContainer.appendChild(containerMenuFeed);
   containerFeed.appendChild(generalContainer);
   
-  
+ 
   return containerFeed;
 
 
 }
 
+
+
+
+  
+  
+  
+  
+  
+  
+  
+ 
+ 
