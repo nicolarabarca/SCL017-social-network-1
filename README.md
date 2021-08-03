@@ -26,10 +26,10 @@ Orientamos nuestro trabajo poniendo en el centro las historias de usuario:
 “Yo como usuaria, quiero poder registrarme/crearme una cuenta”.
    - Criterio de aceptación: Que el usuario se pueda crear una cuenta
    - Definición de terminado: 
-        *Desde html crear los inputs de tipo texto, uno de password y botón de registro que desata la función de  firebase, todo esto de modo responsive. 
-        *Se crea la vista de la página de registro con html dinámico.
-        *En la vista, se agregan casillas de texto (inputs de tipo email y password) y un elemento botón para que el usuario ingrese sus datos de registro.
-        *Se crea proyecto de firebase y se enlaza al proyecto de la red social.
+        * Desde html crear los inputs de tipo texto, uno de password y botón de registro que desata la función de  firebase, todo esto de modo responsive. 
+        * Se crea la vista de la página de registro con html dinámico.
+        * En la vista, se agregan casillas de texto (inputs de tipo email y password) y un elemento botón para que el usuario ingrese sus datos de registro.
+        * Se crea proyecto de firebase y se enlaza al proyecto de la red social.
 
 
 ### Historia de Usuario 3:
