@@ -1,5 +1,5 @@
 import { signOutUser } from '../logic/signOutFB.js';
-import{ savePost, readPost } from '../../main.js';
+import{ savePost, readPost } from '../logic/feedLogic.js';
 
 
 export const feedView = () => {
@@ -74,7 +74,7 @@ export const feedView = () => {
   generalContainer.appendChild(containerMenuFeed);
   containerFeed.appendChild(generalContainer);
   
-  
+  readPost(containerFeed);
   return containerFeed;
 
 

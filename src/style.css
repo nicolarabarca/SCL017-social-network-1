@@ -561,7 +561,7 @@ ul {
   width: 5vh;
   height: 5vh;
   border-style: none;
-  margin-left: 5vh;
+  margin-left: -8vh;
   margin-top: 2vh;
 }
 .likeButton {
@@ -571,7 +571,7 @@ ul {
   height: 5vh;
   border-style: none;
   margin-top: 2vh;
-  margin-left: 5vh;
+  margin-left: -8vh;
 }
 #textView {
   display: block;
@@ -596,7 +596,18 @@ ul {
   width: 5vh;
   height: 5vh;
   border-style: none;
-  margin-left: 1vh;
+  margin-left: 8vh;
+  margin-top: 2vh;
+}
+
+.scoreLikes {
+  font-family: 'Handlee', cursive;
+  font-style: bold;
+  font-size: 20px;
+  display: block;
+  width: 5vh;
+  height: 5vh;
+  margin-left: 6vh;
   margin-top: 2vh;
 }
 
