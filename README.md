@@ -1,3 +1,92 @@
+# "Tejer & Punto"
+
+
+## 1. Definición del Producto
+Tejer & Punto es una red social para tejedores y tejedoras. Un espacio especial para ellos donde puedan compartir patrones, retos u otros temas de interés. Tejer & Punto surge por la necesidad de tener un espacio único para esta comunidad. 
+
+
+Dado el contexto sanitario actual ha existido una creciente demanda y expansión de esta forma creativa. Sin embargo,las redes sociales tradicionales no logran satisfacer todas las necesidades y funcionalidades que este público requiere, es por esto que decidimos escuchar las solicitudes y crear un espacio preciso que entregará una utilidad única y al mismo tiempo, una experiencia de uso satisfactoria. 
+
+
+## 2. Historias de Usuario
+Orientamos nuestro trabajo poniendo en el centro las historias de usuario: 
+
+
+#### Historia de Usuario 1:
+ ”Yo como usuaria, quiero poder ver si esta red social tiene lo que busco, sin necesariamente registrarme o tener una cuenta”.
+   - Criterio de aceptación: Que el usuario pueda ver elementos de la red social sin registrar
+   - Definición de terminado: 
+        *Tener un botón que permita ir a registrarse si lo desea
+        *Mostrar posts, imágenes y contenido en la red social
+        *Se crea vista de portada/intro de la red social con html dinámico
+        *Se estiliza la vista en concordancia con la temática de la red social
+
+
+#### Historia de Usuario 2:
+“Yo como usuaria, quiero poder registrarme/crearme una cuenta”.
+   - Criterio de aceptación: Que el usuario se pueda crear una cuenta
+   - Definición de terminado: 
+        *Desde html crear los inputs de tipo texto, uno de password y botón de registro que desata la función de  firebase, todo esto de modo responsive. 
+        *Se crea la vista de la página de registro con html dinámico.
+        *En la vista, se agregan casillas de texto (inputs de tipo email y password) y un elemento botón para que el usuario ingrese sus datos de registro.
+        *Se crea proyecto de firebase y se enlaza al proyecto de la red social.
+
+
+#### Historia de Usuario 3:
+“Yo como usuaria, quiero postear en Tejer & Punto”
+  - Criterio de aceptación: Que el usuario pueda postear una publicación
+  - Definición de terminado: 
+        *Crear vistas del feed
+        *Crear colecciones en firebase que permita almacenar y mostrar los datos de publicación 
+
+
+#### Historia de Usuario 4:
+“Yo como usuaria, quiero dar like, editar y borrar posts”
+  - Criterio de aceptación: Que el usuario pueda dar like, editar y borrar sus propias publicaciones 
+  - Definición de terminado: 
+       *Crear CSS con los Iconos y botones 
+       *Asociar funcionalidades de Firebase a dichos botones 
+
+
+## 3. Diagrama de Flujo 
+
+Para organizar nuestro proyecto, hicimos uso de el siguiente diagrama de flujo 
+![Diagrama-de-Flujo](src/lib/assets/diagramadeflujo.jpeg)
+
+
+## 4. Diseño de la Interfaz del Usuario
+Para diseñar nuestra aplicación poniendo al usuario al centro decidimos escuchar los dolores y necesidades de los mismos, para lo cuál generamos un Google Forms. 
+
+A continuación se presentan los prototipos que se desprenden de la investigación anterior.
+### Prototipo de Baja Fidelidad
+![Prototipo-de-Baja](src/lib/assets/prototipotejerypunto.jpeg)
+### Prototipo de Alta Fidelidad
+![Prototipo-de-Alta](src/lib/assets/protodealta.jpeg)
+
+
+## 5. Diseño Responsive 
+(PONER FOTOS DE AMBOS)
+
+## 6. Testeo de Usabilidad 
+Para el test de usabilidad se testeo con (PONER CARACTERÍSTAS DE LOS USUARIOS)
+
+con el fin de conocer la performance de nuestra página se le dio a los usuarios las siguientes instrucciones: 
+
+"Antes de comenzar, queremos comentarle que en la prueba que hagamos, no hay acciones o respuestas incorrectas. Estamos testeando la página y cada respuesta tuya es valiosa y válida.
+El test tiene una duración aproximada de 5 minutos. En esta página, te daré una serie de misiones que debes ir completando en la misma. Te pedimos que durante las acciones que desarrolles manifiestes en voz alta lo que pienses con el fin de que podamos entender qué te sugiere lo que va mostrando cada pantalla.
+Las preguntas que te surjan en la navegación las responderemos al final de la prueba."
+
+### Misiones a realizar y criterios de éxito 
+![Prototipo-de-Alta](src/lib/assets/testusa.PNG)
+
+*Iteraciones en base al Test de Usabilidad: 
+(PONERLOS)
+
+## 7. Link A "Tejer & Punto"
+(PONER GH-PAGES)
+
+<details>
+<summary>Read Me Laboratoria</summary>
 # Creando una Red Social
 
 ## Índice
@@ -324,3 +413,4 @@ Otras:
 * [Mobile First - desarrolloweb.com](https://desarrolloweb.com/articulos/mobile-first-responsive.html)
 * [Mobile First - ZURB](https://zurb.com/word/mobile-first)
 * [Mobile First Is NOT Mobile Only - Nielsen Norman Group](https://www.nngroup.com/articles/mobile-first-not-mobile-only/)
+<details>
