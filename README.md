@@ -14,12 +14,12 @@ Orientamos nuestro trabajo poniendo en el centro las historias de usuario:
 
 ### Historia de Usuario 1:
  ”Yo como usuaria, quiero poder ver si esta red social tiene lo que busco, sin necesariamente registrarme o tener una cuenta”.
-   - Criterio de aceptación: Que el usuario pueda ver elementos de la red social sin registrar
-   - Definición de terminado: 
-        *Tener un botón que permita ir a registrarse si lo desea
-        *Mostrar posts, imágenes y contenido en la red social
-        *Se crea vista de portada/intro de la red social con html dinámico
-        *Se estiliza la vista en concordancia con la temática de la red social
+   * Criterio de aceptación: Que el usuario pueda ver elementos de la red social sin registrar
+   * Definición de terminado: 
+    * Tener un botón que permita ir a registrarse si lo desea
+    * Mostrar posts, imágenes y contenido en la red social
+    * Se crea vista de portada/intro de la red social con html dinámico
+    * Se estiliza la vista en concordancia con la temática de la red social
 
 
 ### Historia de Usuario 2:
