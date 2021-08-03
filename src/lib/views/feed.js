@@ -1,6 +1,6 @@
 import { signOutUser } from '../logic/signOutFB.js';
-import{ savePost } from '../logic/feedLogic.js';
-import{ deletePost } from '../logic/feedLogic.js';
+import { savePost } from '../logic/feedLogic.js';
+import { deletePost } from '../logic/feedLogic.js';
 
 export const feedView = () => {
   const containerFeed = document.createElement('div');
