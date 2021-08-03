@@ -22,7 +22,7 @@ Orientamos nuestro trabajo poniendo en el centro las historias de usuario:
         *Se estiliza la vista en concordancia con la temática de la red social
 
 
-#### Historia de Usuario 2:
+### Historia de Usuario 2:
 “Yo como usuaria, quiero poder registrarme/crearme una cuenta”.
    - Criterio de aceptación: Que el usuario se pueda crear una cuenta
    - Definición de terminado: 
@@ -32,7 +32,7 @@ Orientamos nuestro trabajo poniendo en el centro las historias de usuario:
         *Se crea proyecto de firebase y se enlaza al proyecto de la red social.
 
 
-#### Historia de Usuario 3:
+### Historia de Usuario 3:
 “Yo como usuaria, quiero postear en Tejer & Punto”
   - Criterio de aceptación: Que el usuario pueda postear una publicación
   - Definición de terminado: 
@@ -40,7 +40,7 @@ Orientamos nuestro trabajo poniendo en el centro las historias de usuario:
         *Crear colecciones en firebase que permita almacenar y mostrar los datos de publicación 
 
 
-#### Historia de Usuario 4:
+### Historia de Usuario 4:
 “Yo como usuaria, quiero dar like, editar y borrar posts”
   - Criterio de aceptación: Que el usuario pueda dar like, editar y borrar sus propias publicaciones 
   - Definición de terminado: 
