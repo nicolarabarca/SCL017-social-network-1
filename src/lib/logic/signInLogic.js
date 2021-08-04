@@ -10,5 +10,6 @@ export const loginUser = () => {
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
+      window.location.href = '#/intro';
     });
 };
