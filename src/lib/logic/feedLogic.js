@@ -78,16 +78,16 @@ export const readPost = () => {
       divButtons.setAttribute('class', 'buttons');
       const textLike = document.createElement('textView');
       textLike.setAttribute('class', 'scoreLikes');
-      textLike.innerHTML = doc.data().like; //aca se llama el valor del contador del like
+      textLike.innerHTML = doc.data().like;
       const editButton = document.createElement('button');
       editButton.setAttribute('id', 'editButton');
       editButton.addEventListener('click', editPost);
-      editButton.idPost = doc.id; //se asigna el id del post a una variable  para darselo a la funcion
-      editButton.post = doc.data().post; //aqui se le esta pasando el contenido del post
+      editButton.idPost = doc.id;
+      editButton.post = doc.data().post;
       const deleteButton = document.createElement('button');
       deleteButton.setAttribute('id', 'deleteButton');
       deleteButton.addEventListener('click', deletePost);
-      deleteButton.idPost = doc.id; //se asigna el id del post a una variable para darselo a funcion
+      deleteButton.idPost = doc.id;
       if (doc.data().idUser === firebase.auth().currentUser.displayName) {
         divButtons.appendChild(editButton);
         divButtons.appendChild(deleteButton);
@@ -106,7 +106,7 @@ export const readPost = () => {
     const arrayIdLikes = Array(); // aqui se guardan los id de post de los like
     db.collection('likes').get().then((querySnapshot) => { // aqui se consultan los like a la base de datos de firebase
       querySnapshot.forEach((doc) => { // aqui se recorre el resultado de la query
-        if (doc.data().idUser === firebase.auth().currentUser.displayName) { // aqui se pregunta si el like pertenece al usuario logueado
+        if (doc.data().idUser === firebase.auth().currentUser.displayName) {
           const divButtons = document.getElementById('buttons' + doc.data().idPost); // se concatena para que tengan un id unico
           if (divButtons != null) {
             const likeButton = document.createElement('button');
@@ -125,9 +125,9 @@ export const readPost = () => {
           }
         }
       });
-      /* aqui  se pone  por  defecto  dislike  todos  los  post  a  los  cuales  el usuario no les  ha dado  like ni dislike*/
+      // aqui se pone por defecto dislike todos los post a los cuales el usuario no les ha dado like ni dislike
       for (const idPost of arrayIdPost) { // aqui se  recorren los post con el id
-        const divButtons= document.getElementById('buttons'+ idPost); // se  busca el div  donde  se  pondra el boton
+        const divButtons = document.getElementById('buttons' + idPost); // se  busca el div  donde  se  pondra el boton
         console.log(arrayIdLikes.includes(idPost));
         if (!arrayIdLikes.includes(idPost)) { // aqui se  pregunta si el post no pertenece al  usuario se  pinta
           const likeButton = document.createElement('button'); // se  contruye  el  boton  de  like
@@ -138,101 +138,86 @@ export const readPost = () => {
           likeButton.idLike = 0; // no existe ningun like de este usuario a este post
           divButtons.appendChild(likeButton);
         }
-      }            
-    });   
+      }
+    }); 
   });
-}
+};
 
 export const deletePost = (evt) => {
   console.log(evt.currentTarget.idPost); // se lee la id del elemento a eliminar
   db.collection('post').doc(evt.currentTarget.idPost).delete().then(() => { // se pone la id del post
     console.log('Document successfully deleted!');
     readPost();// se pone readpost para refrescar la vista
-    }).catch((error) => {
-        console.error('Error removing document: ', error);
-    });
+  }).catch((error) => {
+    console.error('Error removing document: ', error);
+  });
 };
 
 export const editPost = (evt) => {
-  document.getElementById('writePost').value = evt.currentTarget.post; //se le asigna a la caja de  post el  texto del  post que se editara
-  idEditPost = evt.currentTarget.idPost; // a la variable ideditpost se le asigna el id del post que se va a editar
+  document.getElementById('writePost').value = evt.currentTarget.post;
+  idEditPost = evt.currentTarget.idPost;
 };
 
 export const likePost = (evt) => {
-  let likeButton = document.getElementById('likeButton' +  evt.currentTarget.idPost); // se  identifica el  boton like
+  const likeButton = document.getElementById('likeButton' + evt.currentTarget.idPost); // se identifica el boton like
   console.log(evt.currentTarget.idPost);
-  let idPostUpdate = evt.currentTarget.idPost;
-  let likePost = 0; // se quiere saber si el usuario  le esta dando like  o dislike 
-  if (evt.currentTarget.idLike == 0) { // aqui se  pregunta si el like  tiene  id (significa que  no existe en base de datos)
-    if (likeButton.className == 'dislikeButton') { // si el valor es 1 quiere decir que el usuario le dio like
+  const idPostUpdate = evt.currentTarget.idPost;
+  let likePost = 0; // se quiere saber si el usuario  le esta dando like  o dislike
+  if (evt.currentTarget.idLike === 0) { // aqui se pregunta si el like  tiene id
+    if (likeButton.className === 'dislikeButton') { // si el valor es 1 quiere decir que el usuario le dio like
       likePost = 1;
     }
     db.collection('likes').add({ // esta estructura es un json / se agrega el like a la base de datos
-      idUser: firebase.auth().currentUser.displayName, // son los datos que se guardan cuando se hace  un nuevo post 
+      idUser: firebase.auth().currentUser.displayName,
       idPost: evt.currentTarget.idPost,
       like: likePost,
     })
-        .then((docRef) => { // aca es cuando el guardar  funciona  bien 
-            console.log('Document written with ID: ', docRef.id);
-            updatePostLike( idPostUpdate, likePost) //  se actualiza el valor del like 
-            
-        })
-        .catch((error) => {  // esto s emuestra cuando hay un error en el guardar post
-            console.error('Error adding document: ', error);
-        });
-    }else{ // aqui solo se debe actualizar el estado del like 
-        likePost = 0;  // se  inicializa como si fuera un dislike
-        if (likeButton.className == 'dislikeButton'){ // si viene con dislike significa que es un like  y se  pone en 1 
-            likePost = 1; 
-        }  
-
-        let updateEditLike = db.collection('likes').doc(evt.currentTarget.idLike);// aca se  busca el  documento a editar, se  usa la variale  que guarda el id del post
-        let idPostUpdate=evt.currentTarget.idPost;
-
-        updateEditLike.update({ // se setean los parametros de like y dislike
-            like: likePost
-        })
-        .then(() => {
-            console.log('Document successfully updated!');
-            console.log(idPostUpdate);
-            updatePostLike( idPostUpdate, likePost)// se actualiza la cantidad de likes que tiene el post
-
-        })
-        .catch((error) => { // aqui es cuando falla el editar el post 
-            // The document probably doesn't exist.
-            console.error('Error updating document: ', error);
-        });
-
-
-
+      .then((docRef) => { // aca es cuando el guardar  funciona  bien
+        console.log('Document written with ID: ', docRef.id);
+        updatePostLike(idPostUpdate, likePost); // se actualiza el valor del like
+      })
+      .catch((error) => { // esto s emuestra cuando hay un error en el guardar post
+        console.error('Error adding document: ', error);
+      });
+  } else { // aqui solo se debe actualizar el estado del like
+    likePost = 0; // se  inicializa como si fuera un dislike
+    if (likeButton.className === 'dislikeButton') { // si viene con dislike significa que es un like  y se  pone en 1
+      likePost = 1;
     }
-
-
- 
-   }
-
-
-  function updatePostLike (idEditPost,like) { // contador de  likes 
-    
-    let updateEditPost = db.collection('post').doc(idEditPost);// aca se  busca el  documento a editar, se  usa la variale  que guarda el id del post
-    let likeValue = -1; // aqui vamos a suponer que el usuario hara dislike entonces diminuiremos
-    if(like == 1){
-        likeValue=1;
-
-     }   
-
-     console.log(like);
-     console.log(likeValue);
-    updateEditPost.update({ // se  setean los parametros a editar 
-       like: firebase.firestore.FieldValue.increment( likeValue)    // se  usa para incrementar o disminuir el valor de los like
+    const updateEditLike = db.collection('likes').doc(evt.currentTarget.idLike); // aca se busca el documento a editar, se  usa la variale  que guarda el id del post
+    const idPostUpdate = evt.currentTarget.idPost;
+    updateEditLike.update({ // se setean los parametros de like y dislike
+      like: likePost,
     })
-    .then(() => {
+      .then(() => {
         console.log('Document successfully updated!');
-        readPost();// se actualiza  la vista de  like 
-                
-    })
-    .catch((error) => { // aqui es cuando falla el editar el post 
+        console.log(idPostUpdate);
+        updatePostLike(idPostUpdate, likePost);
+      })
+      .catch((error) => { // aqui es cuando falla el editar el post
         // The document probably doesn't exist.
         console.error('Error updating document: ', error);
+      });
+  }
+};
+
+const updatePostLike = (idEditPost, like) => { // contador de  likes
+  const updateEditPost = db.collection('post').doc(idEditPost); // aca se  busca el  documento a editar, se  usa la variale  que guarda el id del post
+  let likeValue = -1; // aqui vamos a suponer que el usuario hara dislike entonces diminuiremos
+  if (like === 1) {
+    likeValue = 1;
+  }
+  console.log(like);
+  console.log(likeValue);
+  updateEditPost.update({
+    like: firebase.firestore.FieldValue.increment(likeValue),
+  })
+    .then(() => {
+      console.log('Document successfully updated!');
+      readPost();
+    })
+    .catch((error) => {
+      // The document probably doesn't exist.
+      console.error('Error updating document: ', error);
     });
-}
+};
