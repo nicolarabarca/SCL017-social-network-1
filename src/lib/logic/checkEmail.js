@@ -4,5 +4,5 @@ export const checkEmailValidity = () => {
     emails.setCustomValidity('Debes ingresar un email válido');
   } else {
     emails.setCustomValidity('');
-  }  
-}
+  }
+};
