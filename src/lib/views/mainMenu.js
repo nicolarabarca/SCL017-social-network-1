@@ -40,4 +40,4 @@ export const mainMenuView = () => {
   footerMainMenu.innerHTML = 'Derechos reservados @Tejer&Punto';
   containerMainMenu.appendChild(footerMainMenu);
   return containerMainMenu;
-}
+};

@@ -38,15 +38,15 @@ const showView = (hash) => {
       break;
     case '#/feed':
       firebase.auth().onAuthStateChanged((user) => {
-       if (user) {
-        const uid = user.uid;
-        root.appendChild(feedView());
-        readPost();// se cargan los post existentes en base de datos
-        console.log('Existe usuario activo');
+        if (user) {
+          const uid = user.uid;
+          root.appendChild(feedView());
+          readPost();// se cargan los post existentes en base de datos
+          console.log('Existe usuario activo');
         } else {
-        window.location.href = '#/intro';
-        console.log('No existe usuario activo');
-      }
+          window.location.href = '#/intro';
+          console.log('No existe usuario activo');
+        }
       }); 
       break;
     case '#/patterns':

@@ -5,7 +5,7 @@ export const miscellaneousView = () => {
   containerFeed.setAttribute('id', 'containerFeed');
   const generalContainer = document.createElement('div');
   generalContainer.setAttribute('id', 'generalContainer');
-  const containerMenuFeed = document.createElement ('ul');
+  const containerMenuFeed = document.createElement('ul');
   containerMenuFeed.setAttribute('id', 'containerMenuFeedUl');
   const boxHome = document.createElement('li');
   boxHome.setAttribute('id', 'boxHome');
@@ -30,4 +30,4 @@ export const miscellaneousView = () => {
   generalContainer.appendChild(containerMenuFeed);
   containerFeed.appendChild(generalContainer);
   return containerFeed;
-}
+};

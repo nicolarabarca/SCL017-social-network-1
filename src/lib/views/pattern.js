@@ -10,7 +10,7 @@ export const patternsView = () => {
   const boxHome = document.createElement('li');
   boxHome.setAttribute('id', 'boxHome');
   boxHome.innerHTML = '<a href="#/mainmenu"></a>';
-  containerMenuFeed.appendChild(boxHome); 
+  containerMenuFeed.appendChild(boxHome);
   const boxPatterns = document.createElement('li');
   boxPatterns.setAttribute('id', 'boxPatterns');
   boxPatterns.innerHTML = '<a href="#/patterns">Patrones</a>';
@@ -29,7 +29,7 @@ export const patternsView = () => {
   headerFeed.innerHTML = 'Tejer & Punto';
   header.appendChild(headerFeed);
   generalContainer.appendChild(header);
-  const containerPostPattern = document.createElement('div')
+  const containerPostPattern = document.createElement('div');
   const formPostPattern = document.createElement('form');
   formPostPattern.setAttribute('id', 'formPostPattern');
   containerPostPattern.setAttribute('id', 'containerPostPattern');
@@ -43,25 +43,11 @@ export const patternsView = () => {
   divButtonPostPattern.setAttribute('id', 'divButtonPostPattern');
   const buttonPostPattern = document.createElement('button');
   buttonPostPattern.setAttribute('id', 'buttonPostPattern');
-  //buttonPostPattern.addEventListener('click', savePost);
   divButtonPostPattern.appendChild(buttonPostPattern);
   formPostPattern.appendChild(divButtonPostPattern);
   generalContainer.appendChild(formPostPattern);
-//   AQUI EMPIEZA LA WEA DE PATTERNS
-//   const divPostPattern= document.createElement('div');
-//             divPostPattern.setAttribute('class', 'divPostPattern');
-
-//             const textPostPattern= document.createElement('div');
-//             textPostPattern.setAttribute('class', 'textPostPattern'); 
- 
-//             const pPostPattern = document.createElement('p');
-//   pPostPattern.setAttribute('id', 'pPostPattern');
-//   pPostPattern.innerHTML = 'Patrones en construcción ';
-
-//   textPostPattern.appendChild(pPostPattern);
-//   divPostPattern.appendChild(textPostPattern); 
- generalContainer.appendChild(containerPostPattern)
- generalContainer.appendChild(containerMenuFeed);
- containerFeed.appendChild(generalContainer);
- return containerFeed;
-}
+  generalContainer.appendChild(containerPostPattern);
+  generalContainer.appendChild(containerMenuFeed);
+  containerFeed.appendChild(generalContainer);
+  return containerFeed;
+};

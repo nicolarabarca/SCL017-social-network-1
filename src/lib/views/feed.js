@@ -7,7 +7,7 @@ export const feedView = () => {
   containerFeed.setAttribute('id', 'containerFeed');
   const generalContainer = document.createElement('div');
   generalContainer.setAttribute('id', 'generalContainer');
-  const containerMenuFeed = document.createElement ('ul');
+  const containerMenuFeed = document.createElement('ul');
   containerMenuFeed.setAttribute('id', 'containerMenuFeedUl');
   const boxHome = document.createElement('li');
   boxHome.setAttribute('id', 'boxHome');
@@ -31,9 +31,9 @@ export const feedView = () => {
   boxSignOutUser.setAttribute('id', 'boxsignOutUser');
   boxSignOutUser.addEventListener('click', signOutUser);
   containerMenuFeed.appendChild(boxSignOutUser);
-  const containerPost = document.createElement('div')
+  const containerPost = document.createElement('div');
   const formPost = document.createElement('form');
-  formPost.setAttribute('id','formPost');
+  formPost.setAttribute('id', 'formPost');
   containerPost.setAttribute('id', 'containerPost');
   const writePost = document.createElement('input');
   writePost.setAttribute('id', 'writePost');
@@ -43,7 +43,7 @@ export const feedView = () => {
   containerPost.appendChild(writePost);
   formPost.appendChild(containerPost);
   const divButtonPost = document.createElement('div');
-  divButtonPost.setAttribute('id','divButtonPost');
+  divButtonPost.setAttribute('id', 'divButtonPost');
   const buttonPost = document.createElement('button');
   buttonPost.setAttribute('id', 'buttonPost');
   buttonPost.addEventListener('click', savePost);
@@ -56,7 +56,7 @@ export const feedView = () => {
   TextModal.setAttribute('id', 'textModal');
   TextModal.innerHTML = 'Este post se eliminara para siempre!!';
   const sheepImg = document.createElement('sheepImg');
-  sheepImg.setAttribute('id','sheepImg');
+  sheepImg.setAttribute('id', 'sheepImg');
   TextModal.appendChild(sheepImg);
   containerModal.appendChild(TextModal);
   generalContainer.appendChild(containerModal);
@@ -72,4 +72,4 @@ export const feedView = () => {
   generalContainer.appendChild(containerMenuFeed);
   containerFeed.appendChild(generalContainer);
   return containerFeed;
-}
+};
