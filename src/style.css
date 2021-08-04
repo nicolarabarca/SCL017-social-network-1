@@ -681,6 +681,11 @@ ul {
   text-align: center;
   margin-top: -2vh;
 }
+
+#buttonNoSure {
+  width: 10vh;
+  height: 10vh;
+}
 #sheepImg {
   background: url(./lib/assets/sheep1.png) no-repeat;
   position: absolute;

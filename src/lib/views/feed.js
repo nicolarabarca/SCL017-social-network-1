@@ -39,6 +39,9 @@ export const feedView = () => {
   writePost.setAttribute('id', 'writePost');
   writePost.setAttribute('id', 'writePost');
   writePost.setAttribute('type', 'text');
+  /*writePost.setAttribute('size','4');
+  writePost.setAttribute('maxlength', '10');
+  writePost.setAttribute('required', 'required');*/
   writePost.setAttribute('placeholder', 'Escribe lo que piensas');
   containerPost.appendChild(writePost);
   formPost.appendChild(containerPost);
