@@ -50,9 +50,9 @@ export const signUpView = () => {
   buttonToGoogleUp.addEventListener('click', googleAccess);
   mainUp.appendChild(buttonToGoogleUp);
   containerUp.appendChild(mainUp);
-  const divImgUp=document.createElement('div');
+  const divImgUp = document.createElement('div');
   divImgUp.setAttribute('id', 'divImgUp');
-  const imgUp=document.createElement('img');
+  const imgUp = document.createElement('img');
   imgUp.setAttribute('id', 'imgUp');
   divImgUp.appendChild(imgUp);
   containerUp.appendChild(divImgUp);

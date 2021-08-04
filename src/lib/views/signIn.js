@@ -42,7 +42,7 @@ export const signInView = () => {
   buttonToGoogleIn.addEventListener('click', googleAccess);
   mainIn.appendChild(buttonToGoogleIn);
   const divImgIn = document.createElement('div');
-  divImgIn.setAttribute('id','divImgIn');
+  divImgIn.setAttribute('id', 'divImgIn');
   const imgIn = document.createElement('img');
   imgIn.setAttribute('id', 'imgIn');
   divImgIn.appendChild(imgIn);

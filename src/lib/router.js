@@ -4,16 +4,8 @@ import { signInView } from './views/signIn.js';
 import { mainMenuView } from './views/mainMenu.js';
 import { feedView } from './views/feed.js';
 import { patternsView } from './views/pattern.js';
-import {miscellaneousView} from './views/miscellaneous.js';
-import{  readPost } from './logic/feedLogic ';
-
-
-
-
-
-
-
-
+import { miscellaneousView } from './views/miscellaneous.js';
+import { readPost } from './logic/feedLogic.js';
 
 const showView = (hash) => {
   const root = document.getElementById('root');
@@ -32,17 +24,53 @@ const showView = (hash) => {
       root.appendChild(signInView());
       break;
     case '#/mainmenu':
-      root.appendChild(mainMenuView());
+      firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+          const uid = user.uid;
+          root.appendChild(mainMenuView());
+          console.log('Existe usuario activo');
+        } else {
+          window.location.href = '#/intro';
+          console.log('No existe usuario activo');
+        }
+      });
       break;
     case '#/feed':
-      root.appendChild(feedView());
-      readPost(); // se cargan los post existentes en base de datos
+      firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+          const uid = user.uid;
+          root.appendChild(feedView());
+          readPost();// se cargan los post existentes en base de datos
+          console.log('Existe usuario activo');
+        } else {
+          window.location.href = '#/intro';
+          console.log('No existe usuario activo');
+        }
+      }); 
       break;
-      case '#/patterns':
-        root.appendChild(patternsView());
+    case '#/patterns':
+      firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+          const uid = user.uid;
+          root.appendChild(patternsView());
+          console.log('Existe usuario activo');
+        } else {
+          window.location.href = '#/intro';
+          console.log('No existe usuario activo');
+        }
+      });
       break;
     case '#/miscellaneous':
-        root.appendChild(miscellaneousView());
+      firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+          const uid = user.uid;
+          root.appendChild(miscellaneousView());
+          console.log('Existe usuario activo');
+        } else {
+          window.location.href = '#/intro';
+          console.log('No existe usuario activo');
+        }
+      });
       break;
     default:
       break;
@@ -74,7 +102,6 @@ const changePath = (hash) => {
   if (hash === '#/miscellaneous') {
     return showView(hash);
   }
-  
 };
 
 export const init = () => {
@@ -83,3 +110,5 @@ export const init = () => {
     changePath(window.location.hash);
   });
 };
+
+

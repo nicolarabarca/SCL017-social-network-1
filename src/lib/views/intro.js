@@ -22,6 +22,5 @@ export const introView = () => {
   footerIntro.innerHTML = 'Derechos reservados @Tejer&Punto';
   footerIntro.setAttribute('id', 'footerIntro');
   containerIntro.appendChild(footerIntro);
-  
   return containerIntro;
 };

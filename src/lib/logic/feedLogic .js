@@ -322,3 +322,4 @@ export const askConfirmDeletePost = (evt) => {
 	document.getElementById('containerModal').style.visibility = "visible";
         
  }  
+ 
