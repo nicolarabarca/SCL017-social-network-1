@@ -4,7 +4,8 @@ export const observer = () => {
       const uid = user.uid;
       console.log('Existe usuario activo');
     } else {
+      window.location.href = '#/intro';
       console.log('No existe usuario activo');
     }
-  });  
+  });
 };
