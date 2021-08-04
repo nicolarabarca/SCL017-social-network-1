@@ -6,7 +6,6 @@ import { feedView } from './views/feed.js';
 import { patternsView } from './views/pattern.js';
 import { miscellaneousView } from './views/miscellaneous.js';
 import { readPost } from './logic/feedLogic.js';
-import { observer } from './logic/observerFB.js';
 
 const showView = (hash) => {
   const root = document.getElementById('root');

@@ -1,6 +1,6 @@
 import { signOutUser } from '../logic/signOutFB.js';
-import { savePost } from '../logic/feedLogic.js';
-import { deletePost } from '../logic/feedLogic.js';
+import { savePost, confirmDeletePost, noConfirmDeletePost} from '../logic/feedLogic.js';
+
 
 export const feedView = () => {
   const containerFeed = document.createElement('div');
@@ -39,6 +39,9 @@ export const feedView = () => {
   writePost.setAttribute('id', 'writePost');
   writePost.setAttribute('id', 'writePost');
   writePost.setAttribute('type', 'text');
+  /*writePost.setAttribute('size','4');
+  writePost.setAttribute('maxlength', '10');
+  writePost.setAttribute('required', 'required');*/
   writePost.setAttribute('placeholder', 'Escribe lo que piensas');
   containerPost.appendChild(writePost);
   formPost.appendChild(containerPost);
@@ -62,9 +65,19 @@ export const feedView = () => {
   generalContainer.appendChild(containerModal);
   const buttonSure = document.createElement('div');
   buttonSure.setAttribute('id', 'buttonSure');
-  buttonSure.addEventListener('click', deletePost);
+  buttonSure.addEventListener('click', confirmDeletePost);
   buttonSure.innerHTML = 'Eliminar';
+  const buttonNoSure = document.createElement('div');
+  buttonNoSure.setAttribute('id', 'buttonSure');
+  buttonNoSure.addEventListener('click', noConfirmDeletePost);
+  buttonNoSure.innerHTML= 'Cancelar';
+  const hideIdDeletePost = document.createElement('input');
+  hideIdDeletePost.setAttribute('id', 'hideIdDeletePost');
+  hideIdDeletePost.style.visibility = "hidden";//se  oculta el id  del post a  
   containerModal.appendChild(buttonSure);
+  containerModal.appendChild(buttonNoSure);
+  containerModal.appendChild(hideIdDeletePost);
+  containerModal.style.visibility = "hidden"; // se oculta el modal
   generalContainer.appendChild(containerModal);
   const extraDiv = document.createElement('div');
   extraDiv.setAttribute('id', 'extraDiv');
