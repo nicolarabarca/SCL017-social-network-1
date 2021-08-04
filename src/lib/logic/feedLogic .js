@@ -6,12 +6,33 @@ let idEditPost = 0; // se declara la variable idEditPost (ideditPost) que  tendr
 
 export const savePost = () => {
     const writePostValue = document.getElementById('writePost').value; // aqui se  obtiene  el valor del  texto que  hizo el usuario en el murp
-    if (writePostValue == ''){
-        alert ( 'Upss no haz escrito nada ');
-        return;
+    if (writePostValue ==""){
+       /* const inputValidation = () =>{*/
+         
+                 
+                 const myModal= document.createElement('div');
+                 myModal.setAttribute('id', ',modalPost');
+                 myModal.setAttribute('class','modal');
+     
+                 const modalContent = document.createElement('div');
+                 modalContent.setAttribute('class','modal-content');
+                 const pmodalContent= document.createElement('p');
+                 pmodalContent.innerHTML= `escribe algo para postear`;
+                 modalContent.style.display = "block";
+     
+                 myModal.appendChild(modalContent);
+                 modalContent.appendChild(pmodalContent);
 
-    }
-        
+                 window.onclick = function(event) {
+                     if (event.target == modalContent) {
+                        modalContent.style.display = "none"; 
+
+                     }
+              /*  return inputValidation;  */  
+               /*}*/
+          
+}
+        } 
     const idUser = firebase.auth().currentUser;// obtener  el id del usuario que se encuentra usando firebase
     console.log(idEditPost);
 
@@ -96,7 +117,9 @@ export const savePost = () => {
             
             const deleteButton = document.createElement('button');
             deleteButton.setAttribute('id', 'deleteButton');
-            deleteButton.addEventListener('click', deletePost); 
+            //deleteButton.addEventListener('click', deletePost); 
+			deleteButton.addEventListener('click', askConfirmDeletePost); 
+			
             deleteButton.idPost = doc.id ;   //se asigna el id del post a una variable  para darselo a la funcion 
 
             if(doc.data().idUser==firebase.auth().currentUser.displayName){ // id user dice quien es el dueño del post y se compara  con currentuser para ver si corresponde el id con el usuario que esta logueado
@@ -126,7 +149,6 @@ export const savePost = () => {
             querySnapshot.forEach((doc) => { // aqui se recorre el resultado de la query
                 if(doc.data().idUser==firebase.auth().currentUser.displayName){// aqui se pregunta si el like pertenece al usuario logueado
                     let divButtons= document.getElementById("buttons"+doc.data().idPost); // se concatena para que tengan un id unico
-                    console.log(divButtons);
                     if(divButtons != null){ // cuando  es  nuevo se tiene  que saltar esto y  se dibuja en  la  parte  de abajo
                         const likeButton = document.createElement('button');
                         arrayIdLikes.push(doc.data().idPost); // aqui se  agrega el id del post al array
@@ -174,12 +196,13 @@ export const savePost = () => {
 
 
  
-export const deletePost = (evt) => {
-    console.log(evt.currentTarget.idPost); // se lee la id del elemento a eliminar 
+function deletePost(idDeletePost){
+    console.log(idDeletePost); // se lee la id del elemento a eliminar 
     
-    db.collection('post').doc(evt.currentTarget.idPost).delete().then(() => {  // se pone la id del post
+    db.collection('post').doc(idDeletePost).delete().then(() => {  // se pone la id del post
         console.log("Document successfully deleted!");
-        
+		document.getElementById('hideIdDeletePost').value = '';
+        document.getElementById('containerModal').style.visibility = "hidden";
         readPost();// se pone readpost para refrescar la vista
     }).catch((error) => {
           console.error("Error removing document: ", error);
@@ -276,3 +299,26 @@ export const likePost = (evt) => {
         console.error("Error updating document: ", error);
     });
 }
+
+
+
+export const confirmDeletePost = (evt) => {
+	
+	deletePost(document.getElementById('hideIdDeletePost').value);
+
+        
+ }
+ 
+export const noConfirmDeletePost = (evt) => {
+	//Usuario no confirma eliminacion, se esconde el modal
+	document.getElementById('containerModal').style.visibility = "hidden";
+        
+ } 
+ 
+ 
+export const askConfirmDeletePost = (evt) => {
+	//Usuario no confirma eliminacion, se esconde el modal
+	document.getElementById('hideIdDeletePost').value = evt.currentTarget.idPost;
+	document.getElementById('containerModal').style.visibility = "visible";
+        
+ }  
