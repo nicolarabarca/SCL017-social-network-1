@@ -86,7 +86,7 @@ export const readPost = () => {
       editButton.post = doc.data().post;
       const deleteButton = document.createElement('button');
       deleteButton.setAttribute('id', 'deleteButton');
-      deleteButton.addEventListener('click', deletePost);
+      deleteButton.addEventListener('click', askConfirmDeletePost);
       deleteButton.idPost = doc.id;
       if (doc.data().idUser === firebase.auth().currentUser.displayName) {
         divButtons.appendChild(editButton);
@@ -143,15 +143,21 @@ export const readPost = () => {
   });
 };
 
-export const deletePost = (evt) => {
-  console.log(evt.currentTarget.idPost); // se lee la id del elemento a eliminar
-  db.collection('post').doc(evt.currentTarget.idPost).delete().then(() => { // se pone la id del post
-    console.log('Document successfully deleted!');
-    readPost();// se pone readpost para refrescar la vista
+function deletePost(idDeletePost){ // se  transforma en  funcion para pasar parametro
+  console.log(idDeletePost); // se lee la id del elemento a eliminar 
+  
+  db.collection('post').doc(idDeletePost).delete().then(() => {  // se pone la id del post
+      console.log("Document successfully deleted!");
+  document.getElementById('hideIdDeletePost').value = '';// se reinicia todo
+      document.getElementById('containerModal').style.visibility = "hidden";
+      readPost();// se pone readpost para refrescar la vista
   }).catch((error) => {
-    console.error('Error removing document: ', error);
-  });
-};
+        console.error("Error removing document: ", error);
+      });
+
+      
+}
+
 
 export const editPost = (evt) => {
   document.getElementById('writePost').value = evt.currentTarget.post;
@@ -221,3 +227,23 @@ const updatePostLike = (idEditPost, like) => { // contador de  likes
       console.error('Error updating document: ', error);
     });
 };
+
+export const confirmDeletePost = (evt) => {// se asocia al boton eliminar  del modal
+	
+	deletePost(document.getElementById('hideIdDeletePost').value);//se  guarda  el valor  del id en el input que se esconde
+
+        
+ }
+ 
+export const noConfirmDeletePost = (evt) => {
+	//Usuario no confirma eliminacion, se esconde el modal
+	document.getElementById('containerModal').style.visibility = "hidden";
+        
+ }
+ export const askConfirmDeletePost = (evt) => {
+	//Usuario no confirma eliminacion, se esconde el modal
+	document.getElementById('hideIdDeletePost').value = evt.currentTarget.idPost;
+	document.getElementById('containerModal').style.visibility = "visible";
+        
+ }
+
