@@ -1,6 +1,5 @@
 import { signOutUser } from '../logic/signOutFB.js';
-import { savePost, confirmDeletePost, noConfirmDeletePost} from '../logic/feedLogic.js';
-
+import { savePost, confirmDeletePost, noConfirmDeletePost } from '../logic/feedLogic.js';
 
 export const feedView = () => {
   const containerFeed = document.createElement('div');
@@ -69,11 +68,11 @@ export const feedView = () => {
   buttonNoSure.innerHTML= 'Cancelar';
   const hideIdDeletePost = document.createElement('input');
   hideIdDeletePost.setAttribute('id', 'hideIdDeletePost');
-  hideIdDeletePost.style.visibility = "hidden";//se  oculta el id  del post a  
+  hideIdDeletePost.style.visibility = 'hidden';
   containerModal.appendChild(buttonSure);
   containerModal.appendChild(buttonNoSure);
   containerModal.appendChild(hideIdDeletePost);
-  containerModal.style.visibility = "hidden"; // se oculta el modal
+  containerModal.style.visibility = 'hidden';
   generalContainer.appendChild(containerModal);
   const extraDiv = document.createElement('div');
   extraDiv.setAttribute('id', 'extraDiv');
