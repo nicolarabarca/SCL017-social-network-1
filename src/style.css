@@ -424,9 +424,12 @@ body {
   border-radius: 8px;
   grid-area: navigator;
   position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   z-index: 100;
   padding-left: 4vh;
   background-color: #3aa9a1;
+  margin-top: -34px;
 }
 
 #boxHome {
@@ -501,7 +504,7 @@ ul {
   word-break: break-word;
   height: var(--h);
   --h: 43.75px;
-  margin-top: 16vh;
+  margin-top: 8vh;
   margin-left: 4vh;
   position: fixed;
 }
@@ -530,12 +533,15 @@ ul {
   font-family: "Handlee", cursive;
   font-size: 16px;
   grid-area: main;
-  margin-top: -3vh;
+  margin-left: 105px;
+  margin-top: 5vh;
   z-index: 1;
 }
 
 #divButtonPost > button {
   background: url("./lib/assets/send.png") no-repeat;
+  display: block;
+  position: relative;
   height: 5vh;
   width: 20vh;
   margin-left: 76%;
@@ -543,6 +549,7 @@ ul {
   border-style: none;
   align-items: center;
   text-align: center;
+  z-index: 1;
 }
 
 .divPost {
