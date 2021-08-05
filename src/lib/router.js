@@ -28,10 +28,10 @@ const showView = (hash) => {
         if (user) {
           const uid = user.uid;
           root.appendChild(mainMenuView());
-          console.log('Existe usuario activo');
+          // console.log('Existe usuario activo');
         } else {
           window.location.href = '#/intro';
-          console.log('No existe usuario activo');
+          // console.log('No existe usuario activo');
         }
       });
       break;
@@ -41,22 +41,22 @@ const showView = (hash) => {
           const uid = user.uid;
           root.appendChild(feedView());
           readPost();// se cargan los post existentes en base de datos
-          console.log('Existe usuario activo');
+          // console.log('Existe usuario activo');
         } else {
           window.location.href = '#/intro';
-          console.log('No existe usuario activo');
+          // console.log('No existe usuario activo');
         }
-      }); 
+      });
       break;
     case '#/patterns':
       firebase.auth().onAuthStateChanged((user) => {
         if (user) {
           const uid = user.uid;
           root.appendChild(patternsView());
-          console.log('Existe usuario activo');
+          // console.log('Existe usuario activo');
         } else {
           window.location.href = '#/intro';
-          console.log('No existe usuario activo');
+          // console.log('No existe usuario activo');
         }
       });
       break;
@@ -65,10 +65,10 @@ const showView = (hash) => {
         if (user) {
           const uid = user.uid;
           root.appendChild(miscellaneousView());
-          console.log('Existe usuario activo');
+          // console.log('Existe usuario activo');
         } else {
           window.location.href = '#/intro';
-          console.log('No existe usuario activo');
+          // console.log('No existe usuario activo');
         }
       });
       break;
@@ -102,6 +102,7 @@ const changePath = (hash) => {
   if (hash === '#/miscellaneous') {
     return showView(hash);
   }
+  return showView(hash);
 };
 
 export const init = () => {
@@ -110,5 +111,3 @@ export const init = () => {
     changePath(window.location.hash);
   });
 };
-
-
