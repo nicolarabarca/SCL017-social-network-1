@@ -489,6 +489,7 @@ ul {
 #writePost {
   width: 40vh;
   height: 7vh;
+  z-index: 1;
   background: white;
   font-family: "Handlee", cursive;
   border-style: none;
@@ -502,6 +503,7 @@ ul {
   --h: 43.75px;
   margin-top: 16vh;
   margin-left: 4vh;
+  position: fixed;
 }
 
 #writePost::placeholder {
@@ -509,18 +511,17 @@ ul {
   text-align: center;
 }
 
-
-  /* Modal Content */
+/* Modal Content */
 .modal-content {
-  background-color: 		#FFE4B5;
+  background-color: #ffe4b5;
   margin: auto;
   padding: 20px;
-  border: 1px solid 	#FF7F50;
+  border: 1px solid #ff7f50;
   width: 80%;
-  font-weight: bold
+  font-weight: bold;
 }
 
-.modal-content  p {
+.modal-content p {
   text-align: center;
 }
 
@@ -530,6 +531,7 @@ ul {
   font-size: 16px;
   grid-area: main;
   margin-top: -3vh;
+  z-index: 1;
 }
 
 #divButtonPost > button {
@@ -541,7 +543,6 @@ ul {
   border-style: none;
   align-items: center;
   text-align: center;
-  
 }
 
 .divPost {
@@ -556,7 +557,6 @@ ul {
   align-items: stretch;
   --h: 120px;
   border-radius: 2vh;
-
 }
 
 .textPost {
@@ -657,12 +657,17 @@ ul {
 
 #containerModal {
   background-color: white;
-  opacity: 0.8;
   border-radius: 8%;
   width: 42vh;
-  height: 21vh;
+  height: 32vh;
   margin-left: 5vh;
+  position: fixed;
+  z-index: 1;
+  margin-top: 45vh;
+  -webkit-box-shadow: -2px 1px 20px 4px gray;
+  box-shadow: -2px 1px 20px 4px gray;
 }
+
 #textModal {
   font-family: "handlee", cursive;
   text-align: center;
@@ -674,12 +679,12 @@ ul {
   border-radius: 5%;
   border-style: dotted;
   background-color: #f080807d;
-  margin-left: 14vh;
+  margin-left: 13vh;
   width: 12vh;
   padding: 1vh;
   font-family: "Handlee", cursive;
   text-align: center;
-  margin-top: -2vh;
+  margin-top: 1vh;
 }
 
 #buttonNoSure {
@@ -704,7 +709,6 @@ ul {
   border-style: none;
   align-items: center;
   text-align: center;
-  
 }
 
 #writePostPattern {
@@ -730,7 +734,7 @@ ul {
   text-align: center;
 }
 
-#divButtonPostPattern{
+#divButtonPostPattern {
   text-align: center;
   font-family: "Handlee", cursive;
   font-size: 16px;
@@ -988,6 +992,7 @@ ul {
     margin-left: 31%;
     margin-top: -2vh;
     position: fixed;
+    z-index: 1;
   }
   #writePost > input {
     margin-top: 23px;
@@ -1023,7 +1028,7 @@ ul {
     position: fixed;
     display: block;
   }
-  
+
   #likeButton {
     margin-left: 14vh;
   }
@@ -1054,20 +1059,18 @@ ul {
     margin-top: 18vh;
   }
 
-
-
-    /*PATTERN VIEW MEDIA QUERY*/
-   #divButtonPostPattern > button {
-  width: 22vh;
-  margin-top: -1%;
-  margin-left: 24%;
-  position: fixed;
-  display: block;
+  /*PATTERN VIEW MEDIA QUERY*/
+  #divButtonPostPattern > button {
+    width: 22vh;
+    margin-top: -1%;
+    margin-left: 24%;
+    position: fixed;
+    display: block;
   }
 
-  #writePostPattern{
-  margin-top: 1vh;
-  margin-left: 4vh;
+  #writePostPattern {
+    margin-top: 1vh;
+    margin-left: 4vh;
   }
 
   #headerFeed {
@@ -1077,7 +1080,4 @@ ul {
     margin-left: 16vh;
     margin-top: -8vh;
   }
-
-
-
 }
