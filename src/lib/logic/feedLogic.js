@@ -31,7 +31,7 @@ export const savePost = () => {
     db.collection('post').add({
       idUser: idUser.displayName,
       post: writePostValue,
-      date: (Date()),
+      date: ( new Date().toLocaleDateString('day','month','year')),
       like: 0,
     })
       .then((docRef) => {
@@ -46,7 +46,7 @@ export const savePost = () => {
     const updateEditPost = db.collection('post').doc(idEditPost);
     updateEditPost.update({
       post: writePostValue,
-      date: (new Date()),
+      date: ( new Date().toLocaleDateString('day','month','year'))
     })
       .then(() => {
         console.log('Document successfully updated!');
@@ -246,4 +246,3 @@ export const noConfirmDeletePost = (evt) => {
 	document.getElementById('containerModal').style.visibility = "visible";
         
  }
-
