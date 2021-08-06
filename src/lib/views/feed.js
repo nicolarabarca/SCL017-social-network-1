@@ -1,5 +1,5 @@
 import { signOutUser } from '../logic/signOutFB.js';
-import { savePost, confirmDeletePost, noConfirmDeletePost } from '../logic/feedLogic.js';
+import { savePost, confirmDeletePost, noConfirmDeletePost,closeInputModal } from '../logic/feedLogic.js';
 
 export const feedView = () => {
   const containerFeed = document.createElement('div');
@@ -73,6 +73,21 @@ export const feedView = () => {
   containerModal.appendChild(buttonNoSure);
   containerModal.appendChild(hideIdDeletePost);
   containerModal.style.visibility = 'hidden';
+  const containerModalInput = document.createElement('div');
+  containerModalInput.setAttribute('id', 'containerModalInput');  
+  const TextModalInput=document.createElement('p');
+  TextModalInput.setAttribute('id', 'textModalInput');
+  TextModalInput.innerHTML= 'Uups!! no haz posteado nada :D';
+  TextModalInput.appendChild(sheepImg);
+  containerModalInput.appendChild(TextModalInput);  
+  const buttonModalInput = document.createElement('div');
+  buttonModalInput.setAttribute('id', 'buttonModalInput');
+  buttonModalInput.addEventListener('click', closeInputModal);
+  buttonModalInput.innerHTML= 'aceptar';  
+  containerModalInput.appendChild(buttonModalInput);
+  containerModal.style.visibility = 'hidden';
+  containerModalInput.style.visibility = 'hidden';
+  generalContainer.appendChild(containerModalInput);
   generalContainer.appendChild(containerModal);
   const extraDiv = document.createElement('div');
   extraDiv.setAttribute('id', 'extraDiv');
