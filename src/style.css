@@ -675,18 +675,23 @@ ul {
   
 }
 
-#textModalInput{
+#containerModalInput {
   background-color: white;
   border-radius: 8%;
   width: 42vh;
-  height: 36vh;
+  height: 18vh;
   margin-left: 5vh;
   position: fixed;
   z-index: 1;
-  margin-top: 45vh;
-  -webkit-box-shadow: -2px 1px 20px 4px gray;
   box-shadow: -2px 1px 20px 4px gray;
-  margin-top: 22vh;
+  margin-top: 14vh;
+}
+
+#textModalInput{
+  text-align: center;
+  margin-left: -5vh;
+  font-size: 16px;
+  font-family: 'Handlee', cursive;
 }
 
 #buttonModalInput{
@@ -694,7 +699,7 @@ ul {
   border-radius: 5%;
   border-style: dotted;
   background-color: #f080807d;
-  margin-left: 13vh;
+  margin-left: 14vh;
   width: 12vh;
   padding: 1vh;
   font-family: "Handlee", cursive;

@@ -77,7 +77,7 @@ export const feedView = () => {
   containerModalInput.setAttribute('id', 'containerModalInput');  
   const TextModalInput=document.createElement('p');
   TextModalInput.setAttribute('id', 'textModalInput');
-  TextModalInput.innerHTML= 'Uups!! no haz posteado nada :D';
+  TextModalInput.innerHTML= 'Uups!! no haz posteado nada';
   TextModalInput.appendChild(sheepImg);
   containerModalInput.appendChild(TextModalInput);  
   const buttonModalInput = document.createElement('div');
