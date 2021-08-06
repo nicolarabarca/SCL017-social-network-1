@@ -1043,6 +1043,12 @@ ul {
     width: 48vh;
   }
 
+  #containerModalInput {
+    margin-left: 80vh;
+    margin-top: 50vh;
+    z-index: 5;
+  }
+
   .buttons {
     margin-left: 0vh;
     margin-top: 42vh;
