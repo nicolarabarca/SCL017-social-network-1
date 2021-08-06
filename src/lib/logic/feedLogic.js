@@ -8,57 +8,45 @@ let idEditPost = 0;
 export const savePost = () => {
   const writePostValue = document.getElementById('writePost').value;
   if (writePostValue === '') {
-    const myModal = document.createElement('div');
-    myModal.setAttribute('id', 'modalPost');
-    myModal.setAttribute('class', 'modal');
-    const modalContent = document.createElement('div');
-    modalContent.setAttribute('class', 'modal-content');
-    const pmodalContent = document.createElement('p');
-    pmodalContent.innerHTML = 'Escribe algo para postear';
-    modalContent.style.display = 'block';
-    myModal.appendChild(modalContent);
-    modalContent.appendChild(pmodalContent);
-    window.onclick = (event) => {
-      if (event.target === modalContent) {
-        modalContent.style.display = 'none';
-      }
-      /* return inputValidation */
-    };
-  }
-  const idUser = firebase.auth().currentUser;
-  console.log(idEditPost);
-  if (idEditPost === 0) {
-    db.collection('post').add({
-      idUser: idUser.displayName,
-      post: writePostValue,
-      date: ( new Date().toLocaleDateString('day','month','year')),
-      like: 0,
-    })
-      .then((docRef) => {
-        console.log('Document written with ID: ', docRef.id);
-        document.getElementById('writePost').value = '';
-        readPost();
-      })
-      .catch((error) => {
-        console.error('Error adding document: ', error);
-      });
-  } else {
-    const updateEditPost = db.collection('post').doc(idEditPost);
-    updateEditPost.update({
-      post: writePostValue,
-      date: ( new Date().toLocaleDateString('day','month','year'))
-    })
-      .then(() => {
-        console.log('Document successfully updated!');
-        document.getElementById('writePost').value = '';
-        readPost();
-        idEditPost = 0;
-      })
-      .catch((error) => {
-        console.error('Error updating document: ', error);
-      });
+	document.getElementById('containerModalInput').style.visibility = "visible";
+  }else{
+	  const idUser = firebase.auth().currentUser;
+	  console.log(idEditPost);
+	  if (idEditPost === 0) {
+		db.collection('post').add({
+		  idUser: idUser.displayName,
+		  post: writePostValue,
+		  date: ( new Date().toLocaleDateString('day','month','year')),
+		  like: 0,
+		})
+		  .then((docRef) => {
+			console.log('Document written with ID: ', docRef.id);
+			document.getElementById('writePost').value = '';
+			readPost();
+		  })
+		  .catch((error) => {
+			console.error('Error adding document: ', error);
+		  });
+	  } else {
+		const updateEditPost = db.collection('post').doc(idEditPost);
+		updateEditPost.update({
+		  post: writePostValue,
+		  date: ( new Date().toLocaleDateString('day','month','year'))
+		})
+		  .then(() => {
+			console.log('Document successfully updated!');
+			document.getElementById('writePost').value = '';
+			readPost();
+			idEditPost = 0;
+		  })
+		  .catch((error) => {
+			console.error('Error updating document: ', error);
+		  });
+	  }
   }
 };
+
+    
 
 export const readPost = () => {
   const tablePost = document.getElementById('extraDiv');
@@ -244,5 +232,10 @@ export const noConfirmDeletePost = (evt) => {
 	//Usuario no confirma eliminacion, se esconde el modal
 	document.getElementById('hideIdDeletePost').value = evt.currentTarget.idPost;
 	document.getElementById('containerModal').style.visibility = "visible";
+        
+ }
+ export const closeInputModal = (evt) => {
+	//Usuario no confirma eliminacion, se esconde el modal
+	document.getElementById('containerModalInput').style.visibility = "hidden";
         
  }

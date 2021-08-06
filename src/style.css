@@ -311,7 +311,7 @@ body {
   margin-top: 20vh;
   font-family: "Handlee", cursive;
   font-size: 20px;
-  margin-left: -5vh;
+  margin-left: -8vh;
 }
 
 #boxKnittingSticks {
@@ -530,16 +530,18 @@ ul {
   font-family: "Handlee", cursive;
   font-size: 16px;
   grid-area: main;
-  margin-top: -3vh;
+  margin-top: 3vh;
   z-index: 1;
+  position: fixed;
+  margin-left: -1vh;
 }
 
 #divButtonPost > button {
-  background: url("./lib/assets/send.png") no-repeat;
+  background: url(./lib/assets/send.png) no-repeat;
   height: 5vh;
   width: 20vh;
-  margin-left: 76%;
-  margin-top: -5%;
+  margin-left: 207%;
+  margin-top: 40%;
   border-style: none;
   align-items: center;
   text-align: center;
@@ -549,7 +551,7 @@ ul {
   border: 2px solid rgb(0 0 0 / 26%);
   width: 40vh;
   height: 40vh;
-  margin: 2% 4% 6% 6%;
+  margin: 33% 4% 6% 6%;
   padding: 3vh;
   background-color: #f080807d;
   text-align: center;
@@ -582,18 +584,15 @@ ul {
 }
 
 .buttons {
-  width: 25vh;
   height: 7vh;
   position: absolute;
   display: flex;
-  margin-top: 33vh;
-  margin-left: 10vh;
+  margin-top: 32vh;
   width: 40vh;
   border-radius: 2vh;
   background: #3aa9a1;
-  opacity: 0.8;
   margin-left: 0vh;
-  margin-top: 31, 5vh;
+  z-index: 1;
 }
 
 .dislikeButton {
@@ -659,13 +658,14 @@ ul {
   background-color: white;
   border-radius: 8%;
   width: 42vh;
-  height: 32vh;
+  height: 36vh;
   margin-left: 5vh;
   position: fixed;
   z-index: 1;
   margin-top: 45vh;
   -webkit-box-shadow: -2px 1px 20px 4px gray;
   box-shadow: -2px 1px 20px 4px gray;
+  margin-top: 22vh;
 }
 
 #textModal {

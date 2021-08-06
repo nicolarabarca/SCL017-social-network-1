@@ -2,6 +2,8 @@ import { loginUser } from '../logic/signInLogic.js';
 import { googleAccess } from '../logic/googleSignIn.js';
 import { checkEmailValidity } from '../logic/checkEmail.js';
 
+
+
 export const signInView = () => {
   const containerIn = document.createElement('div');
   containerIn.setAttribute('id', 'containerIn');
