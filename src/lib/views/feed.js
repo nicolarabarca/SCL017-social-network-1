@@ -65,7 +65,7 @@ export const feedView = () => {
   const buttonNoSure = document.createElement('div');
   buttonNoSure.setAttribute('id', 'buttonSure');
   buttonNoSure.addEventListener('click', noConfirmDeletePost);
-  buttonNoSure.innerHTML= 'Cancelar';
+  buttonNoSure.innerHTML = 'Cancelar';
   const hideIdDeletePost = document.createElement('input');
   hideIdDeletePost.setAttribute('id', 'hideIdDeletePost');
   hideIdDeletePost.style.visibility = 'hidden';
