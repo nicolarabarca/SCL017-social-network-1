@@ -70,13 +70,23 @@ A continuación se presentan los prototipos que se desprenden de la investigaci�
 ![Prototipo-de-Alta](src/lib/assets/protodealta.jpeg)
 
 
-## 5. Diseño Responsive 
-(PONER FOTOS DE AMBOS)
+## 5. Diseño responsive
+
+Vista Mobile:
+
+
+![Responsive-mobile](src/lib/assets/responsiveMobile.png)
+
+Vista web:
+
+
+![Responsive-web](src/lib/assets/responsiveWeb.png)
+
 
 ## 6. Testeo de Usabilidad 
-Para el test de usabilidad se testeo con (PONER CARACTERÍSTAS DE LOS USUARIOS)
+Para el test de usabilidad se testeo con dos usuarias. Ambas son tejedoras frecuentes que van entre los 33 y 45 años.
 
-con el fin de conocer la performance de nuestra página se le dio a los usuarios las siguientes instrucciones: 
+Con el fin de conocer la performance de nuestra página se le dio a los usuarios las siguientes instrucciones: 
 
 "Antes de comenzar, queremos comentarle que en la prueba que hagamos, no hay acciones o respuestas incorrectas. Estamos testeando la página y cada respuesta tuya es valiosa y válida.
 El test tiene una duración aproximada de 5 minutos. En esta página, te daré una serie de misiones que debes ir completando en la misma. Te pedimos que durante las acciones que desarrolles manifiestes en voz alta lo que pienses con el fin de que podamos entender qué te sugiere lo que va mostrando cada pantalla.
@@ -84,11 +94,19 @@ Las preguntas que te surjan en la navegación las responderemos al final de la p
 
 ### Misiones a realizar y criterios de éxito 
 
+![Test-de-usabilidad](src/lib/assets/testusa.PNG)
 
-![Prototipo-de-Alta](src/lib/assets/testusa.PNG)
+Todas las usuarias resolvieron exitosamente las consignas entregadas.
 
-* Iteraciones en base al Test de Usabilidad: 
-(PONERLOS)
+### Links a las entrevistas de usuario
+
+En este link, puedes ver la entrevista de usuario para app versión web:
+
+https://drive.google.com/file/d/1JnFzPglu4pGGG_DqqFOWCi7_QYnvqg_3/view
+
+En este link, puedes ver la entrevista de usuario para app versión movil:
+
+https://drive.google.com/file/d/1-hlyWzfU4qDwAt2kY-hFFT_NTl9qJCl-/view
 
 ## 7. Link A "Tejer & Punto"
 (PONER GH-PAGES)
