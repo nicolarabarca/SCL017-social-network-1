@@ -16,7 +16,7 @@ export const savePost = () => {
     db.collection('post').add({
 		  idUser: idUser.displayName,
 		  post: writePostValue,
-		  date: ( new Date().toLocaleDateString('day','month','year')),
+		  date: (new Date().toLocaleDateString('day', 'month', 'year')),
 		  like: 0,
 		})
 		 .then((docRef) => {
@@ -31,7 +31,7 @@ export const savePost = () => {
 		const updateEditPost = db.collection('post').doc(idEditPost);
 		updateEditPost.update({
 		  post: writePostValue,
-		  date: ( new Date().toLocaleDateString('day','month','year'))
+		  date: (new Date().toLocaleDateString('day', 'month , year')),
 		})
 		  .then(() => {
 			console.log('Document successfully updated!');
@@ -45,8 +45,6 @@ export const savePost = () => {
 	  }
   }
 };
-
-    
 
 export const readPost = () => {   // se  leen  los post de firebase  y se pintan en pantalla
   const tablePost = document.getElementById('extraDiv'); //variable 
@@ -133,7 +131,7 @@ export const readPost = () => {   // se  leen  los post de firebase  y se pintan
   });
 };
 
-function deletePost(idDeletePost){ // se  transforma en  funcion para pasar parametro
+function deletePost(idDeletePost) { // se  transforma en  funcion para pasar parametro
   console.log(idDeletePost); // se lee la id del elemento a eliminar 
   
   db.collection('post').doc(idDeletePost).delete().then(() => {  // se pone la id del post
@@ -147,7 +145,6 @@ function deletePost(idDeletePost){ // se  transforma en  funcion para pasar para
 
       
 }
-
 
 export const editPost = (evt) => {
   document.getElementById('writePost').value = evt.currentTarget.post;

@@ -7,6 +7,7 @@ import { patternsView } from './views/pattern.js';
 import { miscellaneousView } from './views/miscellaneous.js';
 import { readPost } from './logic/feedLogic.js';
 
+
 const showView = (hash) => {
   const root = document.getElementById('root');
   root.innerHTML = '';
