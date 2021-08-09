@@ -1,25 +1,25 @@
 import { firebaseConfig } from './firebConfig.js';
 
-firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);// inicializar la base de datos a firebases
 
-const db = firebase.firestore();
-let idEditPost = 0;
+const db = firebase.firestore(); // se  inciia  conexion
+let idEditPost = 0; // se  declara para identificar una edicion de un post  neuvo
 
 export const savePost = () => {
   const writePostValue = document.getElementById('writePost').value;
   if (writePostValue === '') {
-	document.getElementById('containerModalInput').style.visibility = "visible";
-  }else{
-	  const idUser = firebase.auth().currentUser;
-	  console.log(idEditPost);
-	  if (idEditPost === 0) {
-		db.collection('post').add({
+    document.getElementById('containerModalInput').style.visibility = 'visible';
+  } else {
+    const idUser = firebase.auth().currentUser;
+    //console.log(idEditPost);
+    if (idEditPost === 0) {
+    db.collection('post').add({
 		  idUser: idUser.displayName,
 		  post: writePostValue,
 		  date: ( new Date().toLocaleDateString('day','month','year')),
 		  like: 0,
 		})
-		  .then((docRef) => {
+		 .then((docRef) => {
 			console.log('Document written with ID: ', docRef.id);
 			document.getElementById('writePost').value = '';
 			readPost();
@@ -48,10 +48,10 @@ export const savePost = () => {
 
     
 
-export const readPost = () => {
-  const tablePost = document.getElementById('extraDiv');
-  db.collection('post').get().then((querySnapshot) => {
-    tablePost.innerHTML = '';
+export const readPost = () => {   // se  leen  los post de firebase  y se pintan en pantalla
+  const tablePost = document.getElementById('extraDiv'); //variable 
+  db.collection('post').get().then((querySnapshot) => { // aqui se  guarda el resultado
+    tablePost.innerHTML = '';// se  incializan los  post
     const arrayIdPost = Array(); // aqui se guardan los id de los post
     querySnapshot.forEach((doc) => { // aqui se recorren los registros del post
       arrayIdPost.push(doc.id); // aqui se guarda el id del array de los post
@@ -118,6 +118,7 @@ export const readPost = () => {
         const divButtons = document.getElementById('buttons' + idPost); // se  busca el div  donde  se  pondra el boton
         console.log(arrayIdLikes.includes(idPost));
         if (!arrayIdLikes.includes(idPost)) { // aqui se  pregunta si el post no pertenece al  usuario se  pinta
+          if (divButtons != null) {
           const likeButton = document.createElement('button'); // se  contruye  el  boton  de  like
           likeButton.setAttribute('id', 'likeButton' + idPost); // se concatena  para individualizar el boton con el id del post
           likeButton.addEventListener('click', likePost); // aqui se  llama  la  funcion que se asocia al boton
@@ -126,6 +127,7 @@ export const readPost = () => {
           likeButton.idLike = 0; // no existe ningun like de este usuario a este post
           divButtons.appendChild(likeButton);
         }
+      }
       }
     }); 
   });

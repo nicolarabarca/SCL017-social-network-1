@@ -111,3 +111,6 @@ export const init = () => {
     changePath(window.location.hash);
   });
 };
+//asocia la funcion changepath a los eventos load y hashchange
+//para verificar la ruta cada vez que el usuario recarge el sitiow
+// para eso se usa el windoe location para conseguir la url

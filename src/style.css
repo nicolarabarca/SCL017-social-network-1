@@ -568,10 +568,6 @@ ul {
   text-align: center;
   overflow-y: scroll;
   word-break: break-word;
-  /*overflow: hidden;*/
-  /*text-overflow: ellipsis;
-  white-space: nowrap;
-  flex-grow: inherit;*/
   background-color: white;
   opacity: 0.7;
   height: var(--h);
@@ -672,7 +668,6 @@ ul {
   font-family: "handlee", cursive;
   text-align: center;
   font-size: 20px;
-  
 }
 
 #containerModalInput {
@@ -687,14 +682,14 @@ ul {
   margin-top: 14vh;
 }
 
-#textModalInput{
+#textModalInput {
   text-align: center;
   margin-left: -5vh;
   font-size: 16px;
-  font-family: 'Handlee', cursive;
+  font-family: "Handlee", cursive;
 }
 
-#buttonModalInput{
+#buttonModalInput {
   font-size: 20px;
   border-radius: 5%;
   border-style: dotted;
