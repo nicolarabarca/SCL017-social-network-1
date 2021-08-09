@@ -109,8 +109,7 @@ En este link, puedes ver la entrevista de usuario para app versión movil:
 https://drive.google.com/file/d/1-hlyWzfU4qDwAt2kY-hFFT_NTl9qJCl-/view
 
 ## 7. Link A "Tejer & Punto"
-(PONER GH-PAGES)
-
+https://nicolepozo.github.io/SCL017-social-network/src/
 
 ## 8. Read Me Laboratoria
 <details>
